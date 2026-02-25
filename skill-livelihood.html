@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skill &amp; Livelihood | CCL CSR – Central Coalfields Limited</title>
+  <meta name="description" content="CCL CSR Skill & Livelihood — CIA Express, Tribal Haat, CIPET, E-Rickshaws. 100% placement, 200 artisans, women empowerment across Jharkhand."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --sk:#D97706;--skd:#92400E;--skdk:#78350F;--skm:#F59E0B;--skl:#FDE68A;
+      --skp:#FFFBEB;--skt:#FEF3C7;
+      --coal:#1A1A2E;--forest:#1E4D35;
+      --cream:#F7F3EE;--cdark:#EDE6D8;--ww:#FDFAF6;--txt:#1C2B22;--mut:#5A7060;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--txt);overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,26,46,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(217,119,6,.22);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nlogo{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nemb{width:42px;height:42px;background:linear-gradient(135deg,#92400E,#F59E0B);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .ntxt{display:flex;flex-direction:column}
+    .ntxt span:first-child{font-size:13px;font-weight:600;color:var(--skl);letter-spacing:.08em;text-transform:uppercase}
+    .ntxt span:last-child{font-size:11px;color:rgba(255,255,255,.42)}
+    .nlinks{display:flex;gap:1.8rem;list-style:none}
+    .nlinks a{color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+    .nlinks a:hover,.nlinks a.active{color:var(--skl)}
+    .nbk{background:var(--sk);color:#fff;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
+    .nbk:hover{background:var(--skd)}
+    a:focus-visible{outline:3px solid var(--skl);outline-offset:3px;border-radius:4px}
+    .bc{position:fixed;top:68px;left:0;right:0;z-index:998;background:var(--skdk);padding:8px 2rem;display:flex;align-items:center;gap:8px}
+    .bc a{font-size:12px;color:rgba(255,255,255,.5);text-decoration:none}.bc a:hover{color:var(--skl)}
+    .bcs{font-size:12px;color:rgba(255,255,255,.25)}.bcc{font-size:12px;font-weight:600;color:var(--skl)}
+
+    /* HERO */
+    .hero{min-height:92vh;background:linear-gradient(150deg,#3D1A00 0%,#78350F 30%,#92400E 62%,#D97706 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding-top:108px}
+    .hero-lines{position:absolute;inset:0;opacity:.05;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(255,255,255,1) 60px,rgba(255,255,255,1) 61px);pointer-events:none}
+    .hero-gl{position:absolute;top:-10%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(253,230,138,.12),transparent 65%);pointer-events:none}
+    .hero-c{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:60px 2rem 80px;display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:center}
+    .hbadge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:7px 18px;margin-bottom:28px}
+    .hbadge span{font-size:12px;font-weight:700;color:var(--skl);letter-spacing:.12em;text-transform:uppercase}
+    .bdot{width:6px;height:6px;background:var(--skl);border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1.1;font-weight:900;color:#fff;margin-bottom:22px}
+    .hero h1 em{font-style:italic;color:var(--skl)}
+    .hero-sub{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:520px;margin-bottom:36px}
+    .hero-acts{display:flex;gap:14px;flex-wrap:wrap}
+    .btn-sk{background:var(--sk);color:#fff;padding:13px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--sk);transition:all .25s}
+    .btn-sk:hover{background:var(--skd);transform:translateY(-2px);box-shadow:0 8px 24px rgba(217,119,6,.4)}
+    .btn-o{background:transparent;color:rgba(255,255,255,.8);padding:13px 26px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:all .25s;display:inline-flex;align-items:center;gap:8px}
+    .btn-o:hover{border-color:rgba(253,230,138,.5);color:var(--skl)}
+    .hero-panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:28px;backdrop-filter:blur(12px)}
+    .hp-t{font-size:11px;font-weight:700;color:var(--skl);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .hp-r{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;border:1px solid rgba(255,255,255,.05)}
+    .hp-r:last-child{margin-bottom:0}
+    .hp-v{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--skl)}
+    .hp-l{font-size:12px;color:rgba(255,255,255,.45);text-align:right;max-width:150px;line-height:1.4}
+    .pnav{background:var(--skdk);padding:0 2rem;display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .ppill{padding:15px 22px;font-size:13px;font-weight:600;color:rgba(255,255,255,.48);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s}
+    .ppill:hover{color:var(--skl)}.ppill.active{color:var(--skl);border-bottom-color:var(--skl)}
+    section{padding:80px 2rem}
+    .wrap{max-width:1200px;margin:0 auto}
+    .slbl{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sk);margin-bottom:12px}
+    .slbl::before{content:'';width:24px;height:2px;background:var(--sk)}
+    .sh{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;line-height:1.2;color:var(--skdk);margin-bottom:14px}
+    .ssub{font-size:1rem;color:var(--mut);line-height:1.75;max-width:640px}
+    .sbadge{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:7px 16px;font-size:12px;font-weight:700;margin-bottom:20px}
+    .s-ok{background:#DCFCE7;color:#166534;border:1px solid #BBF7D0}
+    .s-go{background:#FEF9C3;color:#854D0E;border:1px solid #FDE68A}
+    .sdot{width:6px;height:6px;border-radius:50%;animation:blink 2s infinite}
+    .s-ok .sdot{background:#16A34A}.s-go .sdot{background:#CA8A04}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:56px}
+    .sticky-r{position:sticky;top:140px;display:flex;flex-direction:column;gap:16px}
+
+    /* ══ CIA EXPRESS ══ */
+    #cia{background:var(--ww)}
+    .award-banner{background:linear-gradient(135deg,var(--skdk),var(--skd));border-radius:20px;padding:32px;margin-bottom:28px;position:relative;overflow:hidden}
+    .award-banner::before{content:'🥇';position:absolute;right:16px;top:12px;font-size:56px;opacity:.25}
+    .award-banner h3{font-family:'Playfair Display',serif;font-size:1.55rem;color:#fff;margin-bottom:8px}
+    .award-banner p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.55}
+    .award-tag{display:inline-block;background:linear-gradient(135deg,var(--skl),#FEF9C3);color:var(--skdk);border-radius:100px;padding:6px 18px;font-size:12px;font-weight:700;margin-top:14px}
+    .step-list{display:flex;flex-direction:column;gap:0;margin-top:28px}
+    .step{display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed rgba(217,119,6,.15)}
+    .step:last-child{border:none}
+    .step-num{width:34px;height:34px;border-radius:8px;background:var(--skp);color:var(--sk);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:2px;border:1px solid var(--skt)}
+    .step-body h4{font-size:14px;font-weight:600;color:var(--skdk);margin-bottom:3px}
+    .step-body p{font-size:13px;color:var(--mut);line-height:1.55}
+    .stat-c{border-radius:16px;padding:24px}
+    .sc-a{background:var(--sk);color:#fff}
+    .sc-p{background:var(--skp);border:1px solid var(--skt)}
+    .sc-d{background:var(--skdk);color:#fff}
+    .snum{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:5px}
+    .sc-p .snum{color:var(--skdk)}.sc-p .slb{color:var(--mut)}
+    .slb{font-size:13px;opacity:.72;line-height:1.5}
+    .employer-strip{background:var(--skdk);border-radius:14px;padding:20px 24px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:0}
+    .es-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--skl);flex-shrink:0}
+    .es-co{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:6px 16px;font-size:13px;font-weight:600;color:rgba(255,255,255,.75)}
+
+    /* ══ TRIBAL HAAT ══ */
+    #haat{background:var(--skp)}
+    .haat-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:56px}
+    .haat-img{background:linear-gradient(135deg,var(--skdk),var(--sk));border-radius:20px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;position:relative;overflow:hidden}
+    .haat-img::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.05),transparent 60%)}
+    .haat-img-lbl{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:13px;color:rgba(255,255,255,.55)}
+    .craft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+    .craft-card{background:#fff;border-radius:12px;padding:18px;border:1px solid var(--skt);text-align:center;transition:all .2s}
+    .craft-card:hover{border-color:var(--sk);transform:translateY(-2px);box-shadow:0 4px 14px rgba(217,119,6,.08)}
+    .craft-icon{font-size:28px;margin-bottom:8px}
+    .craft-name{font-size:13px;font-weight:600;color:var(--skdk)}
+    .haat-stats{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .hs{border-radius:14px;padding:22px}
+    .hs.a{background:var(--sk);color:#fff}
+    .hs.p{background:#fff;border:1px solid var(--skt)}
+    .hs.d{background:var(--skdk);color:#fff}
+    .hs-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;margin-bottom:4px}
+    .hs.p .hs-num{color:var(--skdk)}.hs.p .hs-lbl{color:var(--mut)}
+    .hs-lbl{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* ══ CIPET ══ */
+    #cipet{background:var(--ww)}
+    .cipet-layout{display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start;margin-top:56px}
+    .course-list{display:flex;flex-direction:column;gap:12px}
+    .course-item{display:flex;gap:14px;padding:18px;background:#fff;border-radius:12px;border:1px solid var(--cdark);align-items:flex-start;transition:all .2s}
+    .course-item:hover{border-color:var(--skm);box-shadow:0 4px 14px rgba(217,119,6,.07)}
+    .ci-i{font-size:24px;flex-shrink:0}
+    .ci-b h4{font-size:14px;font-weight:600;color:var(--skdk);margin-bottom:3px}
+    .ci-b p{font-size:13px;color:var(--mut);line-height:1.55}
+    .ci-b .dur{font-family:'DM Mono',monospace;font-size:11px;font-weight:700;color:var(--sk);margin-top:5px}
+    .cipet-panel{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .cp{border-radius:14px;padding:22px}
+    .cp.a{background:var(--sk);color:#fff}
+    .cp.p{background:var(--skp);border:1px solid var(--skt)}
+    .cp.d{background:var(--skdk);color:#fff}
+    .cp-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;margin-bottom:4px}
+    .cp.p .cp-num{color:var(--skdk)}.cp.p .cp-lbl{color:var(--mut)}
+    .cp-lbl{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* ══ E-RICKSHAW ══ */
+    #erickshaw{background:var(--skp)}
+    .er-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:56px}
+    .er-story{background:var(--skdk);border-radius:20px;padding:36px;position:relative;overflow:hidden;margin-bottom:24px}
+    .er-story::before{content:'"';position:absolute;top:-20px;left:16px;font-family:'Playfair Display',serif;font-size:120px;color:rgba(255,255,255,.06);line-height:1}
+    .er-story p{font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--skl);line-height:1.65;position:relative;z-index:1}
+    .er-story-attr{font-size:12px;color:rgba(255,255,255,.38);margin-top:12px;position:relative;z-index:1}
+    .er-facts{display:flex;flex-direction:column;gap:12px}
+    .ef-item{display:flex;gap:14px;padding:16px 18px;background:#fff;border-radius:12px;border:1px solid var(--skt);align-items:flex-start}
+    .efi-icon{font-size:22px;flex-shrink:0}
+    .efi-body h4{font-size:14px;font-weight:600;color:var(--skdk);margin-bottom:3px}
+    .efi-body p{font-size:13px;color:var(--mut);line-height:1.55}
+    .er-stats{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .ers{border-radius:14px;padding:22px}
+    .ers.a{background:var(--sk);color:#fff}
+    .ers.p{background:#fff;border:1px solid var(--skt)}
+    .ers.d{background:var(--skdk);color:#fff}
+    .ers-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;margin-bottom:4px}
+    .ers.p .ers-num{color:var(--skdk)}.ers.p .ers-lbl{color:var(--mut)}
+    .ers-lbl{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* IMPACT GRID */
+    .impact-wrap{background:var(--ww);padding:64px 2rem}
+    .impact-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--skdk);border-radius:18px;overflow:hidden}
+    .ib{padding:36px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+    .ib:last-child{border:none}
+    .ib-v{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--skl);margin-bottom:6px}
+    .ib-l{font-size:12px;color:rgba(255,255,255,.42);line-height:1.45}
+
+    /* SECTION NAV */
+    .snav-wrap{background:var(--skdk);padding:40px 2rem}
+    .snav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .snav-link{text-decoration:none;display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;border:1px solid rgba(255,255,255,.1);transition:all .25s}
+    .snav-link:hover{background:rgba(255,255,255,.06);border-color:rgba(253,230,138,.3)}
+    .sn-dir{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+    .sn-ttl{font-size:15px;font-weight:600;color:rgba(255,255,255,.8)}
+    footer{background:var(--coal);padding:40px 2rem 24px}
+    .ft{max-width:1200px;margin:0 auto}
+    .ft-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:20px}
+    .ft-brand{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff}
+    .ft-links{display:flex;gap:20px;flex-wrap:wrap}
+    .ft-links a{font-size:13px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s}
+    .ft-links a:hover{color:var(--skl)}
+    .ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px}
+    .ft-bot p{font-size:12px;color:rgba(255,255,255,.2)}
+    .ft-stag{background:rgba(217,119,6,.2);border:1px solid rgba(217,119,6,.35);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:var(--skl)}
+    .rv{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+    .rv.vis{opacity:1;transform:translateY(0)}
+    @media(max-width:1024px){
+      .hero-c{grid-template-columns:1fr}.hero-panel{display:none}
+      .two-col,.haat-layout,.cipet-layout,.er-layout{grid-template-columns:1fr}
+      .sticky-r,.haat-stats,.cipet-panel,.er-stats{position:static}
+      .impact-bar{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){.nav-links,.nlinks{display:none}.snav{flex-direction:column}.craft-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nlogo">
+    <div class="nemb">⚙️</div>
+    <div class="ntxt"><span>CCL CSR · Skill &amp; Livelihood</span><span>Central Coalfields Limited</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#cia" class="active">CIA Express</a></li>
+    <li><a href="#haat">Tribal Haat</a></li>
+    <li><a href="#cipet">CIPET</a></li>
+    <li><a href="#erickshaw">E-Rickshaw</a></li>
+  </ul>
+  <a href="index.html#sectors" class="nbk">← All Sectors</a>
+</nav>
+
+<div class="bc">
+  <a href="index.html">Home</a><span class="bcs">›</span>
+  <a href="index.html#sectors">CSR Sectors</a><span class="bcs">›</span>
+  <span class="bcc">Skill &amp; Livelihood</span>
+</div>
+
+<section class="hero">
+  <div class="hero-lines"></div><div class="hero-gl"></div>
+  <div class="hero-c">
+    <div>
+      <div class="hbadge"><div class="bdot"></div><span>CSR Sector · Skill &amp; Livelihood</span></div>
+      <h1>Turning Potential<br/>Into <em>Sustainable<br/>Livelihoods</em></h1>
+      <p class="hero-sub">From tribal artisans selling crafts to corporate buyers, to SC/ST graduates working at Amazon — CCL's skill and livelihood programmes convert potential into income with 100% placement guarantees, zero compromise on quality, and a deep respect for the communities they serve.</p>
+      <div class="hero-acts">
+        <a href="#cia" class="btn-sk">CIA Express — 100% Placed →</a>
+        <a href="#haat" class="btn-o">Tribal Haat</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="hp-t">Skill &amp; Livelihood at a Glance</div>
+      <div class="hp-r"><div class="hp-v">100%</div><div class="hp-l">Placement rate · CIA Express</div></div>
+      <div class="hp-r"><div class="hp-v">200+</div><div class="hp-l">Tribal artisans via Tribal Haat</div></div>
+      <div class="hp-r"><div class="hp-v">10</div><div class="hp-l">Women with E-Rickshaws · ₹15K/month</div></div>
+      <div class="hp-r"><div class="hp-v">₹48L</div><div class="hp-l">Tribal Haat project cost</div></div>
+      <div class="hp-r"><div class="hp-v">Gold</div><div class="hp-l">CSR Times Award 2025 · CIA Express</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="pnav">
+  <a href="#cia" class="ppill active">🏅 CIA Express</a>
+  <a href="#haat" class="ppill">🎨 Tribal Haat</a>
+  <a href="#cipet" class="ppill">🏭 CIPET Plastic Engineering</a>
+  <a href="#erickshaw" class="ppill">⚡ E-Rickshaw for Women</a>
+</div>
+
+<!-- ══ CIA EXPRESS ══ -->
+<section id="cia">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 1 · Award-winning</div>
+      <h2 class="sh">CIA Express — Business Computer Applications</h2>
+      <p class="ssub">A job-linked BCA (Business Computer Applications), Accounting, ERP and GST training programme for SC/ST underprivileged students from Ranchi college campuses — implemented by ICA Foundation with a 100% placement guarantee backed by all-time job cards.</p>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="award-banner rv">
+          <h3>🥇 CSR Times Award 2025 — Gold</h3>
+          <p>Livelihood Category — 100% placement of SC/ST beneficiaries at Amazon, Microsoft, SAP Labs and other leading corporates. Recognised at the national CSR Times Awards ceremony, 2025.</p>
+          <div class="award-tag">Gold — CSR Times Award 2025 · Livelihood Category</div>
+        </div>
+        <div class="rv">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--skdk);margin-bottom:18px">Programme Structure</h3>
+          <div class="step-list">
+            <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Campus Mobilisation — Ranchi Colleges</h4><p>ICA Foundation identifies SC/ST underprivileged students across Ranchi college campuses through structured outreach and faculty partnerships.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-body"><h4>BCA + Accounting + ERP + GST Training</h4><p>Intensive hands-on training in Business Computer Applications, Tally, GST filing, ERP systems — skill sets directly demanded by corporate employers.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Soft Skills &amp; Interview Preparation</h4><p>Communication, professional conduct, mock interviews and resume building — ensuring trained candidates are also job-ready in manner and presentation.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-body"><h4>100% Placement with All-Time Job Card</h4><p>Every graduate is placed — with an all-time job card guaranteeing they can return to ICA Foundation for replacement if they lose employment within a defined period.</p></div></div>
+          </div>
+        </div>
+        <div class="employer-strip rv" style="margin-top:24px">
+          <span class="es-lbl">Placed at ▸</span>
+          <span class="es-co">Amazon</span><span class="es-co">Microsoft</span><span class="es-co">SAP Labs</span><span class="es-co">L&amp;T</span><span class="es-co">Leading MNCs</span>
+        </div>
+      </div>
+      <div class="sticky-r rv">
+        <div class="stat-c sc-a"><div class="snum">100%</div><div class="slb">Placement rate — every graduate employed</div></div>
+        <div class="stat-c sc-p"><div class="snum">₹48L</div><div class="slb">Programme cost · CCL CSR investment</div></div>
+        <div class="stat-c sc-d"><div class="snum">SC/ST</div><div class="slb" style="color:rgba(255,255,255,.58)">Exclusively for SC/ST underprivileged students from Ranchi</div></div>
+        <div class="stat-c sc-p"><div class="snum">ICA</div><div class="slb">ICA Foundation — implementing partner with 30+ years of IT training</div></div>
+        <div class="stat-c sc-p"><div class="snum">🥇</div><div class="slb" style="color:var(--skdk);font-weight:600">CSR Times Award 2025 · Gold · Livelihood Category</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRIBAL HAAT ══ -->
+<section id="haat">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 2 · Artisan Empowerment</div>
+      <h2 class="sh">Tribal Haat</h2>
+      <p class="ssub">A dedicated tribal artisan marketplace connecting 200+ artisans from Jharkhand's traditional craft communities with buyers — building a sustainable, dignified income stream for tribal craftspeople who would otherwise depend on middlemen or daily wage labour.</p>
+    </div>
+    <div class="haat-layout">
+      <div>
+        <div class="haat-img rv">
+          🎨
+          <div class="haat-img-lbl">Tribal Haat — Artisan Marketplace · Jharkhand</div>
+        </div>
+        <div class="rv">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--skdk);margin-bottom:14px">Traditional Crafts Supported</h3>
+          <div class="craft-grid">
+            <div class="craft-card"><div class="craft-icon">🏺</div><div class="craft-name">Dokra Metal Craft</div></div>
+            <div class="craft-card"><div class="craft-icon">🧺</div><div class="craft-name">Bamboo Weaving</div></div>
+            <div class="craft-card"><div class="craft-icon">🎨</div><div class="craft-name">Sohrai Art</div></div>
+            <div class="craft-card"><div class="craft-icon">🪡</div><div class="craft-name">Textile &amp; Weaving</div></div>
+            <div class="craft-card"><div class="craft-icon">🪵</div><div class="craft-name">Wood Craft</div></div>
+            <div class="craft-card"><div class="craft-icon">💎</div><div class="craft-name">Tribal Jewellery</div></div>
+          </div>
+        </div>
+        <div class="rv" style="margin-top:28px">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--skdk);margin-bottom:16px">How It Creates Sustainable Income</h3>
+          <div class="step-list">
+            <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Artisan Identification &amp; Onboarding</h4><p>CCL CSR officers identify skilled artisans from tribal communities within command areas, onboard them onto the Haat platform and provide product quality guidance.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Market Linkage &amp; Buyer Access</h4><p>The Haat provides structured access to corporate buyers, government procurement, tourists and online platforms — eliminating exploitative middlemen.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-body"><h4>IHW Bronze Award — Most Impactful Livelihood</h4><p>Tribal Haat received the IHW CSR Health Impact Awards 2024 Bronze — recognising its multi-dimensional impact on health, livelihood and culture preservation.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="haat-stats rv">
+        <div class="hs a"><div class="hs-num">200+</div><div class="hs-lbl">Tribal artisans connected to markets</div></div>
+        <div class="hs p"><div class="hs-num">₹48.72L</div><div class="hs-lbl">CCL CSR investment in Tribal Haat</div></div>
+        <div class="hs d"><div class="hs-num">🥉 IHW</div><div class="hs-lbl" style="color:rgba(255,255,255,.58)">Bronze — IHW CSR Health Impact Awards 2024</div></div>
+        <div class="hs p"><div class="hs-num">Jharkhand</div><div class="hs-lbl">Traditional crafts — Dokra, Sohrai, Bamboo &amp; more</div></div>
+        <div style="background:var(--skp);border-radius:14px;padding:18px;border:1px solid var(--skt)">
+          <div style="font-size:12px;font-weight:700;color:var(--skdk);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Why It Matters</div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">Jharkhand's tribal crafts are dying — not from lack of skill but from lack of market access. Tribal Haat preserves cultural heritage while creating income, transforming craft from a subsistence activity into a dignified profession.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CIPET ══ -->
+<section id="cipet">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 3 · Technical Training</div>
+      <h2 class="sh">CIPET — Plastic Engineering &amp; Technology</h2>
+      <p class="ssub">Certificate and diploma-level courses in Plastic Engineering and Technology at CIPET Ranchi — implemented by the Central Institute of Petrochemicals Engineering &amp; Technology, a Government of India institution under Ministry of Chemicals &amp; Fertilizers.</p>
+    </div>
+    <div class="cipet-layout">
+      <div>
+        <div class="sbadge s-ok rv"><div class="sdot"></div>Ongoing · Annual Enrolment</div>
+        <p class="rv" style="font-size:14px;color:var(--mut);line-height:1.75;margin-bottom:28px">CIPET courses provide industry-recognised technical qualifications in plastics processing — among the highest-demand manufacturing skills in India's growing polymer and packaging industries. CCL funds seats for underprivileged youth from its operational areas, giving them access to a nationally recognised institution they would otherwise be unable to afford.</p>
+        <div class="rv">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--skdk);margin-bottom:18px">Courses Offered</h3>
+          <div class="course-list">
+            <div class="course-item"><div class="ci-i">🏭</div><div class="ci-b"><h4>PG Diploma in Plastics Processing &amp; Testing</h4><p>Post-graduate level qualification covering polymer science, processing techniques and quality testing — typically leading to supervisory roles in manufacturing.</p><div class="dur">Duration: 1 Year · PG Level</div></div></div>
+            <div class="course-item"><div class="ci-i">⚙️</div><div class="ci-b"><h4>Diploma in Plastics Technology</h4><p>Technical diploma in plastics moulding, extrusion, and fabrication — industry-standard qualification for factory floor and technical roles.</p><div class="dur">Duration: 3 Years · Diploma Level</div></div></div>
+            <div class="course-item"><div class="ci-i">🔬</div><div class="ci-b"><h4>Certificate in Plastics Processing Operations</h4><p>Short-duration certificate course for rapid entry into the plastics processing workforce — suited for youth seeking immediate employment.</p><div class="dur">Duration: 6 Months · Certificate Level</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cipet-panel rv">
+        <div class="cp a"><div class="cp-num">CIPET</div><div class="cp-lbl">Central Institute of Petrochemicals Engineering &amp; Technology · Govt. of India</div></div>
+        <div class="cp p"><div class="cp-num">Ranchi</div><div class="cp-lbl">Campus — Jharkhand's capital city, accessible from all CCL districts</div></div>
+        <div class="cp d"><div class="cp-num">Youth</div><div class="cp-lbl" style="color:rgba(255,255,255,.58)">Underprivileged youth from CCL operational areas — seats funded by CCL CSR</div></div>
+        <div class="cp p"><div class="cp-num">3</div><div class="cp-lbl">Course levels — PG Diploma, Diploma, Certificate</div></div>
+        <div style="background:var(--skp);border-radius:14px;padding:18px;border:1px solid var(--skt)">
+          <div style="font-size:12px;font-weight:700;color:var(--skdk);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Sector Demand</div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">India's plastics processing industry is growing at 12% annually — creating sustained demand for technically qualified workers at all levels, from factory floor operators to quality supervisors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ E-RICKSHAW ══ -->
+<section id="erickshaw">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 4 · Women Empowerment</div>
+      <h2 class="sh">E-Rickshaw for Underprivileged Women</h2>
+      <p class="ssub">Ten underprivileged tribal women in Ranchi received electric auto-rickshaws, driving licences and technical training through RK Mission — each now earning ₹15,000 per month serving patients at RK Mission TB Sanatorium. A model of dignified, sustainable employment.</p>
+    </div>
+    <div class="er-layout">
+      <div>
+        <div class="er-story rv">
+          <p>"Ten women. Ten rickshaws. Ten families transformed. Each woman now earns ₹15,000 per month — more than many white-collar graduates in Jharkhand's small towns — serving patients at one of the state's most important TB hospitals."</p>
+          <div class="er-story-attr">— CCL Annual Report 2024–25 · E-Rickshaw Initiative, Ranchi</div>
+        </div>
+        <div class="er-facts rv">
+          <div class="ef-item"><div class="efi-icon">⚡</div><div class="efi-body"><h4>Electric Auto-Rickshaws — Fully Provisioned</h4><p>Each beneficiary received a new electric auto-rickshaw — zero fuel cost, low maintenance, and environmentally clean. The vehicle was provided at zero cost to the beneficiary.</p></div></div>
+          <div class="ef-item"><div class="efi-icon">📋</div><div class="efi-body"><h4>Driving Licence &amp; Technical Training</h4><p>CCL and RK Mission facilitated driving licence acquisition and technical training for each woman — ensuring safe, confident, and legally compliant operation.</p></div></div>
+          <div class="ef-item"><div class="efi-icon">🏥</div><div class="efi-body"><h4>Dedicated Route — RK Mission TB Sanatorium</h4><p>Each rickshaw operates a dedicated route serving patients and staff at RK Mission TB Sanatorium, Ranchi — providing a guaranteed, stable customer base for sustainable income.</p></div></div>
+          <div class="ef-item"><div class="efi-icon">👩‍👧</div><div class="efi-body"><h4>Tribal Women from CCL Command Areas</h4><p>Beneficiaries selected from underprivileged tribal families within CCL's operational areas — with priority given to those with no prior income source.</p></div></div>
+        </div>
+      </div>
+      <div class="er-stats rv">
+        <div class="ers a"><div class="ers-num">₹15,000</div><div class="ers-lbl">Monthly income per woman — per rickshaw</div></div>
+        <div class="ers p"><div class="ers-num">10</div><div class="ers-lbl">Women beneficiaries — 10 families transformed</div></div>
+        <div class="ers d"><div class="ers-num">Electric</div><div class="ers-lbl" style="color:rgba(255,255,255,.58)">Zero fuel cost · Low maintenance · Clean transport</div></div>
+        <div class="ers p"><div class="ers-num">RK Mission</div><div class="ers-lbl">TB Sanatorium, Ranchi — dedicated route &amp; stable income</div></div>
+        <div style="background:var(--skp);border-radius:14px;padding:18px;border:1px solid var(--skt)">
+          <div style="font-size:12px;font-weight:700;color:var(--skdk);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Scale-up Potential</div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">The e-rickshaw model is being evaluated for replication at other CCL area hospitals and facilities — with potential to expand to 50+ women across multiple districts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT BAR -->
+<div class="impact-wrap">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;margin-bottom:36px">
+      <div class="slbl" style="justify-content:center">Sector Impact · Skill &amp; Livelihood</div>
+      <h2 class="sh" style="text-align:center;color:var(--skdk)">What These Programmes Deliver</h2>
+    </div>
+    <div class="impact-bar rv">
+      <div class="ib"><div class="ib-v">100%</div><div class="ib-l">CIA Express placement rate — all SC/ST graduates employed</div></div>
+      <div class="ib"><div class="ib-v">200+</div><div class="ib-l">Tribal artisans earning from Tribal Haat</div></div>
+      <div class="ib"><div class="ib-v">₹15K</div><div class="ib-l">Monthly income per E-Rickshaw woman beneficiary</div></div>
+      <div class="ib"><div class="ib-v">🥇 🥉</div><div class="ib-l">National awards — CSR Times Gold + IHW Bronze</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="snav-wrap">
+  <div class="snav">
+    <a href="health.html" class="snav-link"><div><div class="sn-dir">← Previous Sector</div><div class="sn-ttl" style="color:#FCA5A5">🏥 Health &amp; Nutrition</div></div></a>
+    <div style="text-align:center"><div style="font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">You are viewing</div><div style="font-size:16px;font-weight:700;color:var(--skl)">⚙️ Skill &amp; Livelihood</div></div>
+    <a href="sports.html" class="snav-link"><div style="text-align:right"><div class="sn-dir">Next Sector →</div><div class="sn-ttl" style="color:#C4B5FD">🏆 Sports Promotion</div></div></a>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <div class="ft-top">
+      <div class="ft-brand">Central Coalfields Limited · CSR Division</div>
+      <div class="ft-links">
+        <a href="index.html">Home</a><a href="education.html">Education</a><a href="health.html">Health</a>
+        <a href="sports.html">Sports</a><a href="animal-welfare.html">Animal Welfare</a>
+        <a href="just-transition.html">Just Transition</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2025–26 Central Coalfields Limited · Darbhanga House, Ranchi – 834 029</p>
+      <span class="ft-stag">⚙️ Skill &amp; Livelihood Sector</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ro=new IntersectionObserver(e=>{e.forEach((en,i)=>{if(en.isIntersecting){setTimeout(()=>en.target.classList.add('vis'),i*60);ro.unobserve(en.target);}});},{threshold:.08});
+  document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+  const so=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){document.querySelectorAll('.ppill').forEach(p=>p.classList.remove('active'));const a=document.querySelector(`.ppill[href="#${en.target.id}"]`);if(a)a.classList.add('active');}});},{threshold:.4});
+  ['cia','haat','cipet','erickshaw'].forEach(id=>{const el=document.getElementById(id);if(el)so.observe(el);});
+</script>
+</body>
+</html>
