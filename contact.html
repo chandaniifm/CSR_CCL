@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact CSR | Central Coalfields Limited</title>
+  <meta name="description" content="Contact CCL CSR Division — Darbhanga House, Ranchi. For project enquiries, partnerships, vendor empanelment, NGO collaboration and beneficiary support."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --coal:#1A1A2E; --forest:#1E4D35; --gold:#B45309; --gold-b:#D97706; --gold-pale:#FFFBEB;
+      --cream:#F7F3EE; --cdark:#EDE6D8; --ww:#FDFAF6; --txt:#1C2B22; --mut:#5A7060;
+      --edu:#2563EB; --hlt:#DC2626; --skl:#D97706; --spt:#7C3AED; --aw:#0891B2; --jt:#16A34A;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--txt);overflow-x:hidden}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,26,46,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(180,83,9,.25);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nl{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .ne{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold-b));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .nt span:first-child{display:block;font-size:13px;font-weight:600;color:#FCD34D;letter-spacing:.08em;text-transform:uppercase}
+    .nt span:last-child{display:block;font-size:11px;color:rgba(255,255,255,.4)}
+    .nlinks{display:flex;gap:1.5rem;list-style:none}
+    .nlinks a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+    .nlinks a:hover{color:#FCD34D}
+    a:focus-visible{outline:3px solid #FCD34D;outline-offset:3px;border-radius:4px}
+    .bc{position:fixed;top:68px;left:0;right:0;z-index:998;background:#422006;padding:8px 2rem;display:flex;align-items:center;gap:8px}
+    .bc a{font-size:12px;color:rgba(255,255,255,.45);text-decoration:none}.bc a:hover{color:#FCD34D}
+    .bc .sep{font-size:12px;color:rgba(255,255,255,.2)}.bc .cur{font-size:12px;font-weight:600;color:#FCD34D}
+
+    /* HERO */
+    .hero{background:linear-gradient(150deg,var(--coal) 0%,#1B2918 45%,var(--forest) 100%);padding:140px 2rem 80px;position:relative;overflow:hidden}
+    .hero-mesh{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:28px 28px}
+    .hero-glow{position:absolute;top:-10%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(180,83,9,.12),transparent 65%)}
+    .hero-c{position:relative;z-index:2;max-width:1200px;margin:0 auto}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:7px 18px;margin-bottom:24px}
+    .hero-badge span{font-size:12px;font-weight:700;color:#FCD34D;letter-spacing:.12em;text-transform:uppercase}
+    .bdot{width:6px;height:6px;background:#FCD34D;border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.6rem);line-height:1.1;font-weight:900;color:#fff;margin-bottom:16px}
+    .hero h1 em{font-style:italic;color:#FCD34D}
+    .hero-sub{font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.58);max-width:560px}
+
+    /* MAIN GRID */
+    .main-grid{max-width:1200px;margin:0 auto;padding:64px 2rem 80px;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:start}
+
+    /* CONTACT FORM */
+    .form-card{background:#fff;border-radius:20px;border:1px solid var(--cdark);padding:40px;box-shadow:0 4px 24px rgba(0,0,0,.04)}
+    .form-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--coal);margin-bottom:6px}
+    .form-sub{font-size:13px;color:var(--mut);margin-bottom:32px;line-height:1.6}
+
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+    .form-group label{font-size:13px;font-weight:600;color:var(--coal)}
+    .form-group input,.form-group select,.form-group textarea{font-family:'DM Sans',sans-serif;font-size:14px;padding:12px 14px;border:1.5px solid var(--cdark);border-radius:8px;outline:none;color:var(--txt);background:#fff;transition:border-color .2s}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+    .form-group textarea{resize:vertical;min-height:110px}
+    .form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%235A7060' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+
+    .submit-btn{width:100%;background:var(--gold);color:#fff;border:none;padding:15px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px}
+    .submit-btn:hover{background:#92400E;transform:translateY(-2px);box-shadow:0 8px 24px rgba(180,83,9,.35)}
+    .form-note{font-size:12px;color:var(--mut);text-align:center;margin-top:14px;line-height:1.5}
+
+    /* SUCCESS STATE */
+    .form-success{display:none;text-align:center;padding:48px 24px}
+    .form-success.show{display:block}
+    .fs-icon{font-size:56px;margin-bottom:16px}
+    .fs-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--coal);margin-bottom:8px}
+    .fs-sub{font-size:14px;color:var(--mut);line-height:1.65}
+
+    /* SIDEBAR */
+    .sidebar{display:flex;flex-direction:column;gap:20px}
+
+    /* Address card */
+    .addr-card{background:var(--coal);border-radius:18px;padding:32px;position:relative;overflow:hidden}
+    .addr-card::before{content:'🏛️';position:absolute;right:-5px;bottom:-15px;font-size:80px;opacity:.1;line-height:1}
+    .ac-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:#FCD34D;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .ac-detail{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start}
+    .ac-detail:last-child{margin-bottom:0}
+    .ac-icon{font-size:18px;flex-shrink:0;margin-top:2px}
+    .ac-text h4{font-size:13px;font-weight:600;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+    .ac-text p,.ac-text a{font-size:14px;color:rgba(255,255,255,.8);line-height:1.5;text-decoration:none}
+    .ac-text a:hover{color:#FCD34D}
+
+    /* Enquiry type cards */
+    .enquiry-types{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .et-card{background:#fff;border:1px solid var(--cdark);border-radius:12px;padding:16px;text-align:center;cursor:pointer;transition:all .2s}
+    .et-card:hover{border-color:var(--gold);box-shadow:0 4px 12px rgba(180,83,9,.1);transform:translateY(-2px)}
+    .et-icon{font-size:24px;margin-bottom:6px}
+    .et-title{font-size:12px;font-weight:700;color:var(--coal)}
+    .et-sub{font-size:11px;color:var(--mut);margin-top:2px;line-height:1.3}
+
+    /* Sector quick links */
+    .sector-links{background:var(--cream);border-radius:16px;padding:24px;border:1px solid var(--cdark)}
+    .sl-title{font-size:13px;font-weight:700;color:var(--coal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+    .sl-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .sl-link{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#fff;border-radius:8px;border:1px solid var(--cdark);text-decoration:none;font-size:12px;font-weight:600;color:var(--txt);transition:all .2s}
+    .sl-link:hover{border-color:var(--gold);color:var(--gold)}
+
+    /* CSR reporting */
+    .report-card{background:var(--forest);border-radius:16px;padding:26px;color:#fff}
+    .rc-title{font-family:'Playfair Display',serif;font-size:1rem;color:#86EFAC;margin-bottom:14px}
+    .rc-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px}
+    .rc-row:last-child{border:none}
+    .rc-label{color:rgba(255,255,255,.5)}
+    .rc-val{font-weight:600;color:#fff}
+
+    /* FOOTER */
+    footer{background:var(--coal);padding:40px 2rem 24px}
+    .fi{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+    .ft{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .fb{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff}
+    .fl{display:flex;gap:24px;flex-wrap:wrap}
+    .fl a{font-size:13px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s}
+    .fl a:hover{color:#FCD34D}
+    .fbot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px}
+    .fbot p{font-size:12px;color:rgba(255,255,255,.2)}
+    .ftag{background:rgba(180,83,9,.2);border:1px solid rgba(180,83,9,.35);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:#FCD34D}
+
+    .rev{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+    .rev.vis{opacity:1;transform:translateY(0)}
+
+    @media(max-width:1024px){
+      .main-grid{grid-template-columns:1fr}
+      .enquiry-types{grid-template-columns:repeat(4,1fr)}
+    }
+    @media(max-width:640px){
+      .nlinks{display:none}
+      .form-row{grid-template-columns:1fr}
+      .enquiry-types{grid-template-columns:1fr 1fr}
+      .sl-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nl">
+    <div class="ne">✉️</div>
+    <div class="nt"><span>CCL CSR · Contact</span><span>Central Coalfields Limited</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">All Projects</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="health.html">Health</a></li>
+    <li><a href="skill-livelihood.html">Skill</a></li>
+  </ul>
+</nav>
+
+<div class="bc">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <span class="cur">Contact CSR Division</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-c">
+    <div class="hero-badge"><div class="bdot"></div><span>CSR Division · Reach Us</span></div>
+    <h1>Connect with <em>CCL CSR</em> —<br/>Partners, Beneficiaries &amp; Press</h1>
+    <p class="hero-sub">Whether you are an NGO seeking partnership, a vendor applying for empanelment, a community member seeking support, or a journalist covering Jharkhand's coalfield development — we want to hear from you.</p>
+  </div>
+</section>
+
+<!-- MAIN GRID -->
+<div class="main-grid">
+
+  <!-- FORM -->
+  <div class="rev">
+    <div class="form-card">
+      <!-- Form view -->
+      <div id="form-view">
+        <div class="form-title">Send Us a Message</div>
+        <p class="form-sub">Fill in the form below and our CSR team will respond within 3–5 working days. For urgent matters, please call the numbers listed alongside.</p>
+
+        <div class="form-row">
+          <div class="form-group"><label for="fname">First Name *</label><input type="text" id="fname" placeholder="Ramesh"/></div>
+          <div class="form-group"><label for="lname">Last Name *</label><input type="text" id="lname" placeholder="Kumar"/></div>
+        </div>
+        <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="you@example.com"/></div>
+        <div class="form-group"><label for="phone">Mobile Number</label><input type="tel" id="phone" placeholder="+91 9876543210"/></div>
+        <div class="form-group">
+          <label for="enquiry">Nature of Enquiry *</label>
+          <select id="enquiry">
+            <option value="">– Select –</option>
+            <option>NGO / Implementing Agency Partnership</option>
+            <option>Vendor Empanelment</option>
+            <option>Beneficiary Support / Grievance</option>
+            <option>Media / Press Enquiry</option>
+            <option>Project Proposal Submission</option>
+            <option>Scholarship / Training Enquiry</option>
+            <option>CSR Report / Data Request</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sector">Related CSR Sector</label>
+          <select id="sector">
+            <option value="">– Select if applicable –</option>
+            <option>Education</option>
+            <option>Health &amp; Nutrition</option>
+            <option>Skill &amp; Livelihood</option>
+            <option>Sports</option>
+            <option>Animal Welfare</option>
+            <option>Just Transition / Environment</option>
+            <option>General / Multiple</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="org">Organisation / Company (if applicable)</label><input type="text" id="org" placeholder="Your organisation name"/></div>
+        <div class="form-group"><label for="district">District / Location</label><input type="text" id="district" placeholder="e.g. Hazaribagh, Jharkhand"/></div>
+        <div class="form-group"><label for="message">Message *</label><textarea id="message" placeholder="Please describe your enquiry in detail..."></textarea></div>
+
+        <button class="submit-btn" onclick="submitForm()">Send Message →</button>
+        <p class="form-note">Your information is used only to respond to your enquiry. CCL does not share personal data with third parties.</p>
+      </div>
+
+      <!-- Success view -->
+      <div class="form-success" id="form-success">
+        <div class="fs-icon">✅</div>
+        <div class="fs-title">Message Received</div>
+        <p class="fs-sub">Thank you for reaching out to CCL's CSR Division. Our team will review your message and respond within 3–5 working days to the email address you provided.<br/><br/>For urgent matters, please call <strong>0651-2360555</strong> during office hours (Mon–Fri, 10 AM – 5 PM).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- Address -->
+    <div class="addr-card rev">
+      <div class="ac-title">CCL CSR Division</div>
+      <div class="ac-detail">
+        <div class="ac-icon">🏛️</div>
+        <div class="ac-text"><h4>Registered Office</h4><p>Darbhanga House, Ranchi – 834 029<br/>Jharkhand, India</p></div>
+      </div>
+      <div class="ac-detail">
+        <div class="ac-icon">📞</div>
+        <div class="ac-text"><h4>Phone</h4><p><a href="tel:06512360555">0651-2360555</a><br/><a href="tel:06512361646">0651-2361646</a></p></div>
+      </div>
+      <div class="ac-detail">
+        <div class="ac-icon">📧</div>
+        <div class="ac-text"><h4>Email</h4><p><a href="mailto:csr@ccl.gov.in">csr@ccl.gov.in</a></p></div>
+      </div>
+      <div class="ac-detail">
+        <div class="ac-icon">🕐</div>
+        <div class="ac-text"><h4>Office Hours</h4><p>Monday – Friday<br/>10:00 AM – 5:00 PM IST</p></div>
+      </div>
+      <div class="ac-detail">
+        <div class="ac-icon">🌐</div>
+        <div class="ac-text"><h4>Corporate Website</h4><p><a href="https://www.centralcoalfields.in" target="_blank" rel="noopener">www.centralcoalfields.in</a></p></div>
+      </div>
+    </div>
+
+    <!-- Enquiry type quick select -->
+    <div class="rev">
+      <p style="font-size:13px;font-weight:700;color:var(--coal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">I am a…</p>
+      <div class="enquiry-types">
+        <div class="et-card" onclick="setEnquiry('NGO / Implementing Agency Partnership')">
+          <div class="et-icon">🤝</div>
+          <div class="et-title">NGO / Partner</div>
+          <div class="et-sub">Implementing agencies &amp; CSOs</div>
+        </div>
+        <div class="et-card" onclick="setEnquiry('Vendor Empanelment')">
+          <div class="et-icon">🏭</div>
+          <div class="et-title">Vendor</div>
+          <div class="et-sub">Empanelment &amp; procurement</div>
+        </div>
+        <div class="et-card" onclick="setEnquiry('Beneficiary Support / Grievance')">
+          <div class="et-icon">👤</div>
+          <div class="et-title">Beneficiary</div>
+          <div class="et-sub">Programme support &amp; grievances</div>
+        </div>
+        <div class="et-card" onclick="setEnquiry('Media / Press Enquiry')">
+          <div class="et-icon">📰</div>
+          <div class="et-title">Press / Media</div>
+          <div class="et-sub">Journalists &amp; researchers</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSR Key Numbers -->
+    <div class="report-card rev">
+      <div class="rc-title">CCL CSR — Key Numbers</div>
+      <div class="rc-row"><span class="rc-label">FY 2024–25 CSR Spend</span><span class="rc-val">₹81.11 Cr</span></div>
+      <div class="rc-row"><span class="rc-label">Mandatory Target</span><span class="rc-val">₹62.26 Cr</span></div>
+      <div class="rc-row"><span class="rc-label">Surplus Above Mandatory</span><span class="rc-val">+₹18.85 Cr</span></div>
+      <div class="rc-row"><span class="rc-label">Total Projects (Cumulative)</span><span class="rc-val">377+</span></div>
+      <div class="rc-row"><span class="rc-label">Cumulative CSR (2014–25)</span><span class="rc-val">₹683.44 Cr</span></div>
+    </div>
+
+    <!-- Sector quick links -->
+    <div class="sector-links rev">
+      <div class="sl-title">Explore by Sector</div>
+      <div class="sl-grid">
+        <a href="education.html" class="sl-link" style="border-left:3px solid var(--edu)">📚 Education</a>
+        <a href="health.html" class="sl-link" style="border-left:3px solid var(--hlt)">🏥 Health</a>
+        <a href="skill-livelihood.html" class="sl-link" style="border-left:3px solid var(--skl)">🛠️ Skill</a>
+        <a href="sports.html" class="sl-link" style="border-left:3px solid var(--spt)">🏅 Sports</a>
+        <a href="animal-welfare.html" class="sl-link" style="border-left:3px solid var(--aw)">🐄 Animals</a>
+        <a href="just-transition.html" class="sl-link" style="border-left:3px solid var(--jt)">🌱 Just Transition</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div class="fb">Central Coalfields Limited · CSR Division</div>
+      <div class="fl">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="health.html">Health</a>
+        <a href="skill-livelihood.html">Skill &amp; Livelihood</a>
+        <a href="sports.html">Sports</a>
+        <a href="animal-welfare.html">Animal Welfare</a>
+        <a href="just-transition.html">Just Transition</a>
+        <a href="projects.html">All Projects</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2025–26 Central Coalfields Limited · Darbhanga House, Ranchi – 834 029 · CIN: U10101JH1975GOI001389</p>
+      <span class="ftag">✉️ Contact</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ro = new IntersectionObserver((e)=>{ e.forEach((en,i)=>{ if(en.isIntersecting){ setTimeout(()=>en.target.classList.add('vis'),i*60); ro.unobserve(en.target); } }); },{threshold:0.08});
+  document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+
+  function setEnquiry(val) {
+    document.getElementById('enquiry').value = val;
+    document.getElementById('form-view').scrollIntoView({behavior:'smooth',block:'center'});
+    document.getElementById('enquiry').focus();
+  }
+
+  function submitForm() {
+    const req = ['fname','lname','email','enquiry','message'];
+    let ok = true;
+    req.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el.value.trim()) { el.style.borderColor='#DC2626'; ok=false; }
+      else el.style.borderColor='';
+    });
+    if (!ok) { alert('Please fill in all required fields marked with *.'); return; }
+    document.getElementById('form-view').style.display='none';
+    document.getElementById('form-success').classList.add('show');
+  }
+</script>
+</body>
+</html>
