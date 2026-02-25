@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health &amp; Nutrition | CCL CSR – Central Coalfields Limited</title>
+  <meta name="description" content="CCL CSR Health Programmes — Nanha Sa Dil, Ni-kshay Mitra, Mobile Medical Units, Modular OT Hazaribagh. Transforming healthcare across Jharkhand."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --h:#DC2626;--hd:#991B1B;--hdk:#7F1D1D;--hm:#EF4444;--hl:#FCA5A5;
+      --hp:#FEF2F2;--ht:#FEE2E2;
+      --coal:#1A1A2E;--forest:#1E4D35;--gold:#B45309;--gold-b:#F59E0B;
+      --cream:#F7F3EE;--cdark:#EDE6D8;--ww:#FDFAF6;--txt:#1C2B22;--mut:#5A7060;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--txt);overflow-x:hidden}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,26,46,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(220,38,38,.22);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nav-emb{width:42px;height:42px;background:linear-gradient(135deg,#991B1B,#EF4444);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .nav-txt{display:flex;flex-direction:column}
+    .nav-txt span:first-child{font-size:13px;font-weight:600;color:var(--hl);letter-spacing:.08em;text-transform:uppercase}
+    .nav-txt span:last-child{font-size:11px;color:rgba(255,255,255,.42)}
+    .nav-links{display:flex;gap:1.8rem;list-style:none}
+    .nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--hl)}
+    .nav-back{background:var(--h);color:#fff;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
+    .nav-back:hover{background:var(--hd)}
+    a:focus-visible{outline:3px solid var(--hl);outline-offset:3px;border-radius:4px}
+
+    /* BREADCRUMB */
+    .bc{position:fixed;top:68px;left:0;right:0;z-index:998;background:var(--hdk);padding:8px 2rem;display:flex;align-items:center;gap:8px}
+    .bc a{font-size:12px;color:rgba(255,255,255,.5);text-decoration:none}.bc a:hover{color:var(--hl)}
+    .bc-sep{font-size:12px;color:rgba(255,255,255,.25)}.bc-cur{font-size:12px;font-weight:600;color:var(--hl)}
+
+    /* HERO */
+    .hero{min-height:92vh;background:linear-gradient(150deg,#450A0A 0%,#7F1D1D 30%,#991B1B 62%,#DC2626 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding-top:108px}
+    .hero-pat{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px;pointer-events:none}
+    .hero-gl{position:absolute;top:-10%;right:-5%;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(252,165,165,.12),transparent 65%);pointer-events:none}
+    .hero-gl2{position:absolute;bottom:-20%;left:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(127,29,29,.55),transparent 65%);pointer-events:none}
+    .hero-c{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:60px 2rem 80px;display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:7px 18px;margin-bottom:28px}
+    .hero-badge span{font-size:12px;font-weight:700;color:var(--hl);letter-spacing:.12em;text-transform:uppercase}
+    .bdot{width:6px;height:6px;background:var(--hl);border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1.1;font-weight:900;color:#fff;margin-bottom:22px}
+    .hero h1 em{font-style:italic;color:var(--hl)}
+    .hero-sub{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:520px;margin-bottom:36px}
+    .hero-acts{display:flex;gap:14px;flex-wrap:wrap}
+    .btn-h{background:var(--h);color:#fff;padding:13px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--h);transition:all .25s}
+    .btn-h:hover{background:var(--hd);transform:translateY(-2px);box-shadow:0 8px 24px rgba(220,38,38,.4)}
+    .btn-o{background:transparent;color:rgba(255,255,255,.8);padding:13px 26px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:all .25s;display:inline-flex;align-items:center;gap:8px}
+    .btn-o:hover{border-color:rgba(252,165,165,.5);color:var(--hl)}
+    /* Hero panel */
+    .hero-panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:28px;backdrop-filter:blur(12px)}
+    .hp-ttl{font-size:11px;font-weight:700;color:var(--hl);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .hp-row{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;border:1px solid rgba(255,255,255,.05)}
+    .hp-row:last-child{margin-bottom:0}
+    .hp-val{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#FECACA}
+    .hp-lbl{font-size:12px;color:rgba(255,255,255,.45);text-align:right;max-width:150px;line-height:1.4}
+
+    /* PROG NAV */
+    .pnav{background:var(--hdk);padding:0 2rem;display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .ppill{padding:15px 22px;font-size:13px;font-weight:600;color:rgba(255,255,255,.48);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s}
+    .ppill:hover{color:var(--hl)}
+    .ppill.active{color:var(--hl);border-bottom-color:var(--hl)}
+
+    /* SECTIONS */
+    section{padding:80px 2rem}
+    .wrap{max-width:1200px;margin:0 auto}
+    .slbl{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--h);margin-bottom:12px}
+    .slbl::before{content:'';width:24px;height:2px;background:var(--h)}
+    .sh{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;line-height:1.2;color:var(--hdk);margin-bottom:14px}
+    .ssub{font-size:1rem;color:var(--mut);line-height:1.75;max-width:640px}
+
+    /* STATUS BADGES */
+    .sbadge{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:7px 16px;font-size:12px;font-weight:700;margin-bottom:20px}
+    .s-ok{background:#DCFCE7;color:#166534;border:1px solid #BBF7D0}
+    .s-go{background:#FEF9C3;color:#854D0E;border:1px solid #FDE68A}
+    .s-di{background:linear-gradient(135deg,#E0E7FF,#C7D2FE);color:#3730A3;border:1px solid #A5B4FC}
+    .sdot{width:6px;height:6px;border-radius:50%;animation:blink 2s infinite}
+    .s-ok .sdot{background:#16A34A}.s-go .sdot{background:#CA8A04}.s-di .sdot{background:#4F46E5}
+
+    /* ══ NANHA SA DIL ══ */
+    #nanha{background:var(--ww)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:56px}
+    .sticky-col{position:sticky;top:140px;display:flex;flex-direction:column;gap:16px}
+
+    /* Big stat card */
+    .big-stat{background:var(--hdk);border-radius:20px;padding:36px;position:relative;overflow:hidden}
+    .big-stat::after{content:'❤️';position:absolute;right:-8px;bottom:-18px;font-size:110px;opacity:.07;line-height:1}
+    .bs-num{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;color:#FECACA;line-height:1;margin-bottom:6px}
+    .bs-lbl{font-size:14px;color:rgba(255,255,255,.58);line-height:1.5;position:relative;z-index:1}
+    .bs-note{font-size:12px;color:rgba(255,255,255,.3);margin-top:10px;font-style:italic;position:relative;z-index:1}
+
+    .stat-c{border-radius:16px;padding:24px}
+    .sc-red{background:var(--h);color:#fff}
+    .sc-pale{background:var(--hp);border:1px solid var(--ht)}
+    .sc-dark{background:var(--hdk);color:#fff}
+    .snum{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:5px}
+    .sc-pale .snum{color:var(--hdk)}.sc-pale .slb{color:var(--mut)}
+    .slb{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* Funnel steps */
+    .funnel{display:flex;flex-direction:column;gap:0;margin-top:28px}
+    .fstep{display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed rgba(220,38,38,.15)}
+    .fstep:last-child{border:none}
+    .ficon{width:44px;height:44px;border-radius:50%;background:var(--hp);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;margin-top:2px;border:2px solid var(--ht)}
+    .fbody h4{font-size:14px;font-weight:600;color:var(--hdk);margin-bottom:3px}
+    .fbody p{font-size:13px;color:var(--mut);line-height:1.55}
+    .fbody .hi{font-family:'DM Mono',monospace;font-weight:700;color:var(--h)}
+
+    /* District pills */
+    .d-strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+    .dpill{background:var(--hp);border:1px solid var(--ht);border-radius:100px;padding:7px 18px;font-size:13px;font-weight:600;color:var(--hdk);transition:all .2s}
+    .dpill:hover{background:var(--ht);transform:translateY(-2px)}
+
+    /* Partner box */
+    .partner-box{background:var(--hp);border-radius:14px;padding:20px;border:1px solid var(--ht);margin-top:16px}
+    .pb-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--hdk);margin-bottom:6px}
+    .pb-name{font-size:14px;font-weight:600;color:var(--h)}
+    .pb-note{font-size:12px;color:var(--mut);margin-top:4px;line-height:1.5}
+
+    /* ══ NIKSHAY ══ */
+    #nikshay{background:var(--hp)}
+    .nk-layout{display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start;margin-top:56px}
+    .diamond-card{background:linear-gradient(135deg,#1E1B4B,#3730A3);border-radius:20px;padding:32px;text-align:center;margin-bottom:24px;position:relative;overflow:hidden}
+    .diamond-card::before{content:'💎';position:absolute;right:16px;top:12px;font-size:48px;opacity:.25}
+    .diamond-card h3{font-family:'Playfair Display',serif;font-size:1.55rem;color:#fff;margin-bottom:8px}
+    .diamond-card p{font-size:13px;color:rgba(255,255,255,.58);line-height:1.55}
+    .d-badge{display:inline-block;background:linear-gradient(135deg,#818CF8,#C7D2FE);color:#1E1B4B;border-radius:100px;padding:6px 18px;font-size:12px;font-weight:700;margin-top:14px}
+    .nk-items{display:flex;flex-direction:column;gap:12px}
+    .nk-item{display:flex;gap:14px;padding:18px;background:#fff;border-radius:12px;border:1px solid var(--ht);align-items:flex-start;transition:all .2s}
+    .nk-item:hover{border-color:var(--hl);box-shadow:0 4px 14px rgba(220,38,38,.07)}
+    .nki-icon{font-size:24px;flex-shrink:0}
+    .nki-body h4{font-size:14px;font-weight:600;color:var(--hdk);margin-bottom:3px}
+    .nki-body p{font-size:13px;color:var(--mut);line-height:1.55}
+    .nk-panel{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .nkp{border-radius:14px;padding:22px}
+    .nkp.red{background:var(--h);color:#fff}
+    .nkp.dark{background:var(--hdk);color:#fff}
+    .nkp.wh{background:#fff;border:1px solid var(--ht)}
+    .nkp-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;margin-bottom:4px}
+    .nkp.wh .nkp-num{color:var(--hdk)}.nkp.wh .nkp-lbl{color:var(--mut)}
+    .nkp-lbl{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* ══ MMU ══ */
+    #mmu{background:var(--ww)}
+    .mmu-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:56px}
+    .mmu-box{background:var(--hdk);border-radius:20px;padding:36px;display:flex;align-items:center;justify-content:center;font-size:80px;aspect-ratio:1;position:relative;overflow:hidden}
+    .mmu-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 35% 40%,rgba(220,38,38,.25),transparent 60%)}
+    .mmu-lbl{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-size:13px;color:rgba(255,255,255,.45)}
+    .mmu-units{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+    .mmu-u{background:var(--hp);border:1px solid var(--ht);border-radius:12px;padding:16px;text-align:center;transition:all .2s}
+    .mmu-u:hover{background:var(--ht);transform:translateY(-2px)}
+    .mmu-uv{font-family:'DM Mono',monospace;font-size:1.3rem;font-weight:700;color:var(--hdk);margin-bottom:3px}
+    .mmu-ul{font-size:11px;color:var(--mut);line-height:1.4}
+    .mmu-services{display:flex;flex-direction:column;gap:10px}
+    .mmu-svc{display:flex;gap:12px;align-items:center;padding:13px 16px;background:#fff;border-radius:10px;border:1px solid var(--cdark)}
+    .mmu-svc-i{font-size:20px;flex-shrink:0}
+    .mmu-svc-t{font-size:13px;color:var(--txt);font-weight:500}
+    .camps-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--hdk);border-radius:16px;overflow:hidden;margin-top:24px}
+    .cb{padding:26px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+    .cb:last-child{border:none}
+    .cb-v{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#FECACA;margin-bottom:4px}
+    .cb-l{font-size:11px;color:rgba(255,255,255,.42);line-height:1.4}
+
+    /* ══ INFRASTRUCTURE ══ */
+    #infra{background:var(--hp)}
+    .infra-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
+    .icard{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--ht);transition:all .3s}
+    .icard:hover{box-shadow:0 12px 32px rgba(220,38,38,.1);transform:translateY(-4px)}
+    .ic-head{padding:28px;position:relative;overflow:hidden}
+    .ic-head.red{background:var(--h)}.ic-head.dark{background:var(--hdk)}.ic-head.maroon{background:linear-gradient(135deg,#7F1D1D,#991B1B)}.ic-head.amber{background:linear-gradient(135deg,#78350F,#B45309)}
+    .ic-icon{font-size:36px;margin-bottom:10px}
+    .ic-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:4px}
+    .ic-loc{font-size:12px;color:rgba(255,255,255,.58)}
+    .ic-body{padding:24px}
+    .ic-body p{font-size:13px;color:var(--mut);line-height:1.65;margin-bottom:16px}
+    .ic-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+    .ic-tag{background:var(--hp);color:var(--hdk);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:600}
+    .ic-stats{display:flex;gap:16px;padding-top:14px;border-top:1px solid var(--ht)}
+    .ics-item{display:flex;flex-direction:column;gap:2px}
+    .ics-v{font-family:'DM Mono',monospace;font-size:.95rem;font-weight:700;color:var(--hdk)}
+    .ics-l{font-size:11px;color:var(--mut)}
+
+    /* ══ HEALTH CAMPS ══ */
+    #camps{background:var(--ww)}
+    .camps-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:48px}
+    .camp-list{display:flex;flex-direction:column;gap:12px}
+    .camp-item{display:flex;gap:14px;align-items:flex-start;padding:18px;background:#fff;border-radius:12px;border:1px solid var(--cdark);transition:all .2s}
+    .camp-item:hover{border-color:var(--hl);background:var(--hp)}
+    .ci-icon{font-size:26px;flex-shrink:0}
+    .ci-body h4{font-size:14px;font-weight:600;color:var(--hdk);margin-bottom:3px}
+    .ci-body p{font-size:13px;color:var(--mut);line-height:1.5}
+    .camps-panel{background:var(--hdk);border-radius:20px;padding:32px}
+    .cp-title{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--hl);margin-bottom:22px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .cp-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .cp-row:last-child{border:none}
+    .cp-lbl{font-size:13px;color:rgba(255,255,255,.48)}
+    .cp-val{font-family:'DM Mono',monospace;font-size:14px;font-weight:700;color:#FECACA}
+    .cp-award{margin-top:20px;background:rgba(255,255,255,.05);border-radius:12px;padding:18px;border:1px solid rgba(252,165,165,.12)}
+    .cp-award-icon{font-size:28px;margin-bottom:10px}
+    .cp-award h4{font-size:14px;font-weight:700;color:#FECACA;margin-bottom:6px}
+    .cp-award p{font-size:12px;color:rgba(255,255,255,.42);line-height:1.55}
+
+    /* SECTION NAV */
+    .snav-wrap{background:var(--hdk);padding:40px 2rem}
+    .snav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .snav-link{text-decoration:none;display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;border:1px solid rgba(255,255,255,.1);transition:all .25s}
+    .snav-link:hover{background:rgba(255,255,255,.06);border-color:rgba(252,165,165,.3)}
+    .sn-dir{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+    .sn-title{font-size:15px;font-weight:600;color:rgba(255,255,255,.8)}
+
+    /* FOOTER */
+    footer{background:var(--coal);padding:40px 2rem 24px}
+    .ft{max-width:1200px;margin:0 auto}
+    .ft-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:20px}
+    .ft-brand{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff}
+    .ft-links{display:flex;gap:20px;flex-wrap:wrap}
+    .ft-links a{font-size:13px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s}
+    .ft-links a:hover{color:var(--hl)}
+    .ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px}
+    .ft-bot p{font-size:12px;color:rgba(255,255,255,.2)}
+    .ft-stag{background:rgba(220,38,38,.2);border:1px solid rgba(220,38,38,.35);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:var(--hl)}
+
+    /* REVEAL */
+    .rv{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+    .rv.vis{opacity:1;transform:translateY(0)}
+
+    @media(max-width:1024px){
+      .hero-c{grid-template-columns:1fr}.hero-panel{display:none}
+      .two-col,.nk-layout,.mmu-layout,.camps-layout{grid-template-columns:1fr}
+      .sticky-col,.nk-panel{position:static}
+      .infra-grid{grid-template-columns:1fr}
+      .camps-bar{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .nav-links{display:none}
+      .mmu-units,.camps-bar{grid-template-columns:1fr 1fr}
+      .snav{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-emb">🏥</div>
+    <div class="nav-txt"><span>CCL CSR · Health &amp; Nutrition</span><span>Central Coalfields Limited</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#nanha" class="active">Nanha Sa Dil</a></li>
+    <li><a href="#nikshay">Ni-kshay Mitra</a></li>
+    <li><a href="#mmu">Medical Units</a></li>
+    <li><a href="#infra">Infrastructure</a></li>
+    <li><a href="#camps">Health Camps</a></li>
+  </ul>
+  <a href="index.html#sectors" class="nav-back">← All Sectors</a>
+</nav>
+
+<div class="bc">
+  <a href="index.html">Home</a><span class="bc-sep">›</span>
+  <a href="index.html#sectors">CSR Sectors</a><span class="bc-sep">›</span>
+  <span class="bc-cur">Health &amp; Nutrition</span>
+</div>
+
+<section class="hero">
+  <div class="hero-pat"></div><div class="hero-gl"></div><div class="hero-gl2"></div>
+  <div class="hero-c">
+    <div>
+      <div class="hero-badge"><div class="bdot"></div><span>CSR Sector · Health &amp; Nutrition</span></div>
+      <h1>Where Coalfields<br/>Become<br/><em>Lifelines</em></h1>
+      <p class="hero-sub">CCL's health CSR programme reaches where no hospital van has gone before — screening 30,768 children for heart disease, providing nutrition baskets to 3,375+ TB patients, running 673 health camps, and building a Modular Operation Theatre in Hazaribagh. Healthcare as a fundamental right, not a privilege.</p>
+      <div class="hero-acts">
+        <a href="#nanha" class="btn-h">Nanha Sa Dil →</a>
+        <a href="#nikshay" class="btn-o">Ni-kshay Mitra</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="hp-ttl">Health &amp; Nutrition at a Glance</div>
+      <div class="hp-row"><div class="hp-val">30,768</div><div class="hp-lbl">Children screened for CHD</div></div>
+      <div class="hp-row"><div class="hp-val">82</div><div class="hp-lbl">Free cardiac surgeries done</div></div>
+      <div class="hp-row"><div class="hp-val">3,375+</div><div class="hp-lbl">TB patients with nutrition baskets</div></div>
+      <div class="hp-row"><div class="hp-val">2,37,594</div><div class="hp-lbl">Health camp beneficiaries FY 2024–25</div></div>
+      <div class="hp-row"><div class="hp-val">673</div><div class="hp-lbl">Camps across 8 districts</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="pnav">
+  <a href="#nanha" class="ppill active">❤️ Nanha Sa Dil</a>
+  <a href="#nikshay" class="ppill">💊 Ni-kshay Mitra</a>
+  <a href="#mmu" class="ppill">🚑 Mobile Medical Units</a>
+  <a href="#infra" class="ppill">🏥 Infrastructure</a>
+  <a href="#camps" class="ppill">⛺ Health Camps</a>
+</div>
+
+<!-- ══ NANHA SA DIL ══ -->
+<section id="nanha">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 1 · Flagship</div>
+      <h2 class="sh">Nanha Sa Dil</h2>
+      <p class="ssub">Screening children aged 5–15 years for Congenital Heart Disease across 5 CCL districts — and funding free cardiac surgery for every child who needs it. Implemented through Sri Sathya Sai Health &amp; Education Trust.</p>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="big-stat rv">
+          <div class="bs-num">30,768</div>
+          <div class="bs-lbl">Children screened for Congenital Heart Disease<br/>across 5 CCL districts · FY 2025–26</div>
+          <div class="bs-note">Target: 45,000 children · Surgeries funded: 82 so far, target 500</div>
+        </div>
+        <div class="rv">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--hdk);margin-bottom:18px">How the Programme Works</h3>
+          <div class="funnel">
+            <div class="fstep"><div class="ficon">📢</div><div class="fbody"><h4>Community Mobilisation</h4><p>CCL's CSR officers coordinate with Anganwadi, ASHA workers and school teachers in each district to mobilise children for camps.</p></div></div>
+            <div class="fstep"><div class="ficon">🩺</div><div class="fbody"><h4>Mobile Screening Camps</h4><p>Sri Sathya Sai Health Trust deploys specialist cardiac teams across <span class="hi">5 districts</span> — Latehar, Hazaribagh, Ramgarh, Giridih, Palamu.</p></div></div>
+            <div class="fstep"><div class="ficon">📊</div><div class="fbody"><h4>Echocardiography &amp; Diagnosis</h4><p>Children flagged in initial screening undergo detailed echocardiography. Those confirmed with CHD are enrolled for free surgery.</p></div></div>
+            <div class="fstep"><div class="ficon">🏥</div><div class="fbody"><h4>Free Cardiac Surgery</h4><p>CCL covers surgery costs, hospitalisation, travel and follow-up. Target: <span class="hi">500 surgeries</span>. <span class="hi">82 completed</span> and counting.</p></div></div>
+            <div class="fstep"><div class="ficon">🤝</div><div class="fbody"><h4>Post-Surgery Care</h4><p>Families receive long-term follow-up linkages — not a one-time intervention, but a sustained commitment to each child's recovery.</p></div></div>
+          </div>
+        </div>
+        <div class="rv" style="margin-top:32px">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--hdk);margin-bottom:14px">Districts Covered</h3>
+          <div class="d-strip">
+            <span class="dpill">Latehar</span><span class="dpill">Hazaribagh</span><span class="dpill">Ramgarh</span><span class="dpill">Giridih</span><span class="dpill">Palamu</span>
+          </div>
+        </div>
+      </div>
+      <div class="sticky-col rv">
+        <div class="stat-c sc-red"><div class="snum">₹9.54 Cr</div><div class="slb">Total project cost · FY 2025–26</div></div>
+        <div class="stat-c sc-pale"><div class="snum">45,000</div><div class="slb">Children to be screened (total target)</div></div>
+        <div class="stat-c sc-pale"><div class="snum">30,768</div><div class="slb">Screened so far across 5 districts</div></div>
+        <div class="stat-c sc-dark"><div class="snum">82 ❤️</div><div class="slb" style="color:rgba(255,255,255,.58)">Cardiac surgeries — children with second chances at life</div></div>
+        <div class="stat-c sc-pale"><div class="snum">500</div><div class="slb">Surgery target by programme end</div></div>
+        <div class="partner-box">
+          <div class="pb-lbl">Implementing Partner</div>
+          <div class="pb-name">Sri Sathya Sai Health &amp; Education Trust</div>
+          <div class="pb-note">One of India's most respected cardiac health institutions — specialist teams, equipment &amp; surgical facilities</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NIKSHAY MITRA ══ -->
+<section id="nikshay">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 2 · National Recognition</div>
+      <h2 class="sh">Ni-kshay Mitra</h2>
+      <p class="ssub">Monthly nutrition baskets for TB patients in Latehar and Chatra, with treatment monitoring and health system linkage — earning CCL the Diamond Tier status under PM TB Mukt Bharat Abhiyaan and Best Corporate Nikshay Mitra from Govt. of Jharkhand.</p>
+    </div>
+    <div class="nk-layout">
+      <div>
+        <div class="diamond-card rv">
+          <h3>💎 Diamond Tier — Corporate TB Pledge</h3>
+          <p>CCL is a Diamond Tier Nikshay Mitra — the highest category under the PM TB Mukt Bharat Abhiyaan. Specifically praised by the Central TB Division at DPE's CSR Conclave in New Delhi.</p>
+          <div class="d-badge">Best Corporate Nikshay Mitra · Govt. of Jharkhand · 2024</div>
+        </div>
+        <div class="rv">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--hdk);margin-bottom:18px">What CCL Provides to Each TB Patient</h3>
+          <div class="nk-items">
+            <div class="nk-item"><div class="nki-icon">🧺</div><div class="nki-body"><h4>Monthly Nutrition Basket</h4><p>Nutritious food items to supplement TB treatment — malnutrition dramatically increases TB risk and worsens outcomes in Jharkhand's tribal districts.</p></div></div>
+            <div class="nk-item"><div class="nki-icon">📋</div><div class="nki-body"><h4>Treatment Monitoring</h4><p>CCL's CSR officers coordinate with district health authorities to monitor adherence — ensuring patients complete the full course.</p></div></div>
+            <div class="nk-item"><div class="nki-icon">🏥</div><div class="nki-body"><h4>Government Health Service Linkage</h4><p>Patients actively connected to Nikshay Poshan Yojana and all government TB entitlements alongside CCL's nutrition support.</p></div></div>
+            <div class="nk-item"><div class="nki-icon">📱</div><div class="nki-body"><h4>Nikshay Portal Registration</h4><p>All patients registered on the national TB tracking portal — ensuring coordinated, monitored and nationally reported care.</p></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="nk-panel rv">
+        <div class="nkp red"><div class="nkp-num">₹2.93 Cr</div><div class="nkp-lbl">Total project cost</div></div>
+        <div class="nkp dark"><div class="nkp-num">3,375+</div><div class="nkp-lbl" style="color:rgba(255,255,255,.58)">TB patients receiving nutrition baskets</div></div>
+        <div class="nkp wh"><div class="nkp-num">2</div><div class="nkp-lbl">Districts — Latehar &amp; Chatra</div></div>
+        <div class="nkp wh"><div class="nkp-num">💎</div><div class="nkp-lbl" style="color:var(--hdk);font-weight:600">Diamond Tier · PM TB Mukt Bharat</div></div>
+        <div style="background:var(--hp);border-radius:14px;padding:18px;border:1px solid var(--ht)">
+          <div style="font-size:12px;font-weight:700;color:var(--hdk);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Why This Matters</div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">India has the world's highest TB burden. Jharkhand's tribal districts are among the most affected. Malnutrition — endemic in CCL's operational areas — is a leading cause of TB treatment failure. Nutrition intervention is clinically proven to improve cure rates by up to 40%.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MOBILE MEDICAL UNITS ══ -->
+<section id="mmu">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 3 · Year-round Outreach</div>
+      <h2 class="sh">Mobile Medical Units &amp; Specialised Camps</h2>
+      <p class="ssub">Fleet of mobile medical vans and dedicated specialist camps bringing healthcare directly to communities across CCL's 14 operational areas — reaching populations that would otherwise have no viable access to institutional medicine.</p>
+    </div>
+    <div class="mmu-layout">
+      <div>
+        <div class="mmu-box rv">
+          🚑
+          <div class="mmu-lbl">Mobile Medical Units · 14 CCL Areas · Jharkhand</div>
+        </div>
+        <div class="mmu-units rv">
+          <div class="mmu-u"><div class="mmu-uv">14</div><div class="mmu-ul">CCL Areas covered</div></div>
+          <div class="mmu-u"><div class="mmu-uv">673</div><div class="mmu-ul">Camps FY 2024–25</div></div>
+          <div class="mmu-u"><div class="mmu-uv">2.37L</div><div class="mmu-ul">Beneficiaries FY 2024–25</div></div>
+          <div class="mmu-u"><div class="mmu-uv">365</div><div class="mmu-ul">Days/year · Year-round</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="rv">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--hdk);margin-bottom:18px">Services at Every Camp</h3>
+          <div class="mmu-services">
+            <div class="mmu-svc"><div class="mmu-svc-i">🩺</div><div class="mmu-svc-t">OPD consultation by MBBS doctors</div></div>
+            <div class="mmu-svc"><div class="mmu-svc-i">💊</div><div class="mmu-svc-t">Free medicines from CCL hospital formulary</div></div>
+            <div class="mmu-svc"><div class="mmu-svc-i">🔬</div><div class="mmu-svc-t">Diagnostics — blood sugar, BP, haemoglobin</div></div>
+            <div class="mmu-svc"><div class="mmu-svc-i">👁️</div><div class="mmu-svc-t">Eye camps with spectacle distribution</div></div>
+            <div class="mmu-svc"><div class="mmu-svc-i">🦷</div><div class="mmu-svc-t">Dental camps — extraction, treatment</div></div>
+            <div class="mmu-svc"><div class="mmu-svc-i">👶</div><div class="mmu-svc-t">Child health, immunisation &amp; nutrition</div></div>
+            <div class="mmu-svc"><div class="mmu-svc-i">🤰</div><div class="mmu-svc-t">Antenatal and maternal check-ups</div></div>
+            <div class="mmu-svc"><div class="mmu-svc-i">🏥</div><div class="mmu-svc-t">Referral to CCL hospitals for complex cases</div></div>
+          </div>
+        </div>
+        <div class="camps-bar rv">
+          <div class="cb"><div class="cb-v">673</div><div class="cb-l">Health Camps<br/>FY 2024–25</div></div>
+          <div class="cb"><div class="cb-v">2.37L</div><div class="cb-l">Beneficiaries<br/>FY 2024–25</div></div>
+          <div class="cb"><div class="cb-v">14</div><div class="cb-l">Areas<br/>Covered</div></div>
+          <div class="cb"><div class="cb-v">600+</div><div class="cb-l">School Health<br/>Camps</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INFRASTRUCTURE ══ -->
+<section id="infra">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 4 · Permanent Infrastructure</div>
+      <h2 class="sh">Healthcare Infrastructure</h2>
+      <p class="ssub">Beyond mobile healthcare, CCL invests in permanent facilities that will serve Jharkhand's communities for decades — a Modular OT in Hazaribagh, and CCL's own network of 38 hospitals and dispensaries.</p>
+    </div>
+    <div class="infra-grid">
+      <div class="icard rv">
+        <div class="ic-head red">
+          <div class="ic-icon">🔬</div>
+          <div class="ic-title">Modular Operation Theatre</div>
+          <div class="ic-loc">📍 Sadar Hospital, Hazaribagh</div>
+        </div>
+        <div class="ic-body">
+          <div class="sbadge s-ok"><div class="sdot"></div>Completed &amp; Operational</div>
+          <p>A fully equipped Modular OT built at Sadar Hospital, Hazaribagh — a principal district hospital serving hundreds of thousands. Meets international standards with HEPA filtration, laminar airflow and complete surgical infrastructure.</p>
+          <div class="ic-tags"><span class="ic-tag">HEPA Filtration</span><span class="ic-tag">Laminar Airflow</span><span class="ic-tag">Fully Equipped</span><span class="ic-tag">District Hospital</span></div>
+          <div class="ic-stats">
+            <div class="ics-item"><span class="ics-v">₹2.21 Cr</span><span class="ics-l">Project Cost</span></div>
+            <div class="ics-item"><span class="ics-v">Hazaribagh</span><span class="ics-l">Location</span></div>
+            <div class="ics-item"><span class="ics-v">Operational</span><span class="ics-l">Status</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="icard rv">
+        <div class="ic-head dark">
+          <div class="ic-icon">🤱</div>
+          <div class="ic-title">Project ADITI</div>
+          <div class="ic-loc">📍 Maternal Health · CCL Command Areas</div>
+        </div>
+        <div class="ic-body">
+          <div class="sbadge s-go"><div class="sdot"></div>Active Programme</div>
+          <p>Dedicated maternal and child health programme targeting anaemia reduction, institutional delivery rates, and postnatal care in CCL's operational districts — working through ASHA networks, CCL hospitals and government health linkages.</p>
+          <div class="ic-tags"><span class="ic-tag">Anaemia Reduction</span><span class="ic-tag">Institutional Delivery</span><span class="ic-tag">Postnatal Care</span><span class="ic-tag">ASHA Network</span></div>
+          <div class="ic-stats">
+            <div class="ics-item"><span class="ics-v">Tribal &amp; PAP</span><span class="ics-l">Target families</span></div>
+            <div class="ics-item"><span class="ics-v">Multiple areas</span><span class="ics-l">Coverage</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="icard rv">
+        <div class="ic-head maroon">
+          <div class="ic-icon">🏛️</div>
+          <div class="ic-title">CCL Own Hospital Network</div>
+          <div class="ic-loc">📍 14 Areas across Jharkhand</div>
+        </div>
+        <div class="ic-body">
+          <div class="sbadge s-ok"><div class="sdot"></div>Operational Year-round</div>
+          <p>One of Jharkhand's largest hospital networks — primarily for employees and dependants, frequently extended to community members through outreach camps and emergency care access.</p>
+          <div class="ic-tags"><span class="ic-tag">4 Central Hospitals</span><span class="ic-tag">8 Area Hospitals</span><span class="ic-tag">26 Dispensaries</span><span class="ic-tag">694 Beds</span></div>
+          <div class="ic-stats">
+            <div class="ics-item"><span class="ics-v">73</span><span class="ics-l">Ambulances</span></div>
+            <div class="ics-item"><span class="ics-v">694</span><span class="ics-l">Total beds</span></div>
+            <div class="ics-item"><span class="ics-v">38</span><span class="ics-l">Facilities</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="icard rv">
+        <div class="ic-head amber">
+          <div class="ic-icon">🏆</div>
+          <div class="ic-title">IHW CSR Health Impact Awards 2024</div>
+          <div class="ic-loc">📍 2 Gold · 1 Bronze</div>
+        </div>
+        <div class="ic-body">
+          <div class="sbadge" style="background:#FEF3C7;color:#78350F;border-color:#FDE68A"><div class="sdot" style="background:#D97706"></div>3 Awards · 2024</div>
+          <p>Three IHW CSR Health Impact Awards spanning two entirely different programme areas — reflecting that CCL's health CSR excellence is systemic, not isolated to a single project.</p>
+          <div class="ic-tags"><span class="ic-tag">🥇 Gold — Sports Academy</span><span class="ic-tag">🥇 Gold — Rakshak (Most Innovative)</span><span class="ic-tag">🥉 Bronze — Tribal Haat</span></div>
+          <div class="ic-stats">
+            <div class="ics-item"><span class="ics-v">IHW Summit</span><span class="ics-l">Awarding body</span></div>
+            <div class="ics-item"><span class="ics-v">2024</span><span class="ics-l">Year</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HEALTH CAMPS ══ -->
+<section id="camps">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Programme 5 · Specialist Outreach</div>
+      <h2 class="sh">Specialist Health Camp Programme</h2>
+      <p class="ssub">Eye, dental, gynaecological, orthopaedic and general camps organised year-round at village level across all CCL command areas — free of charge to every community member.</p>
+    </div>
+    <div class="camps-layout">
+      <div class="camp-list rv">
+        <div class="camp-item"><div class="ci-icon">👁️</div><div class="ci-body"><h4>Eye Camps</h4><p>Ophthalmology specialists, vision testing, spectacle distribution, cataract screening and surgical referrals — run in partnership with eye care institutions and CCL's own medical teams.</p></div></div>
+        <div class="camp-item"><div class="ci-icon">🦷</div><div class="ci-body"><h4>Dental Camps</h4><p>Dental check-ups, extractions, scaling, fluoride treatment and oral health awareness — bringing dental care to villages where no private clinic exists within 30 km.</p></div></div>
+        <div class="camp-item"><div class="ci-icon">👩‍⚕️</div><div class="ci-body"><h4>Gynaecological Camps</h4><p>Comprehensive women's health services including gynaecological check-ups, anaemia screening, reproductive health counselling and referrals for institutional delivery.</p></div></div>
+        <div class="camp-item"><div class="ci-icon">🏫</div><div class="ci-body"><h4>School Health Camps</h4><p>CCL doctors visit government schools within command areas — screening for anaemia, vision, dental and general health issues, with referral services for children needing follow-up care.</p></div></div>
+        <div class="camp-item"><div class="ci-icon">🦴</div><div class="ci-body"><h4>Orthopaedic &amp; General OPD Camps</h4><p>Orthopaedic, general medicine and specialist OPD camps at major habitation clusters and CCL mines — integrating health education and free medicines at each event.</p></div></div>
+      </div>
+      <div>
+        <div class="camps-panel rv">
+          <div class="cp-title">FY 2024–25 Health Impact</div>
+          <div class="cp-row"><span class="cp-lbl">Total Health Camps</span><span class="cp-val">673</span></div>
+          <div class="cp-row"><span class="cp-lbl">Total Beneficiaries</span><span class="cp-val">2,37,594</span></div>
+          <div class="cp-row"><span class="cp-lbl">Districts Covered</span><span class="cp-val">8</span></div>
+          <div class="cp-row"><span class="cp-lbl">CCL Areas Covered</span><span class="cp-val">14</span></div>
+          <div class="cp-row"><span class="cp-lbl">School Health Camps</span><span class="cp-val">600+</span></div>
+          <div class="cp-row"><span class="cp-lbl">Free Medicines Distributed</span><span class="cp-val">All Camps</span></div>
+          <div class="cp-award">
+            <div class="cp-award-icon">🏆</div>
+            <h4>Best Corporate — Nikshay Mitra 2024</h4>
+            <p>Awarded by Govt. of Jharkhand · Praised at DPE CSR Conclave, New Delhi · Diamond Tier, PM TB Mukt Bharat Abhiyaan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="snav-wrap">
+  <div class="snav">
+    <a href="education.html" class="snav-link"><div><div class="sn-dir">← Previous Sector</div><div class="sn-title" style="color:#93C5FD">📚 Education</div></div></a>
+    <div style="text-align:center"><div style="font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">You are viewing</div><div style="font-size:16px;font-weight:700;color:var(--hl)">🏥 Health &amp; Nutrition</div></div>
+    <a href="skill-livelihood.html" class="snav-link"><div style="text-align:right"><div class="sn-dir">Next Sector →</div><div class="sn-title" style="color:#FDE68A">⚙️ Skill &amp; Livelihood</div></div></a>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <div class="ft-top">
+      <div class="ft-brand">Central Coalfields Limited · CSR Division</div>
+      <div class="ft-links">
+        <a href="index.html">Home</a><a href="education.html">Education</a><a href="skill-livelihood.html">Skill</a>
+        <a href="sports.html">Sports</a><a href="animal-welfare.html">Animal Welfare</a>
+        <a href="just-transition.html">Just Transition</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2025–26 Central Coalfields Limited · Darbhanga House, Ranchi – 834 029</p>
+      <span class="ft-stag">🏥 Health &amp; Nutrition Sector</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ro=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting){setTimeout(()=>en.target.classList.add('vis'),i*60);ro.unobserve(en.target);}});},{threshold:.08});
+  document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+  const so=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){document.querySelectorAll('.ppill').forEach(p=>p.classList.remove('active'));const a=document.querySelector(`.ppill[href="#${en.target.id}"]`);if(a)a.classList.add('active');}});},{threshold:.4});
+  ['nanha','nikshay','mmu','infra','camps'].forEach(id=>{const el=document.getElementById(id);if(el)so.observe(el);});
+</script>
+</body>
+</html>
