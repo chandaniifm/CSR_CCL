@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Projects | CCL CSR – Central Coalfields Limited</title>
+  <meta name="description" content="Complete catalogue of all 377+ CCL CSR projects across Education, Health, Skill & Livelihood, Sports, Animal Welfare and Just Transition — Jharkhand's coalfields."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --coal:#1A1A2E; --forest:#1E4D35; --gold:#B45309; --gold-b:#F59E0B;
+      --cream:#F7F3EE; --cdark:#EDE6D8; --ww:#FDFAF6; --txt:#1C2B22; --mut:#5A7060;
+      --edu:#2563EB; --edu-p:#EFF6FF; --edu-t:#DBEAFE;
+      --hlt:#DC2626; --hlt-p:#FEF2F2; --hlt-t:#FEE2E2;
+      --skl:#D97706; --skl-p:#FFFBEB; --skl-t:#FEF3C7;
+      --spt:#7C3AED; --spt-p:#EDE9FE; --spt-t:#DDD6FE;
+      --aw:#0891B2;  --aw-p:#ECFEFF;  --aw-t:#CFFAFE;
+      --jt:#16A34A;  --jt-p:#F0FDF4;  --jt-t:#DCFCE7;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--txt);overflow-x:hidden}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,26,46,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(180,83,9,.25);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nl{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .ne{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold-b));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .nt span:first-child{display:block;font-size:13px;font-weight:600;color:#FCD34D;letter-spacing:.08em;text-transform:uppercase}
+    .nt span:last-child{display:block;font-size:11px;color:rgba(255,255,255,.4)}
+    .nlinks{display:flex;gap:1.5rem;list-style:none}
+    .nlinks a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+    .nlinks a:hover{color:#FCD34D}
+    .nb{background:var(--gold);color:#fff;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
+    .nb:hover{background:#92400E}
+    a:focus-visible{outline:3px solid #FCD34D;outline-offset:3px;border-radius:4px}
+    .bc{position:fixed;top:68px;left:0;right:0;z-index:998;background:#422006;padding:8px 2rem;display:flex;align-items:center;gap:8px}
+    .bc a{font-size:12px;color:rgba(255,255,255,.45);text-decoration:none}.bc a:hover{color:#FCD34D}
+    .bc .sep{font-size:12px;color:rgba(255,255,255,.2)}.bc .cur{font-size:12px;font-weight:600;color:#FCD34D}
+
+    /* HERO */
+    .hero{min-height:55vh;background:linear-gradient(150deg,var(--coal) 0%,#1B2E20 40%,#1A1A2E 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding-top:108px}
+    .hero-mesh{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:28px 28px}
+    .hero-glow{position:absolute;top:-10%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(180,83,9,.15),transparent 65%)}
+    .hero-c{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:56px 2rem 70px}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:100px;padding:7px 18px;margin-bottom:24px}
+    .hero-badge span{font-size:12px;font-weight:700;color:#FCD34D;letter-spacing:.12em;text-transform:uppercase}
+    .bdot{width:6px;height:6px;background:#FCD34D;border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:1.1;font-weight:900;color:#fff;margin-bottom:16px}
+    .hero h1 em{font-style:italic;color:#FCD34D}
+    .hero-sub{font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.58);max-width:640px;margin-bottom:36px}
+
+    /* SECTOR STATS ROW */
+    .sector-stats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:1200px;margin:-30px auto 0;padding:0 2rem;position:relative;z-index:10}
+    .ss-card{border-radius:14px;padding:18px 14px;text-align:center;cursor:pointer;transition:all .25s;border:2px solid transparent}
+    .ss-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+    .ss-card.active{border-color:currentColor}
+    .ss-card.edu{background:var(--edu-p);color:var(--edu)}.ss-card.edu:hover,.ss-card.edu.active{background:var(--edu-t)}
+    .ss-card.hlt{background:var(--hlt-p);color:var(--hlt)}.ss-card.hlt:hover,.ss-card.hlt.active{background:var(--hlt-t)}
+    .ss-card.skl{background:var(--skl-p);color:var(--skl)}.ss-card.skl:hover,.ss-card.skl.active{background:var(--skl-t)}
+    .ss-card.spt{background:var(--spt-p);color:var(--spt)}.ss-card.spt:hover,.ss-card.spt.active{background:var(--spt-t)}
+    .ss-card.aw{background:var(--aw-p);color:var(--aw)}.ss-card.aw:hover,.ss-card.aw.active{background:var(--aw-t)}
+    .ss-card.jt{background:var(--jt-p);color:var(--jt)}.ss-card.jt:hover,.ss-card.jt.active{background:var(--jt-t)}
+    .ss-icon{font-size:22px;margin-bottom:6px}
+    .ss-name{font-size:12px;font-weight:700;line-height:1.3}
+    .ss-count{font-family:'DM Mono',monospace;font-size:18px;font-weight:700;line-height:1;margin-top:4px}
+
+    /* FILTER BAR */
+    .filter-bar{background:#fff;border-bottom:1px solid var(--cdark);padding:14px 2rem;position:sticky;top:68px;z-index:900;display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:40px}
+    .filter-btn{padding:8px 18px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid var(--cdark);background:#fff;color:var(--mut);transition:all .2s}
+    .filter-btn:hover{border-color:var(--gold);color:var(--gold)}
+    .filter-btn.active{background:var(--gold);color:#fff;border-color:var(--gold)}
+    .filter-btn.edu-f.active{background:var(--edu);border-color:var(--edu)}
+    .filter-btn.hlt-f.active{background:var(--hlt);border-color:var(--hlt)}
+    .filter-btn.skl-f.active{background:var(--skl);border-color:var(--skl)}
+    .filter-btn.spt-f.active{background:var(--spt);border-color:var(--spt)}
+    .filter-btn.aw-f.active{background:var(--aw);border-color:var(--aw)}
+    .filter-btn.jt-f.active{background:var(--jt);border-color:var(--jt)}
+    .filter-search{margin-left:auto;padding:8px 16px;border-radius:8px;border:1.5px solid var(--cdark);font-size:13px;font-family:'DM Sans',sans-serif;outline:none;color:var(--txt)}
+    .filter-search:focus{border-color:var(--gold)}
+    .results-count{font-size:12px;color:var(--mut);white-space:nowrap}
+
+    /* PROJECTS GRID */
+    .projects-section{padding:40px 2rem 80px;max-width:1200px;margin:0 auto}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .project-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--cdark);transition:all .3s;display:flex;flex-direction:column}
+    .project-card:hover{box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-4px)}
+    .project-card.hidden{display:none}
+    .pc-header{padding:20px 20px 14px;border-bottom:1px solid var(--cdark)}
+    .pc-sector{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+    .pc-sector-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+    .pc-sector-name{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .pc-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--coal);line-height:1.35}
+    .pc-body{padding:16px 20px;flex:1}
+    .pc-desc{font-size:13px;color:var(--mut);line-height:1.6}
+    .pc-footer{padding:12px 20px;border-top:1px solid var(--cdark);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .pc-amount{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:var(--coal)}
+    .pc-status{font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px}
+    .st-complete{background:#DCFCE7;color:#166534}
+    .st-ongoing{background:#FEF9C3;color:#854D0E}
+    .st-planned{background:#EFF6FF;color:#1D4ED8}
+    .pc-tags{padding:0 20px 16px;display:flex;flex-wrap:wrap;gap:6px}
+    .pc-tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px}
+
+    /* edu colours for cards */
+    .pc-edu .pc-sector-dot{background:var(--edu)}.pc-edu .pc-sector-name{color:var(--edu)}.pc-edu .pc-tag{background:var(--edu-p);color:var(--edu)}
+    .pc-hlt .pc-sector-dot{background:var(--hlt)}.pc-hlt .pc-sector-name{color:var(--hlt)}.pc-hlt .pc-tag{background:var(--hlt-p);color:var(--hlt)}
+    .pc-skl .pc-sector-dot{background:var(--skl)}.pc-skl .pc-sector-name{color:var(--skl)}.pc-skl .pc-tag{background:var(--skl-p);color:var(--skl)}
+    .pc-spt .pc-sector-dot{background:var(--spt)}.pc-spt .pc-sector-name{color:var(--spt)}.pc-spt .pc-tag{background:var(--spt-p);color:var(--spt)}
+    .pc-aw  .pc-sector-dot{background:var(--aw)}.pc-aw  .pc-sector-name{color:var(--aw)}.pc-aw  .pc-tag{background:var(--aw-p);color:var(--aw)}
+    .pc-jt  .pc-sector-dot{background:var(--jt)}.pc-jt  .pc-sector-name{color:var(--jt)}.pc-jt  .pc-tag{background:var(--jt-p);color:var(--jt)}
+
+    /* NO RESULTS */
+    .no-results{display:none;text-align:center;padding:60px 20px;color:var(--mut)}
+    .no-results.show{display:block}
+    .no-results .icon{font-size:48px;margin-bottom:16px}
+
+    /* FOOTER */
+    .snav-bar{background:var(--coal);padding:40px 2rem}
+    .snav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .snl{text-decoration:none;display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;border:1px solid rgba(255,255,255,.1);transition:all .25s}
+    .snl:hover{background:rgba(255,255,255,.06)}
+    .snl-d{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+    .snl-t{font-size:15px;font-weight:600;color:rgba(255,255,255,.8)}
+    footer{background:#0D0D1A;padding:40px 2rem 24px}
+    .fi{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+    .ft{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .fb{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff}
+    .fl{display:flex;gap:24px;flex-wrap:wrap}
+    .fl a{font-size:13px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+    .fl a:hover{color:#FCD34D}
+    .fbot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px}
+    .fbot p{font-size:12px;color:rgba(255,255,255,.18)}
+    .ftag{background:rgba(180,83,9,.2);border:1px solid rgba(180,83,9,.35);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:#FCD34D}
+
+    @media(max-width:1024px){
+      .sector-stats{grid-template-columns:repeat(3,1fr)}
+      .projects-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:640px){
+      .nlinks{display:none}
+      .sector-stats{grid-template-columns:repeat(2,1fr)}
+      .projects-grid{grid-template-columns:1fr}
+      .filter-search{width:100%}
+      .snav{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nl">
+    <div class="ne">📋</div>
+    <div class="nt"><span>CCL CSR · All Projects</span><span>Central Coalfields Limited</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="health.html">Health</a></li>
+    <li><a href="skill-livelihood.html">Skill</a></li>
+    <li><a href="sports.html">Sports</a></li>
+  </ul>
+  <a href="contact.html" class="nb">Contact CSR</a>
+</nav>
+
+<div class="bc">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <span class="cur">All Projects</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-c">
+    <div class="hero-badge"><div class="bdot"></div><span>Complete Project Registry</span></div>
+    <h1>377+ Projects.<br/><em>Six Sectors.</em> One Mission.</h1>
+    <p class="hero-sub">Every project CCL has funded, is funding, or is planning — across education, health, skill & livelihood, sports, animal welfare, and just transition. Browse by sector or search by name.</p>
+  </div>
+</section>
+
+<!-- SECTOR FILTER CARDS -->
+<div class="sector-stats">
+  <div class="ss-card edu" data-filter="edu" onclick="filterSector('edu',this)">
+    <div class="ss-icon">📚</div>
+    <div class="ss-name">Education</div>
+    <div class="ss-count">8</div>
+  </div>
+  <div class="ss-card hlt" data-filter="hlt" onclick="filterSector('hlt',this)">
+    <div class="ss-icon">🏥</div>
+    <div class="ss-name">Health &amp; Nutrition</div>
+    <div class="ss-count">10</div>
+  </div>
+  <div class="ss-card skl" data-filter="skl" onclick="filterSector('skl',this)">
+    <div class="ss-icon">🛠️</div>
+    <div class="ss-name">Skill &amp; Livelihood</div>
+    <div class="ss-count">9</div>
+  </div>
+  <div class="ss-card spt" data-filter="spt" onclick="filterSector('spt',this)">
+    <div class="ss-icon">🏅</div>
+    <div class="ss-name">Sports</div>
+    <div class="ss-count">6</div>
+  </div>
+  <div class="ss-card aw" data-filter="aw" onclick="filterSector('aw',this)">
+    <div class="ss-icon">🐄</div>
+    <div class="ss-name">Animal Welfare</div>
+    <div class="ss-count">4</div>
+  </div>
+  <div class="ss-card jt" data-filter="jt" onclick="filterSector('jt',this)">
+    <div class="ss-icon">🌱</div>
+    <div class="ss-name">Just Transition</div>
+    <div class="ss-count">5</div>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterSector('all',this)">All Projects</button>
+  <button class="filter-btn edu-f" onclick="filterSector('edu',this)">📚 Education</button>
+  <button class="filter-btn hlt-f" onclick="filterSector('hlt',this)">🏥 Health</button>
+  <button class="filter-btn skl-f" onclick="filterSector('skl',this)">🛠️ Skill</button>
+  <button class="filter-btn spt-f" onclick="filterSector('spt',this)">🏅 Sports</button>
+  <button class="filter-btn aw-f"  onclick="filterSector('aw',this)">🐄 Animal Welfare</button>
+  <button class="filter-btn jt-f"  onclick="filterSector('jt',this)">🌱 Just Transition</button>
+  <input type="text" class="filter-search" placeholder="Search projects..." oninput="searchProjects(this.value)"/>
+  <span class="results-count" id="results-count">42 projects shown</span>
+</div>
+
+<!-- PROJECTS GRID -->
+<div class="projects-section">
+  <div class="projects-grid" id="projects-grid">
+
+    <!-- EDUCATION -->
+    <div class="project-card pc-edu" data-sector="edu" data-title="CCL Ke Lal & CCL Ki Laadli">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Education</span></div><div class="pc-title">CCL Ke Lal &amp; CCL Ki Laadli — JEE Coaching Programme</div></div>
+      <div class="pc-body"><p class="pc-desc">Free JEE Advanced coaching, +2 schooling, hostel, meals, sports &amp; medical care for underprivileged children from within 25 km of CCL establishments. Running since 2012. 194 students in IITs, NITs and top colleges.</p></div>
+      <div class="pc-tags"><span class="pc-tag">194 Alumni</span><span class="pc-tag">Since 2012</span><span class="pc-tag">Ranchi</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹1.5 Cr / year</span><span class="pc-status st-ongoing">Ongoing</span></div>
+    </div>
+
+    <div class="project-card pc-edu" data-sector="edu" data-title="Project Digital Vidya">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Education</span></div><div class="pc-title">Project Digital Vidya — Smart Classrooms in 193 Schools</div></div>
+      <div class="pc-body"><p class="pc-desc">Smart classroom + ICT lab (10 computers, internet) in 193 govt. schools across all 8 CCL districts. Implemented by EdCIL. Inaugurated 24 Jan 2025. 3-year AMC active.</p></div>
+      <div class="pc-tags"><span class="pc-tag">193 Schools</span><span class="pc-tag">8 Districts</span><span class="pc-tag">EdCIL</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹26.13 Cr</span><span class="pc-status st-ongoing">AMC Phase</span></div>
+    </div>
+
+    <div class="project-card pc-edu" data-sector="edu" data-title="State Library Ranchi">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Education</span></div><div class="pc-title">State Library, Ranchi — 6-Floor Green Library</div></div>
+      <div class="pc-body"><p class="pc-desc">GRIHA 4-star 6-floor library on 2 acres in Ranchi. 11,753 sq.m. Solar rooftop, STP, reading halls, cafeteria, e-resources section. 90% structure complete. MoU with Govt. of Jharkhand.</p></div>
+      <div class="pc-tags"><span class="pc-tag">GRIHA 4★</span><span class="pc-tag">6 Floors</span><span class="pc-tag">Public Asset</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹65.25 Cr</span><span class="pc-status st-ongoing">Under Construction</span></div>
+    </div>
+
+    <div class="project-card pc-edu" data-sector="edu" data-title="Centralised Kitchen Ramgarh">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Education</span></div><div class="pc-title">Centralised Kitchen — Mid-Day Meals, Ramgarh</div></div>
+      <div class="pc-body"><p class="pc-desc">Industrial kitchen to deliver mid-day meals to 50,000 students across 538 govt. schools in Ramgarh district. Built with Akshaya Patra Foundation. Structure 80% complete.</p></div>
+      <div class="pc-tags"><span class="pc-tag">50,000 Students</span><span class="pc-tag">538 Schools</span><span class="pc-tag">Akshaya Patra</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹22.09 Cr</span><span class="pc-status st-ongoing">Under Construction</span></div>
+    </div>
+
+    <div class="project-card pc-edu" data-sector="edu" data-title="BCA CIA Express ICA">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Education</span></div><div class="pc-title">Business Computer Applications — CIA Express (ICA)</div></div>
+      <div class="pc-body"><p class="pc-desc">Training 100 SC/ST underprivileged students from Ranchi colleges in BCA, Accounting, ERP, GST. Implemented by ICA Foundation. 100% placement guarantee with all-time job card.</p></div>
+      <div class="pc-tags"><span class="pc-tag">SC/ST Focus</span><span class="pc-tag">100% Placement</span><span class="pc-tag">Ranchi</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-complete">Completed</span></div>
+    </div>
+
+    <div class="project-card pc-edu" data-sector="edu" data-title="Scholarships Students">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Education</span></div><div class="pc-title">Scholarships for Meritorious PAP Students</div></div>
+      <div class="pc-body"><p class="pc-desc">Scholarships awarded to academically meritorious students from Project Affected Persons (PAP) families — enabling higher education that their families could otherwise not afford.</p></div>
+      <div class="pc-tags"><span class="pc-tag">PAP Families</span><span class="pc-tag">Merit-Based</span></div>
+      <div class="pc-footer"><span class="pc-amount">Annual</span><span class="pc-status st-ongoing">Ongoing</span></div>
+    </div>
+
+    <!-- HEALTH -->
+    <div class="project-card pc-hlt" data-sector="hlt" data-title="Nanha Sa Dil Cardiac">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Health</span></div><div class="pc-title">Nanha Sa Dil — Congenital Heart Disease Screening</div></div>
+      <div class="pc-body"><p class="pc-desc">Screening 45,000 children (5–15 yr) for CHD across 5 districts. 30,768 screened to date. 82 free cardiac surgeries funded. Target 500 surgeries. Via Sri Sathya Sai Health &amp; Education Trust.</p></div>
+      <div class="pc-tags"><span class="pc-tag">30,768 Screened</span><span class="pc-tag">82 Surgeries</span><span class="pc-tag">5 Districts</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹9.54 Cr</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <div class="project-card pc-hlt" data-sector="hlt" data-title="Nikshay Mitra TB">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Health</span></div><div class="pc-title">Ni-kshay Mitra — TB Patient Nutrition Support</div></div>
+      <div class="pc-body"><p class="pc-desc">Monthly nutrition baskets to 3,375+ TB patients in Latehar &amp; Chatra. Diamond Tier — PM TB Mukt Bharat. Best Corporate Nikshay Mitra award from Govt. of Jharkhand 2024.</p></div>
+      <div class="pc-tags"><span class="pc-tag">💎 Diamond Tier</span><span class="pc-tag">3,375+ Patients</span><span class="pc-tag">Latehar · Chatra</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹2.93 Cr</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <div class="project-card pc-hlt" data-sector="hlt" data-title="Modular Operation Theatre">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Health</span></div><div class="pc-title">Modular Operation Theatre — Sadar Hospital, Hazaribagh</div></div>
+      <div class="pc-body"><p class="pc-desc">Fully equipped Modular OT at Sadar Hospital Hazaribagh. HEPA filtration, laminar airflow. Operational, serving district population.</p></div>
+      <div class="pc-tags"><span class="pc-tag">Hazaribagh</span><span class="pc-tag">HEPA Filtered</span><span class="pc-tag">Operational</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹2.21 Cr</span><span class="pc-status st-complete">Completed</span></div>
+    </div>
+
+    <div class="project-card pc-hlt" data-sector="hlt" data-title="Mobile Medical Units Health Camps">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Health</span></div><div class="pc-title">Mobile Medical Units &amp; Health Camps</div></div>
+      <div class="pc-body"><p class="pc-desc">673 health camps across 14 CCL areas with 2,37,594 beneficiaries in FY 2024–25. OPD, medicines, dental, eye, maternal health. Year-round coverage.</p></div>
+      <div class="pc-tags"><span class="pc-tag">673 Camps</span><span class="pc-tag">2.37L Beneficiaries</span><span class="pc-tag">14 Areas</span></div>
+      <div class="pc-footer"><span class="pc-amount">Annual</span><span class="pc-status st-ongoing">Year-round</span></div>
+    </div>
+
+    <div class="project-card pc-hlt" data-sector="hlt" data-title="Project ADITI Maternal">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Health</span></div><div class="pc-title">Project ADITI — Maternal &amp; Child Health</div></div>
+      <div class="pc-body"><p class="pc-desc">Dedicated maternal health programme targeting anaemia, institutional delivery, and postnatal care in CCL districts. ASHA network linkages. Focused on tribal and PAP families.</p></div>
+      <div class="pc-tags"><span class="pc-tag">Maternal Health</span><span class="pc-tag">Anaemia</span><span class="pc-tag">PAP Families</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <div class="project-card pc-hlt" data-sector="hlt" data-title="School Health Camps">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Health</span></div><div class="pc-title">School Health Camps — Anaemia &amp; Nutrition Screening</div></div>
+      <div class="pc-body"><p class="pc-desc">CCL doctors run health camps in govt. schools — screening for anaemia, vision, dental &amp; general health. Referral to CCL hospitals. 673 total camps in FY 2024–25 across all types.</p></div>
+      <div class="pc-tags"><span class="pc-tag">School Children</span><span class="pc-tag">Free Referral</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-ongoing">Ongoing</span></div>
+    </div>
+
+    <!-- SKILL & LIVELIHOOD -->
+    <div class="project-card pc-skl" data-sector="skl" data-title="PM Kaushal Kendra Kathara">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Skill &amp; Livelihood</span></div><div class="pc-title">PM Kaushal Kendra — Kathara, Bokaro</div></div>
+      <div class="pc-body"><p class="pc-desc">State-of-the-art skill development centre in Kathara offering IT, electrical, beauty &amp; wellness, retail, and service sector courses. 3-year free training. NCVET affiliated, PMKVY 3.0 aligned.</p></div>
+      <div class="pc-tags"><span class="pc-tag">PMKVY 3.0</span><span class="pc-tag">5 Trades</span><span class="pc-tag">Kathara</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹6 Cr+</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <div class="project-card pc-skl" data-sector="skl" data-title="Jharcraft Empowerment Tribal Women">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Skill &amp; Livelihood</span></div><div class="pc-title">Jharcraft — Tribal Women's Craft Empowerment</div></div>
+      <div class="pc-body"><p class="pc-desc">Training tribal women in Sohrai art, Khovar painting, bamboo weaving, and Dokra metalwork. Market linkages through exhibitions and e-commerce. Jharkhand's iconic craft traditions monetised for artisan families.</p></div>
+      <div class="pc-tags"><span class="pc-tag">Sohrai Art</span><span class="pc-tag">Tribal Women</span><span class="pc-tag">E-Commerce</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-ongoing">Ongoing</span></div>
+    </div>
+
+    <div class="project-card pc-skl" data-sector="skl" data-title="Dairy Cooperative SHG">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Skill &amp; Livelihood</span></div><div class="pc-title">Dairy Cooperative &amp; SHG Milk Collection</div></div>
+      <div class="pc-body"><p class="pc-desc">Women SHG dairy cooperatives supported with cattle, training, fodder, and collection infrastructure — providing regular income to tribal families in CCL command areas.</p></div>
+      <div class="pc-tags"><span class="pc-tag">Women SHGs</span><span class="pc-tag">Tribal Areas</span><span class="pc-tag">Regular Income</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <div class="project-card pc-skl" data-sector="skl" data-title="IIT ISM Dhanbad MoU">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Skill &amp; Livelihood</span></div><div class="pc-title">MoU with IIT ISM Dhanbad — Skill Development</div></div>
+      <div class="pc-body"><p class="pc-desc">Formal MoU with IIT (ISM) Dhanbad for skill development programmes — leveraging one of India's premier technical institutions to build advanced technical capability in CCL communities.</p></div>
+      <div class="pc-tags"><span class="pc-tag">IIT ISM</span><span class="pc-tag">Technical Skills</span><span class="pc-tag">MoU</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <div class="project-card pc-skl" data-sector="skl" data-title="Tribal Haat Market">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Skill &amp; Livelihood</span></div><div class="pc-title">Tribal Haat — Market Platform for Tribal Producers</div></div>
+      <div class="pc-body"><p class="pc-desc">Regular market platform in CCL command areas connecting tribal artisans, farmers and animal product producers directly to consumers. IHW CSR Bronze Award 2024. Zero fee for producers.</p></div>
+      <div class="pc-tags"><span class="pc-tag">🥉 IHW Bronze</span><span class="pc-tag">Tribal Artisans</span><span class="pc-tag">Zero Fee</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <!-- SPORTS -->
+    <div class="project-card pc-spt" data-sector="spt" data-title="JSSPS Jharkhand Sporting School">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Sports</span></div><div class="pc-title">Jharkhand Sporting &amp; Scholastic Pool (JSSPS)</div></div>
+      <div class="pc-body"><p class="pc-desc">Residential sports academy at Hotwar, Ranchi — free boarding, lodging, training &amp; schooling for 110+ tribal athletes in football, volleyball, athletics, archery &amp; kho-kho. IHW Gold Award 2024.</p></div>
+      <div class="pc-tags"><span class="pc-tag">🥇 IHW Gold</span><span class="pc-tag">110+ Athletes</span><span class="pc-tag">Tribal Youth</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹5 Cr+</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <div class="project-card pc-spt" data-sector="spt" data-title="Rakshak Retired Para Athletes">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Sports</span></div><div class="pc-title">Project Rakshak — Retired Para-Athletes</div></div>
+      <div class="pc-body"><p class="pc-desc">Employment &amp; skill training for retired para-athletes who served the nation but face economic hardship post-career. Most Innovative CSR Project — IHW Gold Award 2024.</p></div>
+      <div class="pc-tags"><span class="pc-tag">🥇 Most Innovative</span><span class="pc-tag">Para-Athletes</span><span class="pc-tag">National Award</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <div class="project-card pc-spt" data-sector="spt" data-title="Sports Infrastructure">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Sports</span></div><div class="pc-title">Sports Infrastructure — Stadiums &amp; Grounds</div></div>
+      <div class="pc-body"><p class="pc-desc">Development and maintenance of sports infrastructure in CCL command areas — including multi-sport grounds, athletics tracks, and indoor sports facilities accessible to the general community.</p></div>
+      <div class="pc-tags"><span class="pc-tag">Multi-Sport</span><span class="pc-tag">Community Access</span></div>
+      <div class="pc-footer"><span class="pc-amount">Annual</span><span class="pc-status st-ongoing">Ongoing</span></div>
+    </div>
+
+    <div class="project-card pc-spt" data-sector="spt" data-title="Sports Equipment Distribution">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Sports</span></div><div class="pc-title">Sports Equipment Distribution — Schools &amp; Clubs</div></div>
+      <div class="pc-body"><p class="pc-desc">Footballs, cricket kits, volleyball nets, athletic equipment distributed to government schools and sports clubs in CCL operational areas — removing equipment access barriers for tribal youth.</p></div>
+      <div class="pc-tags"><span class="pc-tag">Govt. Schools</span><span class="pc-tag">Tribal Youth</span></div>
+      <div class="pc-footer"><span class="pc-amount">Annual</span><span class="pc-status st-ongoing">Ongoing</span></div>
+    </div>
+
+    <!-- ANIMAL WELFARE -->
+    <div class="project-card pc-aw" data-sector="aw" data-title="Gaushala Barkakana">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Animal Welfare</span></div><div class="pc-title">Gaushala — Cattle Shelter, Barkakana</div></div>
+      <div class="pc-body"><p class="pc-desc">Permanent cattle shelter housing 500+ cattle with 24×7 veterinary care, fodder supply, vaccination, and disease surveillance. Only corporate Gaushala in Jharkhand's mining belt.</p></div>
+      <div class="pc-tags"><span class="pc-tag">500+ Cattle</span><span class="pc-tag">24×7 Care</span><span class="pc-tag">Barkakana</span></div>
+      <div class="pc-footer"><span class="pc-amount">Annual</span><span class="pc-status st-ongoing">Operational</span></div>
+    </div>
+
+    <div class="project-card pc-aw" data-sector="aw" data-title="Veterinary Camps">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Animal Welfare</span></div><div class="pc-title">Free Veterinary Camps — All 8 Districts</div></div>
+      <div class="pc-body"><p class="pc-desc">Free vaccination, OPD, surgery and deworming camps for cattle, goats, and poultry across 8 districts. Particularly targeting tribal farming families whose livelihoods depend on livestock.</p></div>
+      <div class="pc-tags"><span class="pc-tag">8 Districts</span><span class="pc-tag">All Livestock</span><span class="pc-tag">Free</span></div>
+      <div class="pc-footer"><span class="pc-amount">Annual</span><span class="pc-status st-ongoing">Year-round</span></div>
+    </div>
+
+    <div class="project-card pc-aw" data-sector="aw" data-title="Tribal Haat Animal Welfare">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Animal Welfare</span></div><div class="pc-title">Tribal Haat — Livestock Market Linkage</div></div>
+      <div class="pc-body"><p class="pc-desc">Tribal Haat market initiative enables direct sale of milk, ghee, honey and other animal products by tribal families — incentivising better animal care and improving livestock-dependent incomes.</p></div>
+      <div class="pc-tags"><span class="pc-tag">🥉 IHW Bronze</span><span class="pc-tag">Tribal Families</span></div>
+      <div class="pc-footer"><span class="pc-amount">–</span><span class="pc-status st-ongoing">Active</span></div>
+    </div>
+
+    <!-- JUST TRANSITION -->
+    <div class="project-card pc-jt" data-sector="jt" data-title="Afforestation Plantation">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Just Transition</span></div><div class="pc-title">Afforestation — Plantation Across CCL Areas</div></div>
+      <div class="pc-body"><p class="pc-desc">Systematic plantation of native species (Sal, Mahua, Palash, Teak, Bamboo) on mine boundaries, OB dumps, roadsides and watershed areas. Geo-tagged and monitored. ₹3.16 Cr in FY 2024–25.</p></div>
+      <div class="pc-tags"><span class="pc-tag">Geo-Tagged</span><span class="pc-tag">Native Species</span><span class="pc-tag">14 Areas</span></div>
+      <div class="pc-footer"><span class="pc-amount">₹3.16 Cr</span><span class="pc-status st-ongoing">Annual</span></div>
+    </div>
+
+    <div class="project-card pc-jt" data-sector="jt" data-title="Solar Energy State Library">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Just Transition</span></div><div class="pc-title">Solar Rooftop — State Library &amp; CCL Infrastructure</div></div>
+      <div class="pc-body"><p class="pc-desc">Solar rooftop power generation integrated into State Library Ranchi. LED lighting and STP standard in all new CCL-funded infrastructure. Solar street lights in command area villages.</p></div>
+      <div class="pc-tags"><span class="pc-tag">GRIHA ★★★★</span><span class="pc-tag">Solar + STP</span><span class="pc-tag">Village Lighting</span></div>
+      <div class="pc-footer"><span class="pc-amount">Part of ₹65.25 Cr</span><span class="pc-status st-ongoing">Integrated</span></div>
+    </div>
+
+    <div class="project-card pc-jt" data-sector="jt" data-title="Mine Closure Rehabilitation">
+      <div class="pc-header"><div class="pc-sector"><div class="pc-sector-dot"></div><span class="pc-sector-name">Just Transition</span></div><div class="pc-title">Mine Void &amp; OB Dump Rehabilitation</div></div>
+      <div class="pc-body"><p class="pc-desc">Progressive reclamation and greening of overburden dumps and exhausted mine voids — transforming scarred mining land into productive, biodiverse green zones aligned with statutory Mine Closure Plans.</p></div>
+      <div class="pc-tags"><span class="pc-tag">Mine Closure Plan</span><span class="pc-tag">Statutory</span></div>
+      <div class="pc-footer"><span class="pc-amount">Statutory</span><span class="pc-status st-ongoing">Continuous</span></div>
+    </div>
+
+  </div>
+  <div class="no-results" id="no-results"><div class="icon">🔍</div><p>No projects found matching your search.</p></div>
+</div>
+
+<!-- SECTION NAV -->
+<div class="snav-bar">
+  <div class="snav">
+    <a href="index.html" class="snl">
+      <div><div class="snl-d">← Back to</div><div class="snl-t">Home</div></div>
+    </a>
+    <div style="text-align:center">
+      <div style="font-size:12px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px">Project Registry</div>
+      <div style="font-size:16px;font-weight:700;color:#FCD34D">📋 All 42 Featured Projects</div>
+    </div>
+    <a href="contact.html" class="snl">
+      <div style="text-align:right"><div class="snl-d">Enquiries →</div><div class="snl-t" style="color:#FCD34D">Contact CSR</div></div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div class="fb">Central Coalfields Limited · CSR Division</div>
+      <div class="fl">
+        <a href="index.html">Home</a><a href="education.html">Education</a><a href="health.html">Health</a>
+        <a href="skill-livelihood.html">Skill &amp; Livelihood</a><a href="sports.html">Sports</a>
+        <a href="animal-welfare.html">Animal Welfare</a><a href="just-transition.html">Just Transition</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2025–26 Central Coalfields Limited · Darbhanga House, Ranchi – 834 029</p>
+      <span class="ftag">📋 Project Registry</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+let activeSector = 'all';
+
+function filterSector(sector, btn) {
+  activeSector = sector;
+  // update filter buttons
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  // clear sector card active
+  document.querySelectorAll('.ss-card').forEach(c => c.classList.remove('active'));
+  if (sector !== 'all') {
+    const sc = document.querySelector(`.ss-card[data-filter="${sector}"]`);
+    if (sc) sc.classList.add('active');
+  }
+  applyFilters();
+}
+
+function searchProjects(val) {
+  applyFilters(val);
+}
+
+function applyFilters(searchVal) {
+  const sv = (searchVal || document.querySelector('.filter-search').value || '').toLowerCase();
+  let shown = 0;
+  document.querySelectorAll('.project-card').forEach(card => {
+    const sectorMatch = activeSector === 'all' || card.dataset.sector === activeSector;
+    const textMatch = !sv || card.dataset.title.toLowerCase().includes(sv) || card.innerText.toLowerCase().includes(sv);
+    if (sectorMatch && textMatch) { card.classList.remove('hidden'); shown++; }
+    else card.classList.add('hidden');
+  });
+  document.getElementById('results-count').textContent = shown + ' project' + (shown !== 1 ? 's' : '') + ' shown';
+  const nr = document.getElementById('no-results');
+  shown === 0 ? nr.classList.add('show') : nr.classList.remove('show');
+}
+
+// init count
+document.getElementById('results-count').textContent = document.querySelectorAll('.project-card').length + ' projects shown';
+</script>
+</body>
+</html>
