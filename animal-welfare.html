@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animal Welfare | CCL CSR – Central Coalfields Limited</title>
+  <meta name="description" content="CCL CSR Animal Welfare — Gaushala, Veterinary Camps, Cattle Health, Jharkhand Coalfields. Protecting animals across CCL's operational areas."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --t:  #0891B2;  --td: #0E7490;  --tdk: #164E63;
+      --tl: #67E8F9;  --tp: #ECFEFF;  --tt: #CFFAFE;
+      --coal:#1A1A2E; --forest:#1E4D35; --gold:#B45309;
+      --cream:#F7F3EE; --ww:#FDFAF6; --txt:#1C2B22; --mut:#5A7060;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--txt);overflow-x:hidden}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,26,46,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(8,145,178,.25);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nl{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .ne{width:42px;height:42px;background:linear-gradient(135deg,#0E7490,#06B6D4);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .nt span:first-child{display:block;font-size:13px;font-weight:600;color:#67E8F9;letter-spacing:.08em;text-transform:uppercase}
+    .nt span:last-child{display:block;font-size:11px;color:rgba(255,255,255,.4)}
+    .nlinks{display:flex;gap:1.5rem;list-style:none}
+    .nlinks a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+    .nlinks a:hover,.nlinks a.act{color:#67E8F9}
+    .nb{background:var(--t);color:#fff;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
+    .nb:hover{background:var(--td)}
+    a:focus-visible{outline:3px solid #67E8F9;outline-offset:3px;border-radius:4px}
+    .bc{position:fixed;top:68px;left:0;right:0;z-index:998;background:var(--tdk);padding:8px 2rem;display:flex;align-items:center;gap:8px}
+    .bc a,.bc span{font-size:12px;color:rgba(255,255,255,.45);text-decoration:none}.bc a:hover{color:#67E8F9}
+    .bc .sep{color:rgba(255,255,255,.2)}.bc .cur{font-weight:600;color:#67E8F9}
+
+    /* HERO */
+    .hero{min-height:90vh;background:linear-gradient(150deg,#042f3e 0%,#0c4a6e 25%,#0E7490 60%,#0891B2 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding-top:108px}
+    .hero-ripple{position:absolute;inset:0;pointer-events:none}
+    .hero-ripple::before,.hero-ripple::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(103,232,249,.08);animation:ripple 6s ease-in-out infinite}
+    .hero-ripple::before{width:800px;height:800px;top:-200px;right:-200px;animation-delay:0s}
+    .hero-ripple::after{width:600px;height:600px;bottom:-200px;left:-100px;animation-delay:3s}
+    @keyframes ripple{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:.4}}
+    .hero-c{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:60px 2rem 80px;display:grid;grid-template-columns:1fr 380px;gap:5rem;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:7px 18px;margin-bottom:28px}
+    .hero-badge span{font-size:12px;font-weight:700;color:#A5F3FC;letter-spacing:.12em;text-transform:uppercase}
+    .bdot{width:6px;height:6px;background:#67E8F9;border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1.1;font-weight:900;color:#fff;margin-bottom:22px}
+    .hero h1 em{font-style:italic;color:#A5F3FC}
+    .hero-sub{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:520px;margin-bottom:36px}
+    .hero-acts{display:flex;gap:14px;flex-wrap:wrap}
+    .bt{background:var(--t);color:#fff;padding:13px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--t);transition:all .25s}
+    .bt:hover{background:var(--td);transform:translateY(-2px);box-shadow:0 8px 24px rgba(8,145,178,.4)}
+    .bo{background:transparent;color:rgba(255,255,255,.8);padding:13px 26px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:all .25s;display:inline-flex;align-items:center}
+    .bo:hover{border-color:rgba(103,232,249,.5);color:#A5F3FC}
+    .hero-panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:28px;backdrop-filter:blur(12px)}
+    .hp-t{font-size:11px;font-weight:700;color:#A5F3FC;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .hp-s{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;background:rgba(255,255,255,.06);border-radius:10px;border:1px solid rgba(255,255,255,.06);margin-bottom:8px}
+    .hp-s:last-child{margin-bottom:0}
+    .hp-v{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#CFFAFE;line-height:1}
+    .hp-l{font-size:12px;color:rgba(255,255,255,.45);text-align:right;max-width:160px;line-height:1.4}
+
+    /* PROG NAV */
+    .pnav{background:var(--tdk);padding:0 2rem;display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .pp{padding:15px 22px;font-size:13px;font-weight:600;color:rgba(255,255,255,.5);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s}
+    .pp:hover{color:#A5F3FC}.pp.act{color:#67E8F9;border-bottom-color:#67E8F9}
+
+    /* SECTIONS */
+    section{padding:80px 2rem}
+    .ctr{max-width:1200px;margin:0 auto}
+    .sl{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--t);margin-bottom:12px}
+    .sl::before{content:'';width:24px;height:2px;background:var(--t)}
+    .sh{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:700;line-height:1.2;color:var(--tdk);margin-bottom:14px}
+    .ss{font-size:1rem;color:var(--mut);line-height:1.75;max-width:640px}
+
+    /* STATUS */
+    .sbadge{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:7px 16px;font-size:12px;font-weight:700;margin-bottom:20px}
+    .s-ok{background:#DCFCE7;color:#166534;border:1px solid #BBF7D0}
+    .s-on{background:#FEF9C3;color:#854D0E;border:1px solid #FDE68A}
+    .sdot{width:6px;height:6px;border-radius:50%;animation:blink 2s infinite}
+    .s-ok .sdot{background:#16A34A}.s-on .sdot{background:#CA8A04}
+
+    /* ── SECTION 1: GAUSHALA ── */
+    #gaushala{background:var(--ww)}
+    .g-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:56px}
+
+    /* main stat */
+    .g-hero-stat{background:linear-gradient(135deg,var(--tdk),var(--td));border-radius:20px;padding:36px;position:relative;overflow:hidden;margin-bottom:22px}
+    .g-hero-stat::after{content:'🐄';position:absolute;right:-5px;bottom:-15px;font-size:100px;opacity:.12;line-height:1}
+    .ghs-val{font-family:'Playfair Display',serif;font-size:3.6rem;font-weight:900;color:#CFFAFE;line-height:1;margin-bottom:8px}
+    .ghs-lbl{font-size:15px;color:rgba(255,255,255,.65);line-height:1.5;position:relative;z-index:1}
+    .ghs-sub{font-size:12px;color:rgba(255,255,255,.35);margin-top:8px;font-style:italic;position:relative;z-index:1}
+
+    .g-features{display:flex;flex-direction:column;gap:0}
+    .gf{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(8,145,178,.1)}
+    .gf:last-child{border:none}
+    .gf-icon{width:42px;height:42px;border-radius:10px;background:var(--tp);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;border:1px solid var(--tt)}
+    .gf-body h4{font-size:14px;font-weight:600;color:var(--tdk);margin-bottom:3px}
+    .gf-body p{font-size:13px;color:var(--mut);line-height:1.55}
+
+    /* stats col */
+    .stats-col{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .sc-card{border-radius:14px;padding:24px}
+    .sc-card.teal{background:var(--t);color:#fff}
+    .sc-card.pale{background:var(--tp);border:1px solid var(--tt)}
+    .sc-card.dark{background:var(--tdk);color:#fff}
+    .sc-v{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:6px}
+    .sc-card.pale .sc-v{color:var(--tdk)}.sc-card.pale .sc-l{color:var(--mut)}
+    .sc-l{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* ── SECTION 2: VET CAMPS ── */
+    #vet-camps{background:var(--tp)}
+    .vc-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:48px}
+
+    .vc-types{display:flex;flex-direction:column;gap:12px}
+    .vct{display:flex;gap:14px;padding:18px;background:#fff;border-radius:12px;border:1px solid var(--tt);align-items:flex-start;transition:all .2s}
+    .vct:hover{border-color:var(--t);box-shadow:0 4px 14px rgba(8,145,178,.08)}
+    .vct-icon{font-size:26px;flex-shrink:0}
+    .vct-body h4{font-size:14px;font-weight:600;color:var(--tdk);margin-bottom:3px}
+    .vct-body p{font-size:13px;color:var(--mut);line-height:1.55}
+
+    /* Camp impact bar */
+    .camp-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--tdk);border-radius:16px;overflow:hidden;margin-top:28px}
+    .cb-item{padding:28px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.06)}
+    .cb-item:last-child{border:none}
+    .cb-v{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#CFFAFE;margin-bottom:4px}
+    .cb-l{font-size:11px;color:rgba(255,255,255,.42);line-height:1.4}
+
+    .vc-panel{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .vcp{border-radius:14px;padding:24px}
+    .vcp.teal{background:var(--t);color:#fff}
+    .vcp.pale{background:#fff;border:1px solid var(--tt)}
+    .vcp.dark{background:var(--tdk);color:#fff}
+    .vcp-v{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;margin-bottom:5px}
+    .vcp.pale .vcp-v{color:var(--tdk)}.vcp.pale .vcp-l{color:var(--mut)}
+    .vcp-l{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* ── SECTION 3: TRIBAL HAAT ── */
+    #tribal-haat{background:var(--ww)}
+    .th-layout{display:grid;grid-template-columns:3fr 2fr;gap:4rem;align-items:start;margin-top:56px}
+
+    .award-banner{background:linear-gradient(135deg,#78350F,#B45309);border-radius:20px;padding:30px;text-align:center;margin-bottom:22px;position:relative;overflow:hidden}
+    .award-banner::before{content:'🏆';position:absolute;right:10px;top:10px;font-size:52px;opacity:.25}
+    .award-banner h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:8px}
+    .award-banner p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55}
+    .award-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#FDE68A;border-radius:100px;padding:6px 18px;font-size:12px;font-weight:700;margin-top:12px}
+
+    .th-what{display:flex;flex-direction:column;gap:12px}
+    .thw{display:flex;gap:12px;padding:16px;background:var(--tp);border-radius:12px;border:1px solid var(--tt);align-items:flex-start;transition:all .2s}
+    .thw:hover{border-color:var(--t)}
+    .thw-icon{font-size:24px;flex-shrink:0}
+    .thw-body h4{font-size:14px;font-weight:600;color:var(--tdk);margin-bottom:3px}
+    .thw-body p{font-size:13px;color:var(--mut);line-height:1.5}
+
+    .th-stats{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .ths{border-radius:14px;padding:24px}
+    .ths.teal{background:var(--t);color:#fff}
+    .ths.pale{background:var(--tp);border:1px solid var(--tt)}
+    .ths.dark{background:var(--tdk);color:#fff}
+    .ths-v{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:5px}
+    .ths.pale .ths-v{color:var(--tdk)}.ths.pale .ths-l{color:var(--mut)}
+    .ths-l{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* ── SECTION 4: ALSO ── */
+    #also{background:var(--tp);padding:64px 2rem}
+    .also-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+    .also-card{background:#fff;border-radius:16px;padding:28px;border:1px solid var(--tt);transition:all .25s}
+    .also-card:hover{box-shadow:0 8px 28px rgba(8,145,178,.1);transform:translateY(-4px);border-color:var(--t)}
+    .also-card .icon{font-size:32px;margin-bottom:14px}
+    .also-card h4{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--tdk);margin-bottom:8px}
+    .also-card p{font-size:13px;color:var(--mut);line-height:1.6}
+    .also-tag{display:inline-block;background:var(--tp);color:var(--td);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:600;margin-top:12px;border:1px solid var(--tt)}
+
+    /* SECTION NAV */
+    .snav-bar{background:var(--tdk);padding:40px 2rem}
+    .snav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .snl{text-decoration:none;display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;border:1px solid rgba(255,255,255,.1);transition:all .25s}
+    .snl:hover{background:rgba(255,255,255,.06);border-color:rgba(103,232,249,.3)}
+    .snl-d{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+    .snl-t{font-size:15px;font-weight:600;color:rgba(255,255,255,.8)}
+
+    /* FOOTER */
+    footer{background:var(--coal);padding:40px 2rem 24px}
+    .fi{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+    .ft{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .fb{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff}
+    .fl{display:flex;gap:24px;flex-wrap:wrap}
+    .fl a{font-size:13px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s}
+    .fl a:hover{color:#67E8F9}
+    .fbot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px}
+    .fbot p{font-size:12px;color:rgba(255,255,255,.2)}
+    .ftag{background:rgba(8,145,178,.2);border:1px solid rgba(8,145,178,.35);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:#67E8F9}
+
+    /* REVEAL */
+    .rev{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+    .rev.vis{opacity:1;transform:translateY(0)}
+
+    @media(max-width:1024px){
+      .hero-c{grid-template-columns:1fr}.hero-panel{display:none}
+      .g-layout,.vc-layout,.th-layout{grid-template-columns:1fr}
+      .stats-col,.vc-panel,.th-stats{position:static}
+      .camp-bar{grid-template-columns:1fr 1fr}
+      .also-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .nlinks{display:none}
+      .also-grid{grid-template-columns:1fr}
+      .snav{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nl">
+    <div class="ne">🐄</div>
+    <div class="nt"><span>CCL CSR · Animal Welfare</span><span>Central Coalfields Limited</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#gaushala" class="act">Gaushala</a></li>
+    <li><a href="#vet-camps">Vet Camps</a></li>
+    <li><a href="#tribal-haat">Tribal Haat</a></li>
+  </ul>
+  <a href="index.html#sectors" class="nb">← All Sectors</a>
+</nav>
+
+<div class="bc">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="index.html#sectors">CSR Sectors</a><span class="sep">›</span>
+  <span class="cur">Animal Welfare</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ripple"></div>
+  <div class="hero-c">
+    <div>
+      <div class="hero-badge"><div class="bdot"></div><span>CSR Sector · Animal Welfare</span></div>
+      <h1>Care for Every Creature<br/>in the <em>Coalfields</em></h1>
+      <p class="hero-sub">From sheltering and treating injured cattle at Gaushala to organising free veterinary camps across CCL's operational districts, CCL's animal welfare programme reflects a commitment that the communities it serves extend to every living being in them.</p>
+      <div class="hero-acts">
+        <a href="#gaushala" class="bt">Gaushala →</a>
+        <a href="#vet-camps" class="bo">Vet Camps</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="hp-t">Animal Welfare at a Glance</div>
+      <div class="hp-s"><div class="hp-v">500+</div><div class="hp-l">Cattle sheltered at Gaushala, Barkakana</div></div>
+      <div class="hp-s"><div class="hp-v">24×7</div><div class="hp-l">Veterinary care at Gaushala</div></div>
+      <div class="hp-s"><div class="hp-v">🥉</div><div class="hp-l">IHW Bronze Award — Tribal Haat initiative</div></div>
+      <div class="hp-s"><div class="hp-v">8</div><div class="hp-l">Districts with animal welfare outreach</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="pnav">
+  <a href="#gaushala" class="pp act">🐄 Gaushala, Barkakana</a>
+  <a href="#vet-camps" class="pp">💉 Veterinary Camps</a>
+  <a href="#tribal-haat" class="pp">🏆 Tribal Haat Initiative</a>
+  <a href="#also" class="pp">+ More</a>
+</div>
+
+<!-- ══ GAUSHALA ══ -->
+<section id="gaushala">
+  <div class="ctr">
+    <div class="rev">
+      <div class="sl">Programme 1 · Flagship</div>
+      <h2 class="sh">Gaushala, Barkakana</h2>
+      <p class="ss">A dedicated cattle shelter in Barkakana — providing permanent refuge, medical treatment, fodder, and round-the-clock veterinary care to stray, injured, and abandoned cattle across CCL's command area. One of the few corporate-funded Gaushalas in Jharkhand's mining belt.</p>
+    </div>
+
+    <div class="g-layout">
+      <div>
+        <div class="g-hero-stat rev">
+          <div class="ghs-val">500+</div>
+          <div class="ghs-lbl">Cattle sheltered at CCL Gaushala, Barkakana<br/>— receiving full-time care and veterinary treatment</div>
+          <div class="ghs-sub">24×7 staffing · permanent facility · fodder ensured year-round</div>
+        </div>
+
+        <div class="sbadge s-ok rev"><div class="sdot"></div>Operational — Barkakana, Jharkhand</div>
+
+        <div class="g-features rev">
+          <div class="gf">
+            <div class="gf-icon">🏠</div>
+            <div class="gf-body"><h4>Permanent Shelter Infrastructure</h4><p>Covered cattle sheds with adequate space, ventilation, and drainage — providing dignified shelter to abandoned and injured animals, not merely a holding facility.</p></div>
+          </div>
+          <div class="gf">
+            <div class="gf-icon">🌿</div>
+            <div class="gf-body"><h4>Fodder &amp; Nutrition</h4><p>Year-round supply of fodder, green grass, and supplementary feed — ensuring cattle maintain health and body condition irrespective of season or rainfall.</p></div>
+          </div>
+          <div class="gf">
+            <div class="gf-icon">💉</div>
+            <div class="gf-body"><h4>24×7 Veterinary Care</h4><p>A resident veterinary officer and support staff provide round-the-clock medical attention — treating injuries, infections, and chronic conditions with medicines funded by CCL CSR.</p></div>
+          </div>
+          <div class="gf">
+            <div class="gf-icon">🔬</div>
+            <div class="gf-body"><h4>Disease Surveillance &amp; Vaccination</h4><p>Routine vaccination against Foot-and-Mouth Disease, Hemorrhagic Septicemia, and other endemic cattle diseases — protecting the resident herd and breaking disease cycles.</p></div>
+          </div>
+          <div class="gf">
+            <div class="gf-icon">🤝</div>
+            <div class="gf-body"><h4>Community Intake</h4><p>Stray and injured cattle reported by community members around Barkakana are received, treated, and rehabilitated — providing relief to both the animal and the families impacted.</p></div>
+          </div>
+          <div class="gf">
+            <div class="gf-icon">♻️</div>
+            <div class="gf-body"><h4>Dung &amp; Biogas Utilisation</h4><p>Cattle waste is converted to organic manure distributed to local farmers, and biogas generation is under evaluation — creating a circular benefit for surrounding communities.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-col rev">
+        <div class="sc-card teal">
+          <div class="sc-v">500+</div>
+          <div class="sc-l">Cattle currently sheltered at Barkakana</div>
+        </div>
+        <div class="sc-card pale">
+          <div class="sc-v">24×7</div>
+          <div class="sc-l">Continuous veterinary &amp; care staffing</div>
+        </div>
+        <div class="sc-card dark">
+          <div class="sc-v">Barkakana</div>
+          <div class="sc-l" style="color:rgba(255,255,255,.6)">Location — Ramgarh district, Jharkhand</div>
+        </div>
+        <div class="sc-card pale">
+          <div class="sc-v">1 of few</div>
+          <div class="sc-l">Corporate Gaushalas in Jharkhand's mining belt</div>
+        </div>
+        <div style="background:var(--tp);border-radius:14px;padding:20px;border:1px solid var(--tt)">
+          <div style="font-size:11px;font-weight:700;color:var(--tdk);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Why This Matters</div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">Stray cattle cause accidents, crop damage, and community conflict around mining areas where heavy vehicle movement is constant. The Gaushala removes this risk, protects animals, and reflects CCL's responsibility to the broader ecosystem it operates within.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VET CAMPS ══ -->
+<section id="vet-camps">
+  <div class="ctr">
+    <div class="rev">
+      <div class="sl">Programme 2</div>
+      <h2 class="sh">Veterinary Camps &amp; Animal Health Outreach</h2>
+      <p class="ss">Free veterinary camps organised across CCL's operational districts — bringing specialist animal healthcare to communities where private veterinary services are unaffordable or inaccessible. Particularly vital for tribal farming families whose livelihoods depend on their animals.</p>
+    </div>
+
+    <div class="vc-layout">
+      <div>
+        <div class="vc-types rev">
+          <div class="vct">
+            <div class="vct-icon">💉</div>
+            <div class="vct-body"><h4>Vaccination Drives</h4><p>FMD, HS, Black Quarter and other preventable cattle diseases are targeted through community vaccination campaigns — protecting the entire herd of villages in CCL command areas.</p></div>
+          </div>
+          <div class="vct">
+            <div class="vct-icon">🩺</div>
+            <div class="vct-body"><h4>General OPD Consultation</h4><p>Veterinary doctors attend to cattle, goats, poultry, and other livestock — diagnosing conditions, providing treatment, and dispensing free medicines at each camp.</p></div>
+          </div>
+          <div class="vct">
+            <div class="vct-icon">✂️</div>
+            <div class="vct-body"><h4>Surgical Procedures</h4><p>Minor surgical procedures including wound treatment, dehorning, abscess drainage, and reproductive health interventions are performed at field camp settings.</p></div>
+          </div>
+          <div class="vct">
+            <div class="vct-icon">🧪</div>
+            <div class="vct-body"><h4>Deworming &amp; Parasite Control</h4><p>Mass deworming of cattle reduces production losses from internal parasites — one of the leading causes of poor milk yield and weight gain in smallholder cattle.</p></div>
+          </div>
+          <div class="vct">
+            <div class="vct-icon">🐓</div>
+            <div class="vct-body"><h4>Poultry &amp; Small Livestock</h4><p>Backyard poultry — a critical income source for tribal women — is covered through disease management, Ranikhet vaccination, and production advisory camps.</p></div>
+          </div>
+          <div class="vct">
+            <div class="vct-icon">👨‍🌾</div>
+            <div class="vct-body"><h4>Farmer Advisory &amp; Awareness</h4><p>Each camp includes livestock management advisory: nutrition, housing, breeding, insurance schemes, and linkage to government veterinary services.</p></div>
+          </div>
+        </div>
+
+        <div class="camp-bar rev">
+          <div class="cb-item"><div class="cb-v">8</div><div class="cb-l">Districts covered</div></div>
+          <div class="cb-item"><div class="cb-v">Free</div><div class="cb-l">All medicines &amp; treatment</div></div>
+          <div class="cb-item"><div class="cb-v">All</div><div class="cb-l">Livestock species treated</div></div>
+          <div class="cb-item"><div class="cb-v">Year-round</div><div class="cb-l">Camp schedule maintained</div></div>
+        </div>
+      </div>
+
+      <div class="vc-panel rev">
+        <div class="vcp teal">
+          <div class="vcp-v">8 Districts</div>
+          <div class="vcp-l">All CCL operational districts receive veterinary outreach</div>
+        </div>
+        <div class="vcp pale">
+          <div class="vcp-v">₹ Free</div>
+          <div class="vcp-l">Zero cost to farmers — all medicines, treatment and consultation funded by CCL CSR</div>
+        </div>
+        <div class="vcp dark">
+          <div class="vcp-v">Tribal Focus</div>
+          <div class="vcp-l" style="color:rgba(255,255,255,.6)">Priority given to tribal and PAP (Project Affected Person) families who depend most on livestock livelihoods</div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:20px;border:1px solid var(--tt)">
+          <div style="font-size:11px;font-weight:700;color:var(--tdk);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Government Convergence</div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">CCL coordinates vet camps with the Jharkhand Animal Husbandry Department — ensuring government schemes (Kisan Credit Card, cattle insurance, NABARD loans) are introduced at each camp, extending benefit beyond immediate healthcare.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRIBAL HAAT ══ -->
+<section id="tribal-haat">
+  <div class="ctr">
+    <div class="rev">
+      <div class="sl">Programme 3 · Nationally Recognised</div>
+      <h2 class="sh">Tribal Haat Initiative</h2>
+      <p class="ss">An integrated tribal livelihood market initiative that received the IHW CSR Bronze Award 2024 — connecting tribal artisans, farmers, and animal product producers directly to markets, bypassing exploitative middlemen and putting more income in tribal hands.</p>
+    </div>
+
+    <div class="th-layout">
+      <div>
+        <div class="award-banner rev">
+          <h3>🥉 IHW CSR Bronze Award 2024</h3>
+          <p>The Tribal Haat initiative received the IHW CSR Health Impact Bronze Award 2024 — one of three IHW awards received by CCL CSR that year, alongside two Gold Awards for other programmes.</p>
+          <div class="award-badge">IHW CSR Health Impact Awards 2024</div>
+        </div>
+
+        <div class="th-what rev">
+          <div class="thw">
+            <div class="thw-icon">🛒</div>
+            <div class="thw-body"><h4>Direct Market Access for Tribal Producers</h4><p>Weekly or fortnightly Tribal Haats organised in CCL command areas — providing tribal farmers, cattle rearers, and artisans a regular platform to sell directly to consumers and fair-trade buyers.</p></div>
+          </div>
+          <div class="thw">
+            <div class="thw-icon">🥛</div>
+            <div class="thw-body"><h4>Animal Product Marketing</h4><p>Milk, ghee, honey, and other animal-derived products produced by tribal families are featured prominently — giving visibility to products that are typically undervalued in informal markets.</p></div>
+          </div>
+          <div class="thw">
+            <div class="thw-icon">🎨</div>
+            <div class="thw-body"><h4>Tribal Craft &amp; Forest Produce</h4><p>Sohrai art, bamboo craft, mahua products, and other indigenous goods are displayed and sold — with CCL providing infrastructure, promotion, and buyer linkages.</p></div>
+          </div>
+          <div class="thw">
+            <div class="thw-icon">🏦</div>
+            <div class="thw-body"><h4>Financial Inclusion Linkages</h4><p>Each Haat event includes stalls from SBI, NABARD, and Jharkhand Livelihood Promotion Society — linking tribal participants to bank accounts, SHG credit, and government welfare schemes.</p></div>
+          </div>
+          <div class="thw">
+            <div class="thw-icon">👩</div>
+            <div class="thw-body"><h4>Women Self-Help Groups</h4><p>Tribal women's SHGs are prioritised for stalls — building their confidence, income, and financial independence in markets historically dominated by non-tribal traders.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="th-stats rev">
+        <div class="ths teal">
+          <div class="ths-v">🥉 IHW</div>
+          <div class="ths-l">Bronze Award · CSR Health Impact 2024</div>
+        </div>
+        <div class="ths pale">
+          <div class="ths-v">Tribal Focus</div>
+          <div class="ths-l">Exclusively designed for scheduled tribe communities in CCL command areas</div>
+        </div>
+        <div class="ths dark">
+          <div class="ths-v">Zero Fee</div>
+          <div class="ths-l" style="color:rgba(255,255,255,.6)">CCL bears all infrastructure and logistics costs — tribal producers keep 100% of sales</div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:20px;border:1px solid var(--tt)">
+          <div style="font-size:11px;font-weight:700;color:var(--tdk);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Link to Animal Welfare</div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">The Tribal Haat directly incentivises better animal husbandry — as tribal families who can sell milk, ghee, and wool at fair prices are more likely to invest in their animals' health, nutrition, and veterinary care.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ALSO ── -->
+<section id="also">
+  <div class="ctr">
+    <div class="rev">
+      <div class="sl">More Animal Welfare Work</div>
+      <h2 class="sh">Additional Initiatives</h2>
+      <p class="ss">Beyond the three flagship programmes, CCL supports a range of additional animal welfare activities that protect animals and support livestock-dependent livelihoods.</p>
+    </div>
+    <div class="also-grid">
+      <div class="also-card rev">
+        <div class="icon">🐕</div>
+        <h4>Stray Dog Management</h4>
+        <p>Coordination with district municipal bodies on ABC (Animal Birth Control) and rabies vaccination drives in CCL townships and command area villages — reducing human-animal conflict and protecting community health.</p>
+        <span class="also-tag">Public Health + Animal Welfare</span>
+      </div>
+      <div class="also-card rev">
+        <div class="icon">🌾</div>
+        <h4>Fodder Bank Support</h4>
+        <p>During drought years and summer months when natural fodder is scarce, CCL supports fodder bank distribution to PAP families with cattle — preventing distress sale of animals and preserving tribal livelihoods.</p>
+        <span class="also-tag">Drought Relief · PAP Families</span>
+      </div>
+      <div class="also-card rev">
+        <div class="icon">📋</div>
+        <h4>Livestock Insurance Awareness</h4>
+        <p>Camp-based awareness drives on PMFBY livestock insurance, Rashtriya Gokul Mission, and state animal husbandry schemes — ensuring tribal cattle owners protect their primary asset with available government safety nets.</p>
+        <span class="also-tag">Financial Protection · Tribal Farmers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION NAV -->
+<div class="snav-bar">
+  <div class="snav">
+    <a href="sports.html" class="snl">
+      <div><div class="snl-d">← Previous Sector</div><div class="snl-t" style="color:#C4B5FD">🏅 Sports &amp; Athletics</div></div>
+    </a>
+    <div style="text-align:center">
+      <div style="font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">You are viewing</div>
+      <div style="font-size:16px;font-weight:700;color:#67E8F9">🐄 Animal Welfare</div>
+    </div>
+    <a href="just-transition.html" class="snl">
+      <div style="text-align:right"><div class="snl-d">Next Sector →</div><div class="snl-t" style="color:#86EFAC">🌱 Just Transition</div></div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div class="fb">Central Coalfields Limited · CSR Division</div>
+      <div class="fl">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="health.html">Health</a>
+        <a href="skill-livelihood.html">Skill &amp; Livelihood</a>
+        <a href="sports.html">Sports</a>
+        <a href="just-transition.html">Just Transition</a>
+        <a href="projects.html">All Projects</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2025–26 Central Coalfields Limited · Darbhanga House, Ranchi – 834 029</p>
+      <span class="ftag">🐄 Animal Welfare Sector</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach((e,i) => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('vis'),i*60); ro.unobserve(e.target); } });
+  },{threshold:0.08});
+  document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+
+  const secs=['gaushala','vet-camps','tribal-haat','also'];
+  const pills=document.querySelectorAll('.pp');
+  const so=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        pills.forEach(p=>p.classList.remove('act'));
+        const a=document.querySelector(`.pp[href="#${e.target.id}"]`);
+        if(a) a.classList.add('act');
+      }
+    });
+  },{threshold:0.4});
+  secs.forEach(id=>{const el=document.getElementById(id);if(el)so.observe(el);});
+</script>
+</body>
+</html>
