@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports Promotion | CCL CSR – Central Coalfields Limited</title>
+  <meta name="description" content="CCL CSR Sports — JSSPS Sports Academy Hotwar, 1809 medals, 11 disciplines, Khelo India accredited, 234 athletes. From coalfields to international podiums."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --sp:#7C3AED;--spd:#6D28D9;--spdk:#4C1D95;--spm:#8B5CF6;--spl:#C4B5FD;
+      --spp:#EDE9FE;--spt:#DDD6FE;
+      --gold:#B45309;--gold-b:#F59E0B;--gold-l:#FDE68A;
+      --coal:#1A1A2E;--forest:#1E4D35;
+      --cream:#F7F3EE;--cdark:#EDE6D8;--ww:#FDFAF6;--txt:#1C2B22;--mut:#5A7060;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--txt);overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,26,46,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(124,58,237,.25);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nlogo{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nemb{width:42px;height:42px;background:linear-gradient(135deg,#4C1D95,#8B5CF6);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .ntxt{display:flex;flex-direction:column}
+    .ntxt span:first-child{font-size:13px;font-weight:600;color:var(--spl);letter-spacing:.08em;text-transform:uppercase}
+    .ntxt span:last-child{font-size:11px;color:rgba(255,255,255,.42)}
+    .nlinks{display:flex;gap:1.8rem;list-style:none}
+    .nlinks a{color:rgba(255,255,255,.65);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+    .nlinks a:hover,.nlinks a.active{color:var(--spl)}
+    .nbk{background:var(--sp);color:#fff;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
+    .nbk:hover{background:var(--spd)}
+    a:focus-visible{outline:3px solid var(--spl);outline-offset:3px;border-radius:4px}
+    .bc{position:fixed;top:68px;left:0;right:0;z-index:998;background:var(--spdk);padding:8px 2rem;display:flex;align-items:center;gap:8px}
+    .bc a{font-size:12px;color:rgba(255,255,255,.5);text-decoration:none}.bc a:hover{color:var(--spl)}
+    .bcs{font-size:12px;color:rgba(255,255,255,.25)}.bcc{font-size:12px;font-weight:600;color:var(--spl)}
+
+    /* HERO — dramatic dark purple with gold accents for trophy feel */
+    .hero{min-height:92vh;background:linear-gradient(150deg,#1A0533 0%,#2E1065 30%,#4C1D95 62%,#6D28D9 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding-top:108px}
+    .hero-stars{position:absolute;inset:0;pointer-events:none}
+    .star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle 3s infinite}
+    @keyframes twinkle{0%,100%{opacity:.8}50%{opacity:.1}}
+    .hero-gold-glow{position:absolute;bottom:-10%;left:10%;width:500px;height:300px;background:radial-gradient(ellipse,rgba(245,158,11,.08),transparent 65%);pointer-events:none}
+    .hero-purple-glow{position:absolute;top:-10%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.2),transparent 65%);pointer-events:none}
+    .hero-c{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:60px 2rem 80px;display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:center}
+    .hbadge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:7px 18px;margin-bottom:28px}
+    .hbadge span{font-size:12px;font-weight:700;color:var(--spl);letter-spacing:.12em;text-transform:uppercase}
+    .bdot{width:6px;height:6px;background:var(--gold-l);border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1.1;font-weight:900;color:#fff;margin-bottom:22px}
+    .hero h1 em{font-style:italic;background:linear-gradient(90deg,var(--gold-b),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero-sub{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:520px;margin-bottom:36px}
+    .hero-acts{display:flex;gap:14px;flex-wrap:wrap}
+    .btn-sp{background:var(--sp);color:#fff;padding:13px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--sp);transition:all .25s}
+    .btn-sp:hover{background:var(--spd);transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,.4)}
+    .btn-o{background:transparent;color:rgba(255,255,255,.8);padding:13px 26px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:all .25s;display:inline-flex;align-items:center;gap:8px}
+    .btn-o:hover{border-color:rgba(196,181,253,.5);color:var(--spl)}
+    /* Hero trophy panel */
+    .hero-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:28px;backdrop-filter:blur(12px)}
+    .hp-t{font-size:11px;font-weight:700;color:var(--gold-l);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .hp-r{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;border:1px solid rgba(255,255,255,.05)}
+    .hp-r:last-child{margin-bottom:0}
+    .hp-v{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--gold-l)}
+    .hp-l{font-size:12px;color:rgba(255,255,255,.45);text-align:right;max-width:150px;line-height:1.4}
+
+    /* PROG NAV */
+    .pnav{background:var(--spdk);padding:0 2rem;display:flex;gap:0;overflow-x:auto}
+    .ppill{padding:15px 22px;font-size:13px;font-weight:600;color:rgba(255,255,255,.48);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s}
+    .ppill:hover{color:var(--spl)}.ppill.active{color:var(--spl);border-bottom-color:var(--spl)}
+
+    /* SECTIONS */
+    section{padding:80px 2rem}
+    .wrap{max-width:1200px;margin:0 auto}
+    .slbl{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--sp);margin-bottom:12px}
+    .slbl::before{content:'';width:24px;height:2px;background:var(--sp)}
+    .sh{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;line-height:1.2;color:var(--spdk);margin-bottom:14px}
+    .ssub{font-size:1rem;color:var(--mut);line-height:1.75;max-width:640px}
+    .sbadge{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:7px 16px;font-size:12px;font-weight:700;margin-bottom:20px}
+    .s-ok{background:#DCFCE7;color:#166534;border:1px solid #BBF7D0}
+    .s-go{background:#FEF9C3;color:#854D0E;border:1px solid #FDE68A}
+    .sdot{width:6px;height:6px;border-radius:50%;animation:blink 2s infinite}
+    .s-ok .sdot{background:#16A34A}.s-go .sdot{background:#CA8A04}
+
+    /* ══ ACADEMY OVERVIEW ══ */
+    #academy{background:var(--ww)}
+    .acad-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:56px}
+
+    /* Medal counter */
+    .medal-card{background:linear-gradient(135deg,var(--spdk),var(--sp));border-radius:20px;padding:36px;position:relative;overflow:hidden;margin-bottom:24px}
+    .medal-card::after{content:'🏆';position:absolute;right:-8px;bottom:-18px;font-size:110px;opacity:.1;line-height:1}
+    .mc-num{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;color:var(--gold-l);line-height:1;margin-bottom:6px}
+    .mc-lbl{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5;position:relative;z-index:1}
+    .mc-note{font-size:12px;color:rgba(255,255,255,.3);margin-top:10px;font-style:italic;position:relative;z-index:1}
+
+    /* Facilities grid */
+    .fac-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+    .fac-item{background:var(--spp);border:1px solid var(--spt);border-radius:12px;padding:16px;transition:all .2s}
+    .fac-item:hover{border-color:var(--sp);transform:translateY(-2px)}
+    .fac-icon{font-size:24px;margin-bottom:8px}
+    .fac-name{font-size:13px;font-weight:600;color:var(--spdk);margin-bottom:2px}
+    .fac-desc{font-size:12px;color:var(--mut);line-height:1.4}
+
+    /* Stats column */
+    .stats-col{display:flex;flex-direction:column;gap:16px;position:sticky;top:140px}
+    .sc{border-radius:16px;padding:24px}
+    .sc.purple{background:var(--sp);color:#fff}
+    .sc.pale{background:var(--spp);border:1px solid var(--spt)}
+    .sc.dark{background:var(--spdk);color:#fff}
+    .sc.gold-c{background:linear-gradient(135deg,var(--gold),var(--gold-b));color:#fff}
+    .scnum{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:5px}
+    .sc.pale .scnum{color:var(--spdk)}.sc.pale .sclb{color:var(--mut)}
+    .sclb{font-size:13px;opacity:.75;line-height:1.5}
+
+    /* ══ DISCIPLINES ══ */
+    #disciplines{background:var(--spp)}
+    .disc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+    .disc-card{background:#fff;border-radius:16px;padding:24px;text-align:center;border:1px solid var(--spt);transition:all .3s;position:relative;overflow:hidden}
+    .disc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--sp)}
+    .disc-card:hover{box-shadow:0 10px 28px rgba(124,58,237,.1);transform:translateY(-5px)}
+    .disc-icon{font-size:36px;margin-bottom:12px}
+    .disc-name{font-size:14px;font-weight:700;color:var(--spdk);margin-bottom:4px}
+    .disc-khelo{display:inline-block;background:var(--spp);color:var(--sp);border-radius:100px;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:.06em;margin-top:6px}
+
+    /* ══ AWARDS ══ */
+    #awards-sp{background:var(--ww)}
+    .awards-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:56px}
+    .award-timeline{display:flex;flex-direction:column;gap:0}
+    .at-item{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--cdark)}
+    .at-item:last-child{border:none}
+    .at-year{width:60px;flex-shrink:0;text-align:right}
+    .at-year span{display:inline-block;background:var(--sp);color:#fff;border-radius:100px;padding:4px 10px;font-size:11px;font-weight:700}
+    .at-line{width:2px;background:var(--spt);flex-shrink:0;margin:0 12px;position:relative}
+    .at-line::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:var(--sp);border:2px solid #fff}
+    .at-body h4{font-size:14px;font-weight:600;color:var(--spdk);margin-bottom:4px}
+    .at-body p{font-size:13px;color:var(--mut);line-height:1.55}
+    .at-badge{display:inline-flex;align-items:center;gap:6px;background:var(--spp);color:var(--sp);border-radius:100px;padding:3px 10px;font-size:11px;font-weight:600;margin-top:6px}
+
+    .awards-panel{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .ap{border-radius:14px;padding:24px}
+    .ap.gold{background:linear-gradient(135deg,#78350F,#B45309);color:#fff}
+    .ap.purple{background:var(--sp);color:#fff}
+    .ap.dark{background:var(--spdk);color:#fff}
+    .ap.pale{background:var(--spp);border:1px solid var(--spt)}
+    .ap-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;margin-bottom:4px}
+    .ap.pale .ap-num{color:var(--spdk)}.ap.pale .ap-lbl{color:var(--mut)}
+    .ap-lbl{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* ══ WELFARE ══ */
+    #welfare{background:var(--spp)}
+    .welfare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+    .wcard{background:#fff;border-radius:16px;padding:28px;border:1px solid var(--spt);transition:all .3s}
+    .wcard:hover{box-shadow:0 10px 28px rgba(124,58,237,.08);transform:translateY(-4px)}
+    .wc-icon{font-size:32px;margin-bottom:14px}
+    .wcard h4{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--spdk);margin-bottom:8px}
+    .wcard p{font-size:13px;color:var(--mut);line-height:1.6}
+    .wc-tag{display:inline-block;background:var(--spp);color:var(--sp);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:600;margin-top:12px}
+
+    /* ══ IMPACT BAR ══ */
+    .impact-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--spdk);border-radius:18px;overflow:hidden;margin-top:48px}
+    .ib{padding:36px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+    .ib:last-child{border:none}
+    .ib-v{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--gold-l);margin-bottom:6px}
+    .ib-l{font-size:12px;color:rgba(255,255,255,.42);line-height:1.45}
+
+    /* SECTION NAV */
+    .snav-wrap{background:var(--spdk);padding:40px 2rem}
+    .snav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .snav-link{text-decoration:none;display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;border:1px solid rgba(255,255,255,.1);transition:all .25s}
+    .snav-link:hover{background:rgba(255,255,255,.06);border-color:rgba(196,181,253,.3)}
+    .sn-dir{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+    .sn-ttl{font-size:15px;font-weight:600;color:rgba(255,255,255,.8)}
+    footer{background:var(--coal);padding:40px 2rem 24px}
+    .ft{max-width:1200px;margin:0 auto}
+    .ft-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:20px}
+    .ft-brand{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff}
+    .ft-links{display:flex;gap:20px;flex-wrap:wrap}
+    .ft-links a{font-size:13px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s}
+    .ft-links a:hover{color:var(--spl)}
+    .ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px}
+    .ft-bot p{font-size:12px;color:rgba(255,255,255,.2)}
+    .ft-stag{background:rgba(124,58,237,.2);border:1px solid rgba(124,58,237,.35);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:var(--spl)}
+    .rv{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+    .rv.vis{opacity:1;transform:translateY(0)}
+    @media(max-width:1024px){
+      .hero-c{grid-template-columns:1fr}.hero-panel{display:none}
+      .acad-layout,.awards-layout{grid-template-columns:1fr}
+      .stats-col,.awards-panel{position:static}
+      .disc-grid{grid-template-columns:repeat(2,1fr)}
+      .welfare-grid{grid-template-columns:1fr 1fr}
+      .impact-bar{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){.nlinks{display:none}.snav{flex-direction:column}.disc-grid,.welfare-grid{grid-template-columns:1fr}.fac-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nlogo">
+    <div class="nemb">🏆</div>
+    <div class="ntxt"><span>CCL CSR · Sports Promotion</span><span>Central Coalfields Limited</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#academy" class="active">Academy</a></li>
+    <li><a href="#disciplines">Disciplines</a></li>
+    <li><a href="#awards-sp">Awards</a></li>
+    <li><a href="#welfare">Athlete Welfare</a></li>
+  </ul>
+  <a href="index.html#sectors" class="nbk">← All Sectors</a>
+</nav>
+
+<div class="bc">
+  <a href="index.html">Home</a><span class="bcs">›</span>
+  <a href="index.html#sectors">CSR Sectors</a><span class="bcs">›</span>
+  <span class="bcc">Sports Promotion</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-stars" id="starfield"></div>
+  <div class="hero-gold-glow"></div><div class="hero-purple-glow"></div>
+  <div class="hero-c">
+    <div>
+      <div class="hbadge"><div class="bdot"></div><span>CSR Sector · Sports Promotion</span></div>
+      <h1>From Coalfield Villages<br/>to <em>International<br/>Podiums</em></h1>
+      <p class="hero-sub">The Jharkhand Sporting Stars Promotion Society (JSSPS) Sports Academy at Hotwar, Ranchi has produced 1,809 medals — including 15 international — across 11 disciplines. Khelo India accredited for 8 academies. CBSE schooling, full welfare, and two consecutive National CSR Awards from the Ministry of Corporate Affairs.</p>
+      <div class="hero-acts">
+        <a href="#academy" class="btn-sp">The Academy →</a>
+        <a href="#awards-sp" class="btn-o">National Awards</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="hp-t">Sports Academy at a Glance</div>
+      <div class="hp-r"><div class="hp-v">1,809</div><div class="hp-l">Total medals won by JSSPS athletes</div></div>
+      <div class="hp-r"><div class="hp-v">15</div><div class="hp-l">International medals</div></div>
+      <div class="hp-r"><div class="hp-v">234</div><div class="hp-l">Athletes currently enrolled</div></div>
+      <div class="hp-r"><div class="hp-v">11</div><div class="hp-l">Sports disciplines offered</div></div>
+      <div class="hp-r"><div class="hp-v">2×</div><div class="hp-l">National CSR Award — Ministry of Corporate Affairs</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="pnav">
+  <a href="#academy" class="ppill active">🏛️ Sports Academy (JSSPS)</a>
+  <a href="#disciplines" class="ppill">🎽 11 Disciplines</a>
+  <a href="#awards-sp" class="ppill">🥇 Awards &amp; Recognition</a>
+  <a href="#welfare" class="ppill">❤️ Athlete Welfare</a>
+</div>
+
+<!-- ══ ACADEMY ══ -->
+<section id="academy">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">The Academy</div>
+      <h2 class="sh">Jharkhand Sporting Stars Promotion Society (JSSPS)</h2>
+      <p class="ssub">A world-class multi-sport academy at Hotwar, Ranchi — operating under the Jharkhand Sporting Stars Promotion Society, a collaboration between CCL and the Government of Jharkhand. Open to talented athletes from Jharkhand's most underserved communities.</p>
+    </div>
+    <div class="acad-layout">
+      <div>
+        <div class="medal-card rv">
+          <div class="mc-num">1,809</div>
+          <div class="mc-lbl">Medals won by JSSPS Sports Academy athletes<br/>in national and international competitions</div>
+          <div class="mc-note">Including 15 international medals · Across 11 disciplines</div>
+        </div>
+        <div class="rv">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--spdk);margin-bottom:18px">World-class Facilities at Hotwar, Ranchi</h3>
+          <div class="fac-grid">
+            <div class="fac-item"><div class="fac-icon">🏊</div><div class="fac-name">Olympic-size Swimming Pool</div><div class="fac-desc">Temperature-controlled, competition-grade pool for aquatics training</div></div>
+            <div class="fac-item"><div class="fac-icon">🏹</div><div class="fac-name">Archery Range</div><div class="fac-desc">International-standard 70m outdoor range with covered training bays</div></div>
+            <div class="fac-item"><div class="fac-icon">🥊</div><div class="fac-name">Boxing &amp; Wrestling Hall</div><div class="fac-desc">Sprung floors, full ring and mat area with coaching support</div></div>
+            <div class="fac-item"><div class="fac-icon">🏋️</div><div class="fac-name">Strength &amp; Conditioning</div><div class="fac-desc">Full gymnasium with modern equipment for all disciplines</div></div>
+            <div class="fac-item"><div class="fac-icon">🏃</div><div class="fac-name">Athletics Track</div><div class="fac-desc">Synthetic 400m track for sprints, hurdles and field events</div></div>
+            <div class="fac-item"><div class="fac-icon">🏠</div><div class="fac-name">Residential Hostel</div><div class="fac-desc">24×7 secure accommodation for all 234 enrolled athletes</div></div>
+            <div class="fac-item"><div class="fac-icon">🏥</div><div class="fac-name">CCL Doctor On Campus</div><div class="fac-desc">Dedicated medical officer, physiotherapy and medical insurance</div></div>
+            <div class="fac-item"><div class="fac-icon">🎓</div><div class="fac-name">CBSE Schooling</div><div class="fac-desc">DAV School within campus — athletes don't sacrifice education for sport</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-col rv">
+        <div class="sc gold-c"><div class="scnum">2×</div><div class="sclb">National CSR Award — Ministry of Corporate Affairs for Sports Promotion</div></div>
+        <div class="sc purple"><div class="scnum">₹12–14 Cr</div><div class="sclb">Annual CCL CSR outlay for the Sports Academy</div></div>
+        <div class="sc pale"><div class="scnum">234</div><div class="sclb">Athletes currently enrolled across 11 disciplines</div></div>
+        <div class="sc dark"><div class="scnum">8</div><div class="sclb" style="color:rgba(255,255,255,.58)">Khelo India accredited academies within JSSPS</div></div>
+        <div class="sc pale"><div class="scnum">2</div><div class="sclb">State-of-the-art hostels — boys and girls separately housed</div></div>
+        <div class="sc pale"><div class="scnum">CBSE</div><div class="sclb">Schooling within campus — DAV School, Hotwar</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DISCIPLINES ══ -->
+<section id="disciplines">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">11 Disciplines</div>
+      <h2 class="sh">Eleven Paths to the Podium</h2>
+      <p class="ssub">JSSPS Sports Academy offers training in 11 disciplines — 8 of which are accredited by Khelo India, the Government of India's flagship sports development programme. Every discipline has a dedicated coach, training infrastructure, and competition calendar.</p>
+    </div>
+    <div class="disc-grid">
+      <div class="disc-card rv"><div class="disc-icon">🏊</div><div class="disc-name">Swimming</div><div class="disc-khelo">Khelo India Accredited</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🏹</div><div class="disc-name">Archery</div><div class="disc-khelo">Khelo India Accredited</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🥊</div><div class="disc-name">Boxing</div><div class="disc-khelo">Khelo India Accredited</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🤼</div><div class="disc-name">Wrestling</div><div class="disc-khelo">Khelo India Accredited</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🏋️</div><div class="disc-name">Weightlifting</div><div class="disc-khelo">Khelo India Accredited</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🏃</div><div class="disc-name">Athletics</div><div class="disc-khelo">Khelo India Accredited</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🏸</div><div class="disc-name">Badminton</div><div class="disc-khelo">Khelo India Accredited</div></div>
+      <div class="disc-card rv"><div class="disc-icon">⚽</div><div class="disc-name">Football</div><div class="disc-khelo">Khelo India Accredited</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🏓</div><div class="disc-name">Table Tennis</div><div class="disc-khelo" style="background:var(--cdark);color:var(--mut)">Academy Programme</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🤸</div><div class="disc-name">Gymnastics</div><div class="disc-khelo" style="background:var(--cdark);color:var(--mut)">Academy Programme</div></div>
+      <div class="disc-card rv"><div class="disc-icon">🎯</div><div class="disc-name">Shooting</div><div class="disc-khelo" style="background:var(--cdark);color:var(--mut)">Academy Programme</div></div>
+      <div class="disc-card rv" style="background:var(--spdk);border-color:var(--sp)"><div class="disc-icon">🏅</div><div class="disc-name" style="color:#fff">1,809 Medals</div><div style="font-size:12px;color:rgba(255,255,255,.5);margin-top:6px">Across all disciplines</div></div>
+    </div>
+    <div class="impact-bar rv">
+      <div class="ib"><div class="ib-v">1,809</div><div class="ib-l">Total medals across all disciplines</div></div>
+      <div class="ib"><div class="ib-v">15</div><div class="ib-l">International medals</div></div>
+      <div class="ib"><div class="ib-v">8</div><div class="ib-l">Khelo India accredited academies</div></div>
+      <div class="ib"><div class="ib-v">11</div><div class="ib-l">Disciplines with dedicated coaches</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AWARDS ══ -->
+<section id="awards-sp">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Recognition</div>
+      <h2 class="sh">National &amp; International Awards</h2>
+      <p class="ssub">JSSPS Sports Academy has won two consecutive National CSR Awards from the Ministry of Corporate Affairs — India's highest CSR honour — alongside three IHW CSR Health Impact Awards 2024, making CCL's sports CSR among the most decorated in India.</p>
+    </div>
+    <div class="awards-layout">
+      <div class="award-timeline rv">
+        <div class="at-item">
+          <div class="at-year"><span>2025</span></div>
+          <div class="at-line"></div>
+          <div class="at-body"><h4>🥇 IHW CSR Health Impact Award — Gold</h4><p>Sports Academy (JSSPS) — Gold Award at IHW CSR Health Impact Awards 2024, recognising the holistic health, education and sporting impact of the academy's athlete welfare model.</p><span class="at-badge">Gold · IHW 2024</span></div>
+        </div>
+        <div class="at-item">
+          <div class="at-year"><span>2024</span></div>
+          <div class="at-line"></div>
+          <div class="at-body"><h4>🏛️ 2nd National CSR Award — Ministry of Corporate Affairs</h4><p>Second consecutive National CSR Award for Promotion of Sports — India's highest national recognition for corporate social responsibility. Received at the National CSR Conclave, New Delhi.</p><span class="at-badge">2nd Consecutive · National CSR Award</span></div>
+        </div>
+        <div class="at-item">
+          <div class="at-year"><span>2023</span></div>
+          <div class="at-line"></div>
+          <div class="at-body"><h4>🏛️ 1st National CSR Award — Ministry of Corporate Affairs</h4><p>First National CSR Award for Promotion of Sports — establishing JSSPS as the benchmark for sports CSR in India's corporate sector. The only PSU-run sports academy to receive this award.</p><span class="at-badge">1st National CSR Award · Sports Category</span></div>
+        </div>
+        <div class="at-item">
+          <div class="at-year"><span>2024</span></div>
+          <div class="at-line"></div>
+          <div class="at-body"><h4>🎖️ SKOCH Award 2024</h4><p>SKOCH Award for Development of 8 Aspirational Districts — recognising the Sports Academy's role in talent identification and development from Jharkhand's most underserved communities.</p><span class="at-badge">SKOCH Award · 2024</span></div>
+        </div>
+        <div class="at-item">
+          <div class="at-year"><span>2022</span></div>
+          <div class="at-line"></div>
+          <div class="at-body"><h4>🥇 ICSI CSR Excellence Award</h4><p>Best Corporate in Large Category — awarded by the Institute of Company Secretaries of India, recognising CCL's overall CSR excellence with sports as a key pillar.</p><span class="at-badge">ICSI · Best Corporate · Large Category</span></div>
+        </div>
+        <div class="at-item">
+          <div class="at-year"><span>Int'l</span></div>
+          <div class="at-line"></div>
+          <div class="at-body"><h4>🌍 15 International Medals</h4><p>JSSPS athletes have won 15 international medals in disciplines including swimming, boxing, archery and wrestling — representing India at international competitions across Asia and beyond.</p><span class="at-badge">15 International Medals · Multiple Countries</span></div>
+        </div>
+      </div>
+      <div class="awards-panel rv">
+        <div class="ap gold"><div class="ap-num">2×</div><div class="ap-lbl">National CSR Award — India's highest CSR honour from MCA</div></div>
+        <div class="ap purple"><div class="ap-num">🥇 IHW</div><div class="ap-lbl">Gold — IHW CSR Health Impact Awards 2024</div></div>
+        <div class="ap dark"><div class="ap-num">1,809</div><div class="ap-lbl" style="color:rgba(255,255,255,.58)">Total medals — national and international</div></div>
+        <div class="ap pale"><div class="ap-num">ICSI</div><div class="ap-lbl">Best Corporate in Large Category · 2022</div></div>
+        <div class="ap pale"><div class="ap-num">SKOCH</div><div class="ap-lbl">Aspirational Districts Development · 2024</div></div>
+        <div style="background:linear-gradient(135deg,var(--spdk),var(--sp));border-radius:14px;padding:20px">
+          <div style="font-size:12px;font-weight:700;color:var(--gold-l);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Unique Achievement</div>
+          <p style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.6">CCL is the only PSU-run sports academy to win consecutive National CSR Awards for Sports Promotion. No other coal company, oil PSU, or mining entity has matched this record.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WELFARE ══ -->
+<section id="welfare">
+  <div class="wrap">
+    <div class="rv">
+      <div class="slbl">Athlete Welfare</div>
+      <h2 class="sh">Total Care — Every Athlete, Every Day</h2>
+      <p class="ssub">CCL's Sports Academy model is built on total athlete welfare — ensuring no talented child from Jharkhand's coalfield communities has to choose between sport and education, health, or financial security.</p>
+    </div>
+    <div class="welfare-grid">
+      <div class="wcard rv"><div class="wc-icon">🎓</div><h4>CBSE Schooling On Campus</h4><p>DAV School at Hotwar campus — athletes attend school within the academy, eliminating the trade-off between education and training. Coaches plan training around school schedules.</p><span class="wc-tag">Education + Sport = No Compromise</span></div>
+      <div class="wcard rv"><div class="wc-icon">🏠</div><h4>24×7 Residential Hostel</h4><p>Secure, supervised residential accommodation for all 234 athletes — separate hostels for boys and girls, with wardens, security and structured daily routines.</p><span class="wc-tag">Safe, Secure, Supervised</span></div>
+      <div class="wcard rv"><div class="wc-icon">🍽️</div><h4>Nutritious Meals — All Included</h4><p>Sport-specific nutritional meal plans — three meals a day, designed in consultation with coaches and medical staff to support each athlete's training load and recovery needs.</p><span class="wc-tag">Performance Nutrition</span></div>
+      <div class="wcard rv"><div class="wc-icon">🏥</div><h4>Dedicated CCL Doctor</h4><p>A CCL medical officer is stationed at the academy campus — providing immediate medical attention, injury management, and preventive health services for all athletes.</p><span class="wc-tag">On-site Medical Officer</span></div>
+      <div class="wcard rv"><div class="wc-icon">🛡️</div><h4>Medical Insurance Cover</h4><p>Comprehensive medical insurance for every athlete — covering hospitalisation, surgery, and specialist care, so no injury ends a sporting career due to financial constraints.</p><span class="wc-tag">Full Medical Insurance</span></div>
+      <div class="wcard rv"><div class="wc-icon">✈️</div><h4>National &amp; International Tournaments</h4><p>CCL funds full participation in national and international tournaments — travel, accommodation, registration and equipment for every competitive event in the calendar.</p><span class="wc-tag">Travel + Tournament Funding</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="snav-wrap">
+  <div class="snav">
+    <a href="skill-livelihood.html" class="snav-link"><div><div class="sn-dir">← Previous</div><div class="sn-ttl" style="color:#FDE68A">⚙️ Skill &amp; Livelihood</div></div></a>
+    <div style="text-align:center"><div style="font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">You are viewing</div><div style="font-size:16px;font-weight:700;color:var(--spl)">🏆 Sports Promotion</div></div>
+    <a href="animal-welfare.html" class="snav-link"><div style="text-align:right"><div class="sn-dir">Next Sector →</div><div class="sn-ttl" style="color:#67E8F9">🐾 Animal Welfare</div></div></a>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <div class="ft-top">
+      <div class="ft-brand">Central Coalfields Limited · CSR Division</div>
+      <div class="ft-links">
+        <a href="index.html">Home</a><a href="education.html">Education</a><a href="health.html">Health</a>
+        <a href="skill-livelihood.html">Skill</a><a href="animal-welfare.html">Animal Welfare</a>
+        <a href="just-transition.html">Just Transition</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2025–26 Central Coalfields Limited · Darbhanga House, Ranchi – 834 029</p>
+      <span class="ft-stag">🏆 Sports Promotion Sector</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Starfield
+  const sf=document.getElementById('starfield');
+  if(sf){for(let i=0;i<80;i++){const s=document.createElement('div');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';s.style.animationDuration=(2+Math.random()*3)+'s';sf.appendChild(s);}}
+  // Reveal
+  const ro=new IntersectionObserver(e=>{e.forEach((en,i)=>{if(en.isIntersecting){setTimeout(()=>en.target.classList.add('vis'),i*60);ro.unobserve(en.target);}});},{threshold:.08});
+  document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+  // Pill nav
+  const so=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){document.querySelectorAll('.ppill').forEach(p=>p.classList.remove('active'));const a=document.querySelector(`.ppill[href="#${en.target.id}"]`);if(a)a.classList.add('active');}});},{threshold:.35});
+  ['academy','disciplines','awards-sp','welfare'].forEach(id=>{const el=document.getElementById(id);if(el)so.observe(el);});
+</script>
+</body>
+</html>
