@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Just Transition | CCL CSR – Central Coalfields Limited</title>
+  <meta name="description" content="CCL CSR Just Transition — Afforestation, Plantation, Environmental Sustainability, Renewable Energy, Community Transition in Jharkhand's coalfields."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --g:#16A34A; --gd:#15803D; --gdk:#14532D;
+      --gl:#86EFAC; --gp:#F0FDF4; --gt:#DCFCE7;
+      --coal:#1A1A2E; --gold:#B45309;
+      --cream:#F7F3EE; --ww:#FDFAF6; --txt:#1C2B22; --mut:#5A7060;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--ww);color:var(--txt);overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,26,46,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(22,163,74,.25);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nl{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .ne{width:42px;height:42px;background:linear-gradient(135deg,#15803D,#4ADE80);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .nt span:first-child{display:block;font-size:13px;font-weight:600;color:#86EFAC;letter-spacing:.08em;text-transform:uppercase}
+    .nt span:last-child{display:block;font-size:11px;color:rgba(255,255,255,.4)}
+    .nlinks{display:flex;gap:1.5rem;list-style:none}
+    .nlinks a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
+    .nlinks a:hover,.nlinks a.act{color:#86EFAC}
+    .nb{background:var(--g);color:#fff;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
+    .nb:hover{background:var(--gd)}
+    a:focus-visible{outline:3px solid #86EFAC;outline-offset:3px;border-radius:4px}
+    .bc{position:fixed;top:68px;left:0;right:0;z-index:998;background:var(--gdk);padding:8px 2rem;display:flex;align-items:center;gap:8px}
+    .bc a{font-size:12px;color:rgba(255,255,255,.45);text-decoration:none}.bc a:hover{color:#86EFAC}
+    .bc .sep{font-size:12px;color:rgba(255,255,255,.2)}.bc .cur{font-size:12px;font-weight:600;color:#86EFAC}
+
+    /* HERO — coal-to-green gradient reflecting the Just Transition theme */
+    .hero{min-height:90vh;background:linear-gradient(150deg,#1A1A2E 0%,#1B2E20 30%,#14532D 65%,#16A34A 100%);position:relative;overflow:hidden;display:flex;align-items:center;padding-top:108px}
+    .hero-mesh{position:absolute;inset:0;opacity:.05;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:28px 28px}
+    .hero-glow{position:absolute;top:-15%;right:-8%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(134,239,172,.12),transparent 65%)}
+    .hero-coal{position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(26,26,46,.7),transparent 65%)}
+    .hero-c{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:60px 2rem 80px;display:grid;grid-template-columns:1fr 380px;gap:5rem;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:7px 18px;margin-bottom:28px}
+    .hero-badge span{font-size:12px;font-weight:700;color:#86EFAC;letter-spacing:.12em;text-transform:uppercase}
+    .bdot{width:6px;height:6px;background:#86EFAC;border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1.1;font-weight:900;color:#fff;margin-bottom:22px}
+    .hero h1 em{font-style:italic;color:#86EFAC}
+    .hero-sub{font-size:1.05rem;line-height:1.8;color:rgba(255,255,255,.6);max-width:520px;margin-bottom:36px}
+    .hero-acts{display:flex;gap:14px;flex-wrap:wrap}
+    .bg{background:var(--g);color:#fff;padding:13px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--g);transition:all .25s}
+    .bg:hover{background:var(--gd);transform:translateY(-2px);box-shadow:0 8px 24px rgba(22,163,74,.4)}
+    .bo{background:transparent;color:rgba(255,255,255,.8);padding:13px 26px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:2px solid rgba(255,255,255,.2);transition:all .25s;display:inline-flex;align-items:center}
+    .bo:hover{border-color:rgba(134,239,172,.5);color:#86EFAC}
+    .hero-panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:28px;backdrop-filter:blur(12px)}
+    .hp-t{font-size:11px;font-weight:700;color:#86EFAC;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .hp-s{display:flex;justify-content:space-between;align-items:center;padding:13px 14px;background:rgba(255,255,255,.06);border-radius:10px;border:1px solid rgba(255,255,255,.06);margin-bottom:8px}
+    .hp-s:last-child{margin-bottom:0}
+    .hp-v{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#BBFAD0;line-height:1}
+    .hp-l{font-size:12px;color:rgba(255,255,255,.45);text-align:right;max-width:160px;line-height:1.4}
+
+    /* PROG NAV */
+    .pnav{background:var(--gdk);padding:0 2rem;display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .pp{padding:15px 22px;font-size:13px;font-weight:600;color:rgba(255,255,255,.5);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s}
+    .pp:hover{color:#86EFAC}.pp.act{color:#86EFAC;border-bottom-color:#86EFAC}
+
+    /* BASE */
+    section{padding:80px 2rem}
+    .ctr{max-width:1200px;margin:0 auto}
+    .sl{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--g);margin-bottom:12px}
+    .sl::before{content:'';width:24px;height:2px;background:var(--g)}
+    .sh{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:700;line-height:1.2;color:var(--gdk);margin-bottom:14px}
+    .ss{font-size:1rem;color:var(--mut);line-height:1.75;max-width:640px}
+    .sbadge{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:7px 16px;font-size:12px;font-weight:700;margin-bottom:20px}
+    .s-ok{background:#DCFCE7;color:#166534;border:1px solid #BBF7D0}
+    .s-on{background:#FEF9C3;color:#854D0E;border:1px solid #FDE68A}
+    .sdot{width:6px;height:6px;border-radius:50%;animation:blink 2s infinite}
+    .s-ok .sdot{background:#16A34A}.s-on .sdot{background:#CA8A04}
+
+    /* ── AFFORESTATION ── */
+    #afforestation{background:var(--ww)}
+    .af-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:56px}
+
+    /* Tree counter big stat */
+    .tree-counter{background:linear-gradient(135deg,var(--gdk),var(--gd));border-radius:20px;padding:36px;position:relative;overflow:hidden;margin-bottom:22px}
+    .tree-counter::after{content:'🌳';position:absolute;right:-5px;bottom:-15px;font-size:100px;opacity:.12;line-height:1}
+    .tc-val{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;color:#BBFAD0;line-height:1;margin-bottom:8px}
+    .tc-lbl{font-size:15px;color:rgba(255,255,255,.65);line-height:1.5;position:relative;z-index:1}
+    .tc-sub{font-size:12px;color:rgba(255,255,255,.35);margin-top:8px;font-style:italic;position:relative;z-index:1}
+
+    .af-list{display:flex;flex-direction:column;gap:0}
+    .afl{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid rgba(22,163,74,.1)}
+    .afl:last-child{border:none}
+    .afl-icon{width:42px;height:42px;border-radius:10px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;border:1px solid var(--gt)}
+    .afl-body h4{font-size:14px;font-weight:600;color:var(--gdk);margin-bottom:3px}
+    .afl-body p{font-size:13px;color:var(--mut);line-height:1.55}
+
+    /* species grid */
+    .species-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}
+    .spc{background:var(--gp);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--gt);transition:all .2s}
+    .spc:hover{background:var(--gt);transform:translateY(-2px)}
+    .spc-icon{font-size:24px;margin-bottom:4px}
+    .spc-name{font-size:12px;font-weight:600;color:var(--gdk)}
+    .spc-type{font-size:11px;color:var(--mut)}
+
+    /* stats column */
+    .sc{display:flex;flex-direction:column;gap:14px;position:sticky;top:140px}
+    .sc-card{border-radius:14px;padding:24px}
+    .sc-card.green{background:var(--g);color:#fff}
+    .sc-card.pale{background:var(--gp);border:1px solid var(--gt)}
+    .sc-card.dark{background:var(--gdk);color:#fff}
+    .scv{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:5px}
+    .sc-card.pale .scv{color:var(--gdk)}.sc-card.pale .scl{color:var(--mut)}
+    .scl{font-size:13px;opacity:.72;line-height:1.5}
+
+    /* ── RENEWABLE ENERGY / SOLAR ── */
+    #solar{background:var(--gp)}
+    .solar-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:48px}
+
+    .solar-vis{background:linear-gradient(135deg,#1A1A2E,var(--gdk));border-radius:20px;padding:36px;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-size:80px;position:relative;overflow:hidden}
+    .solar-vis::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(250,204,21,.15),transparent 55%)}
+    .solar-vis-label{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:12px;color:rgba(255,255,255,.45)}
+
+    .solar-items{display:flex;flex-direction:column;gap:12px}
+    .soi{display:flex;gap:14px;padding:18px;background:#fff;border-radius:12px;border:1px solid var(--gt);align-items:flex-start;transition:all .2s}
+    .soi:hover{border-color:var(--g);box-shadow:0 4px 14px rgba(22,163,74,.07)}
+    .soi-icon{font-size:26px;flex-shrink:0}
+    .soi-body h4{font-size:14px;font-weight:600;color:var(--gdk);margin-bottom:3px}
+    .soi-body p{font-size:13px;color:var(--mut);line-height:1.55}
+
+    .solar-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--gdk);border-radius:16px;overflow:hidden;margin-top:28px}
+    .sbar-item{padding:26px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.06)}
+    .sbar-item:last-child{border:none}
+    .sbar-v{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:#BBFAD0;margin-bottom:4px}
+    .sbar-l{font-size:11px;color:rgba(255,255,255,.4);line-height:1.4}
+
+    /* ── COMMUNITY TRANSITION ── */
+    #community{background:var(--ww)}
+    .comm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+    .comm-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--gt);transition:all .3s}
+    .comm-card:hover{box-shadow:0 12px 32px rgba(22,163,74,.1);transform:translateY(-4px)}
+    .comm-card-hdr{background:var(--g);padding:24px;position:relative;overflow:hidden}
+    .comm-card-hdr::after{position:absolute;right:10px;bottom:-10px;font-size:55px;opacity:.15}
+    .cch-icon{font-size:32px;margin-bottom:8px}
+    .cch-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:3px}
+    .cch-sub{font-size:12px;color:rgba(255,255,255,.6)}
+    .comm-card-body{padding:22px}
+    .comm-card-body p{font-size:13px;color:var(--mut);line-height:1.65;margin-bottom:14px}
+    .comm-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .ctag{background:var(--gp);color:var(--gdk);border-radius:100px;padding:4px 10px;font-size:11px;font-weight:600}
+
+    /* ENVIRONMENT TARGET */
+    #targets{background:var(--gp);padding:64px 2rem}
+    .targets-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+    .tg{background:#fff;border-radius:14px;padding:24px;border:1px solid var(--gt);text-align:center;transition:all .2s}
+    .tg:hover{border-color:var(--g);box-shadow:0 6px 20px rgba(22,163,74,.08)}
+    .tg-icon{font-size:32px;margin-bottom:12px}
+    .tg-val{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--gdk);line-height:1;margin-bottom:4px}
+    .tg-lbl{font-size:12px;color:var(--mut);line-height:1.4}
+
+    /* SECTION NAV */
+    .snav-bar{background:var(--gdk);padding:40px 2rem}
+    .snav{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    .snl{text-decoration:none;display:flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;border:1px solid rgba(255,255,255,.1);transition:all .25s}
+    .snl:hover{background:rgba(255,255,255,.06);border-color:rgba(134,239,172,.3)}
+    .snl-d{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+    .snl-t{font-size:15px;font-weight:600;color:rgba(255,255,255,.8)}
+
+    /* FOOTER */
+    footer{background:var(--coal);padding:40px 2rem 24px}
+    .fi{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+    .ft{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .fb{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff}
+    .fl{display:flex;gap:24px;flex-wrap:wrap}
+    .fl a{font-size:13px;color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s}
+    .fl a:hover{color:#86EFAC}
+    .fbot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:10px}
+    .fbot p{font-size:12px;color:rgba(255,255,255,.2)}
+    .ftag{background:rgba(22,163,74,.2);border:1px solid rgba(22,163,74,.35);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:#86EFAC}
+
+    .rev{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+    .rev.vis{opacity:1;transform:translateY(0)}
+
+    @media(max-width:1024px){
+      .hero-c{grid-template-columns:1fr}.hero-panel{display:none}
+      .af-layout,.solar-layout{grid-template-columns:1fr}
+      .sc{position:static}
+      .comm-grid{grid-template-columns:1fr 1fr}
+      .targets-grid{grid-template-columns:1fr 1fr}
+      .solar-bar{grid-template-columns:1fr 1fr}
+      .species-grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:640px){
+      .nlinks{display:none}
+      .comm-grid,.targets-grid{grid-template-columns:1fr}
+      .species-grid{grid-template-columns:1fr 1fr}
+      .snav{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nl">
+    <div class="ne">🌱</div>
+    <div class="nt"><span>CCL CSR · Just Transition</span><span>Central Coalfields Limited</span></div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#afforestation" class="act">Afforestation</a></li>
+    <li><a href="#solar">Solar &amp; Energy</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#targets">Targets</a></li>
+  </ul>
+  <a href="index.html#sectors" class="nb">← All Sectors</a>
+</nav>
+
+<div class="bc">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="index.html#sectors">CSR Sectors</a><span class="sep">›</span>
+  <span class="cur">Just Transition</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-coal"></div>
+  <div class="hero-c">
+    <div>
+      <div class="hero-badge"><div class="bdot"></div><span>CSR Sector · Just Transition</span></div>
+      <h1>From Coal to <em>Green</em> —<br/>A Transition That<br/>Leaves No One Behind</h1>
+      <p class="hero-sub">Just Transition is the promise that as India's energy system evolves, the communities built around coal will not be abandoned but empowered — through afforestation, solar energy, sustainable livelihoods, and environmental restoration. CCL is walking this path now, not waiting for tomorrow.</p>
+      <div class="hero-acts">
+        <a href="#afforestation" class="bg">Afforestation →</a>
+        <a href="#solar" class="bo">Solar Initiatives</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="hp-t">Just Transition at a Glance</div>
+      <div class="hp-s"><div class="hp-v">₹3.16 Cr</div><div class="hp-l">Afforestation spend in FY 2024–25</div></div>
+      <div class="hp-s"><div class="hp-v">Lakh+</div><div class="hp-l">Saplings planted across CCL command areas</div></div>
+      <div class="hp-s"><div class="hp-v">GRIHA ★★★★</div><div class="hp-l">State Library green building rating</div></div>
+      <div class="hp-s"><div class="hp-v">Solar</div><div class="hp-l">Rooftop solar on CCL infrastructure projects</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="pnav">
+  <a href="#afforestation" class="pp act">🌳 Afforestation</a>
+  <a href="#solar" class="pp">☀️ Solar &amp; Energy</a>
+  <a href="#community" class="pp">🤝 Community Transition</a>
+  <a href="#targets" class="pp">🎯 Environmental Targets</a>
+</div>
+
+<!-- ══ AFFORESTATION ══ -->
+<section id="afforestation">
+  <div class="ctr">
+    <div class="rev">
+      <div class="sl">Pillar 1 · Environmental Restoration</div>
+      <h2 class="sh">Afforestation &amp; Green Cover</h2>
+      <p class="ss">Systematic plantation of native species across mine-adjacent land, roadsides, and degraded areas — restoring green cover, sequestering carbon, and rebuilding ecosystems around CCL's operational footprint. ₹3.16 crore spent in FY 2024–25 alone.</p>
+    </div>
+
+    <div class="af-layout">
+      <div>
+        <div class="tree-counter rev">
+          <div class="tc-val">₹3.16 Cr</div>
+          <div class="tc-lbl">Afforestation expenditure in FY 2024–25<br/>— saplings planted, land restored, ecosystems rebuilt</div>
+          <div class="tc-sub">Part of CCL's Mine Closure Plan &amp; CSR Green commitments</div>
+        </div>
+
+        <div class="af-list rev">
+          <div class="afl">
+            <div class="afl-icon">🌱</div>
+            <div class="afl-body"><h4>Native Species Plantation</h4><p>Priority given to locally endemic species — Sal, Mahua, Palash, Arjun, Neem, and Teak — ensuring ecological compatibility with Jharkhand's natural forest type.</p></div>
+          </div>
+          <div class="afl">
+            <div class="afl-icon">🏭</div>
+            <div class="afl-body"><h4>Mine Void Rehabilitation</h4><p>Plantation on overburden dumps, mine boundaries, and reclaimed land — transforming scarred mining landscape into productive, biodiverse green cover.</p></div>
+          </div>
+          <div class="afl">
+            <div class="afl-icon">🛣️</div>
+            <div class="afl-body"><h4>Roadside &amp; Colony Greening</h4><p>Avenue plantation along CCL township roads, mine access roads, and administrative areas — improving air quality, reducing dust, and providing shade for workers and community members.</p></div>
+          </div>
+          <div class="afl">
+            <div class="afl-icon">💧</div>
+            <div class="afl-body"><h4>Watershed &amp; Water Body Restoration</h4><p>Plantation around water bodies and watershed areas — preventing soil erosion, recharging groundwater, and restoring riparian habitats essential to Jharkhand's ecology.</p></div>
+          </div>
+          <div class="afl">
+            <div class="afl-icon">📊</div>
+            <div class="afl-body"><h4>Geo-Tagged Tracking</h4><p>Every sapling planted under CCL's CSR afforestation programme is geo-tagged and monitored through CCL's plantation management system — ensuring survival rates are tracked and replacements made.</p></div>
+          </div>
+          <div class="afl">
+            <div class="afl-icon">👩‍🌾</div>
+            <div class="afl-body"><h4>Community Nurseries</h4><p>Tribal Self-Help Groups run sapling nurseries supplying the plantation programme — combining environmental restoration with livelihood generation for women in CCL command areas.</p></div>
+          </div>
+        </div>
+
+        <!-- species grid -->
+        <div class="rev" style="margin-top:32px">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gdk);margin-bottom:16px">Key Species Planted</h3>
+          <div class="species-grid">
+            <div class="spc"><div class="spc-icon">🌳</div><div class="spc-name">Sal</div><div class="spc-type">Native Forest</div></div>
+            <div class="spc"><div class="spc-icon">🌸</div><div class="spc-name">Palash</div><div class="spc-type">Sacred / Medicinal</div></div>
+            <div class="spc"><div class="spc-icon">🌰</div><div class="spc-name">Mahua</div><div class="spc-type">Tribal Livelihood</div></div>
+            <div class="spc"><div class="spc-icon">🌿</div><div class="spc-name">Arjun</div><div class="spc-type">Medicinal Tree</div></div>
+            <div class="spc"><div class="spc-icon">🍃</div><div class="spc-name">Neem</div><div class="spc-type">Multi-purpose</div></div>
+            <div class="spc"><div class="spc-icon">🌲</div><div class="spc-name">Teak</div><div class="spc-type">Commercial Timber</div></div>
+            <div class="spc"><div class="spc-icon">🪴</div><div class="spc-name">Bamboo</div><div class="spc-type">Fast-Growing / SHG</div></div>
+            <div class="spc"><div class="spc-icon">🌴</div><div class="spc-name">Karanj</div><div class="spc-type">Biofuel / Avenue</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc rev">
+        <div class="sc-card green">
+          <div class="scv">₹3.16 Cr</div>
+          <div class="scl">FY 2024–25 afforestation expenditure</div>
+        </div>
+        <div class="sc-card pale">
+          <div class="scv">14 Areas</div>
+          <div class="scl">All CCL operational areas receive plantation activity</div>
+        </div>
+        <div class="sc-card dark">
+          <div class="scv">Geo-Tagged</div>
+          <div class="scl" style="color:rgba(255,255,255,.6)">Every sapling tracked digitally — survival monitoring enforced</div>
+        </div>
+        <div class="sc-card pale">
+          <div class="scv">Mine Plan</div>
+          <div class="scl">Integrated with statutory Mine Closure Plans — not just CSR optionality</div>
+        </div>
+        <div style="background:var(--gp);border-radius:14px;padding:20px;border:1px solid var(--gt)">
+          <div style="font-size:11px;font-weight:700;color:var(--gdk);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">Carbon Sequestration Impact</div>
+          <p style="font-size:13px;color:var(--mut);line-height:1.6">Each mature Sal tree sequesters approximately 22 kg of CO₂ annually. CCL's plantation programme, once trees reach maturity, will represent a measurable carbon offset contribution — directly supporting CIL's group-level net-zero journey.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOLAR & ENERGY ══ -->
+<section id="solar">
+  <div class="ctr">
+    <div class="rev">
+      <div class="sl">Pillar 2 · Renewable Energy</div>
+      <h2 class="sh">Solar Energy &amp; Sustainable Infrastructure</h2>
+      <p class="ss">CCL is embedding solar and sustainability principles into every major infrastructure project — from the GRIHA 4-star State Library in Ranchi to solar street lighting in command area villages, signalling what the post-coal era can look like.</p>
+    </div>
+
+    <div class="solar-layout">
+      <div>
+        <div class="solar-vis rev">
+          ☀️
+          <div class="solar-vis-label">Solar Rooftop · State Library Ranchi (under construction)</div>
+        </div>
+        <div class="solar-bar rev">
+          <div class="sbar-item"><div class="sbar-v">GRIHA ★★★★</div><div class="sbar-l">State Library green rating</div></div>
+          <div class="sbar-item"><div class="sbar-v">STP</div><div class="sbar-l">Sewage Treatment Plant installed</div></div>
+          <div class="sbar-item"><div class="sbar-v">Solar</div><div class="sbar-l">Rooftop generation on CCL infra</div></div>
+          <div class="sbar-item"><div class="sbar-v">LED</div><div class="sbar-l">100% LED lighting in new projects</div></div>
+        </div>
+      </div>
+
+      <div class="solar-items rev">
+        <div class="soi">
+          <div class="soi-icon">☀️</div>
+          <div class="soi-body"><h4>Solar Rooftop — State Library, Ranchi</h4><p>The ₹65.25 crore State Library includes a solar rooftop power generation system — a first for any major public library in Jharkhand. Reduces operational electricity costs and demonstrates renewable energy to every visitor.</p></div>
+        </div>
+        <div class="soi">
+          <div class="soi-icon">🏘️</div>
+          <div class="soi-body"><h4>Solar Street Lighting — Command Area Villages</h4><p>Solar street lights installed in PAP colonies and tribal villages across CCL command areas — providing reliable, maintenance-free lighting in communities where grid electricity remains unreliable.</p></div>
+        </div>
+        <div class="soi">
+          <div class="soi-icon">♻️</div>
+          <div class="soi-body"><h4>Sewage Treatment &amp; Water Recycling</h4><p>STPs mandated in all major CCL CSR infrastructure projects — the State Library's STP recycles greywater for landscape irrigation, modelling sustainable water use for future Jharkhand construction.</p></div>
+        </div>
+        <div class="soi">
+          <div class="soi-icon">💡</div>
+          <div class="soi-body"><h4>Energy Efficiency in Infrastructure</h4><p>All CCL-funded community infrastructure — schools, libraries, health centres — is now designed with LED lighting, energy-efficient HVAC, and passive solar design principles as standard requirements.</p></div>
+        </div>
+        <div class="soi">
+          <div class="soi-icon">🔋</div>
+          <div class="soi-body"><h4>Biogas from Gaushala</h4><p>Cattle waste from the Barkakana Gaushala is being assessed for biogas generation — a circular energy solution that converts animal welfare infrastructure into a clean cooking fuel source for adjacent communities.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMMUNITY TRANSITION ══ -->
+<section id="community">
+  <div class="ctr">
+    <div class="rev">
+      <div class="sl">Pillar 3 · People</div>
+      <h2 class="sh">Community-Centred Transition</h2>
+      <p class="ss">Just Transition is not an abstract policy — it is lived experience. CCL's community transition work ensures that families around mines develop skills, assets, and livelihoods resilient to eventual coal phase-down — through education, skill training, agriculture, and SHG-based enterprise.</p>
+    </div>
+
+    <div class="comm-grid">
+      <div class="comm-card rev">
+        <div class="comm-card-hdr"><div class="cch-icon">🎓</div><div class="cch-title">Education — Future-Proofing Youth</div><div class="cch-sub">CCL Ke Lal &amp; Laadli · Digital Vidya</div></div>
+        <div class="comm-card-body">
+          <p>194 students from coalfield villages now working at Amazon, Microsoft, SAP Labs — their careers completely independent of coal. Digital Vidya equips 193 schools with computers. Every educated child is a Just Transition success story.</p>
+          <div class="comm-tags"><span class="ctag">194 Engineers</span><span class="ctag">193 Schools Digitised</span></div>
+        </div>
+      </div>
+      <div class="comm-card rev">
+        <div class="comm-card-hdr" style="background:var(--gdk)"><div class="cch-icon">🛠️</div><div class="cch-title">Skill Training — Non-Coal Livelihoods</div><div class="cch-sub">PM Kaushal Kendra · IIT Dhanbad MoU</div></div>
+        <div class="comm-card-body">
+          <p>PM Kaushal Kendra in Kathara trains youth in IT, electrical, beauty & wellness, and service sector skills — deliberately targeting sectors with no coal dependency. IIT ISM Dhanbad MoU builds technical capacity in renewable energy fields.</p>
+          <div class="comm-tags"><span class="ctag">Non-Coal Skills</span><span class="ctag">IIT ISM MoU</span></div>
+        </div>
+      </div>
+      <div class="comm-card rev">
+        <div class="comm-card-hdr" style="background:#0891B2"><div class="cch-icon">👩</div><div class="cch-title">Women SHG Enterprises</div><div class="cch-sub">Tribal Haat · Skill Livelihood</div></div>
+        <div class="comm-card-body">
+          <p>Tribal women's SHGs produce and sell food products, handicrafts, and agricultural goods through Tribal Haats and CCL's market linkage programmes — building income streams entirely independent of coal employment.</p>
+          <div class="comm-tags"><span class="ctag">SHG Enterprises</span><span class="ctag">Market Linkages</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ENVIRONMENTAL TARGETS ══ -->
+<section id="targets">
+  <div class="ctr">
+    <div class="rev">
+      <div class="sl">CIL Group Environmental Targets</div>
+      <h2 class="sh">CCL's Environmental Commitments</h2>
+      <p class="ss">CCL operates under CIL's group-level environmental and sustainability framework — with binding targets on afforestation, water recycling, renewable energy, and emissions reduction that shape every CSR and operational decision.</p>
+    </div>
+    <div class="targets-grid">
+      <div class="tg rev">
+        <div class="tg-icon">🌳</div>
+        <div class="tg-val">1 Cr+</div>
+        <div class="tg-lbl">Saplings targeted across CIL group for FY 2025–26</div>
+      </div>
+      <div class="tg rev">
+        <div class="tg-icon">💧</div>
+        <div class="tg-val">Mine Water</div>
+        <div class="tg-lbl">100% mine water recycled in operations — zero discharge policy</div>
+      </div>
+      <div class="tg rev">
+        <div class="tg-icon">☀️</div>
+        <div class="tg-val">3 GW</div>
+        <div class="tg-lbl">CIL group solar target — CCL contributing through site identification</div>
+      </div>
+      <div class="tg rev">
+        <div class="tg-icon">🏭</div>
+        <div class="tg-val">Net Zero</div>
+        <div class="tg-lbl">CIL group net-zero pathway — CCL's afforestation &amp; solar contribute directly</div>
+      </div>
+      <div class="tg rev">
+        <div class="tg-icon">♻️</div>
+        <div class="tg-val">OB Dumps</div>
+        <div class="tg-lbl">All overburden dumps progressively reclaimed and greened</div>
+      </div>
+      <div class="tg rev">
+        <div class="tg-icon">🌱</div>
+        <div class="tg-val">GRIHA</div>
+        <div class="tg-lbl">All new CCL-funded major infrastructure buildings to achieve green rating</div>
+      </div>
+      <div class="tg rev">
+        <div class="tg-icon">🏘️</div>
+        <div class="tg-val">PAP First</div>
+        <div class="tg-lbl">Project Affected Persons receive priority in all skill, livelihood and transition programmes</div>
+      </div>
+      <div class="tg rev">
+        <div class="tg-icon">📊</div>
+        <div class="tg-val">ESG</div>
+        <div class="tg-lbl">CCL CSR contributes directly to CIL's ESG reporting under SEBI BRSR framework</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION NAV -->
+<div class="snav-bar">
+  <div class="snav">
+    <a href="animal-welfare.html" class="snl">
+      <div><div class="snl-d">← Previous Sector</div><div class="snl-t" style="color:#67E8F9">🐄 Animal Welfare</div></div>
+    </a>
+    <div style="text-align:center">
+      <div style="font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">You are viewing</div>
+      <div style="font-size:16px;font-weight:700;color:#86EFAC">🌱 Just Transition</div>
+    </div>
+    <a href="projects.html" class="snl">
+      <div style="text-align:right"><div class="snl-d">See All →</div><div class="snl-t" style="color:#FDE68A">📋 All Projects</div></div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div class="fb">Central Coalfields Limited · CSR Division</div>
+      <div class="fl">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="health.html">Health</a>
+        <a href="skill-livelihood.html">Skill &amp; Livelihood</a>
+        <a href="sports.html">Sports</a>
+        <a href="animal-welfare.html">Animal Welfare</a>
+        <a href="projects.html">All Projects</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>© 2025–26 Central Coalfields Limited · Darbhanga House, Ranchi – 834 029</p>
+      <span class="ftag">🌱 Just Transition Sector</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ro = new IntersectionObserver((e)=>{ e.forEach((en,i)=>{ if(en.isIntersecting){ setTimeout(()=>en.target.classList.add('vis'),i*60); ro.unobserve(en.target); } }); },{threshold:0.08});
+  document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+  const secs=['afforestation','solar','community','targets'];
+  const pills=document.querySelectorAll('.pp');
+  const so=new IntersectionObserver((e)=>{ e.forEach(en=>{ if(en.isIntersecting){ pills.forEach(p=>p.classList.remove('act')); const a=document.querySelector(`.pp[href="#${en.target.id}"]`); if(a) a.classList.add('act'); } }); },{threshold:0.4});
+  secs.forEach(id=>{ const el=document.getElementById(id); if(el) so.observe(el); });
+</script>
+</body>
+</html>
