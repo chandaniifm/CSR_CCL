@@ -43,25 +43,7 @@
     .hero h1 em{font-style:italic;color:#FCD34D}
     .hero-sub{font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.58);max-width:560px}
 
-    /* MAIN GRID */
-    .main-grid{max-width:1200px;margin:0 auto;padding:64px 2rem 80px;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:start}
-
-    /* CONTACT FORM */
-    .form-card{background:#fff;border-radius:20px;border:1px solid var(--cdark);padding:40px;box-shadow:0 4px 24px rgba(0,0,0,.04)}
-    .form-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--coal);margin-bottom:6px}
-    .form-sub{font-size:13px;color:var(--mut);margin-bottom:32px;line-height:1.6}
-
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
-    .form-group label{font-size:13px;font-weight:600;color:var(--coal)}
-    .form-group input,.form-group select,.form-group textarea{font-family:'DM Sans',sans-serif;font-size:14px;padding:12px 14px;border:1.5px solid var(--cdark);border-radius:8px;outline:none;color:var(--txt);background:#fff;transition:border-color .2s}
-    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
-    .form-group textarea{resize:vertical;min-height:110px}
-    .form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%235A7060' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
-
-    .submit-btn{width:100%;background:var(--gold);color:#fff;border:none;padding:15px;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px}
-    .submit-btn:hover{background:#92400E;transform:translateY(-2px);box-shadow:0 8px 24px rgba(180,83,9,.35)}
-    .form-note{font-size:12px;color:var(--mut);text-align:center;margin-top:14px;line-height:1.5}
+    
 
     /* SUCCESS STATE */
     .form-success{display:none;text-align:center;padding:48px 24px}
@@ -150,83 +132,6 @@
   </ul>
 </nav>
 
-<div class="bc">
-  <a href="index.html">Home</a><span class="sep">›</span>
-  <span class="cur">Contact CSR Division</span>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-mesh"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-c">
-    <div class="hero-badge"><div class="bdot"></div><span>CSR Division · Reach Us</span></div>
-    <h1>Connect with <em>CCL CSR</em> —<br/>Partners, Beneficiaries &amp; Press</h1>
-    <p class="hero-sub">Whether you are an NGO seeking partnership, a vendor applying for empanelment, a community member seeking support, or a journalist covering Jharkhand's coalfield development — we want to hear from you.</p>
-  </div>
-</section>
-
-<!-- MAIN GRID -->
-<div class="main-grid">
-
-  <!-- FORM -->
-  <div class="rev">
-    <div class="form-card">
-      <!-- Form view -->
-      <div id="form-view">
-        <div class="form-title">Send Us a Message</div>
-        <p class="form-sub">Fill in the form below and our CSR team will respond within 3–5 working days. For urgent matters, please call the numbers listed alongside.</p>
-
-        <div class="form-row">
-          <div class="form-group"><label for="fname">First Name *</label><input type="text" id="fname" placeholder="Ramesh"/></div>
-          <div class="form-group"><label for="lname">Last Name *</label><input type="text" id="lname" placeholder="Kumar"/></div>
-        </div>
-        <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="you@example.com"/></div>
-        <div class="form-group"><label for="phone">Mobile Number</label><input type="tel" id="phone" placeholder="+91 9876543210"/></div>
-        <div class="form-group">
-          <label for="enquiry">Nature of Enquiry *</label>
-          <select id="enquiry">
-            <option value="">– Select –</option>
-            <option>NGO / Implementing Agency Partnership</option>
-            <option>Vendor Empanelment</option>
-            <option>Beneficiary Support / Grievance</option>
-            <option>Media / Press Enquiry</option>
-            <option>Project Proposal Submission</option>
-            <option>Scholarship / Training Enquiry</option>
-            <option>CSR Report / Data Request</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="sector">Related CSR Sector</label>
-          <select id="sector">
-            <option value="">– Select if applicable –</option>
-            <option>Education</option>
-            <option>Health &amp; Nutrition</option>
-            <option>Skill &amp; Livelihood</option>
-            <option>Sports</option>
-            <option>Animal Welfare</option>
-            <option>Just Transition / Environment</option>
-            <option>General / Multiple</option>
-          </select>
-        </div>
-        <div class="form-group"><label for="org">Organisation / Company (if applicable)</label><input type="text" id="org" placeholder="Your organisation name"/></div>
-        <div class="form-group"><label for="district">District / Location</label><input type="text" id="district" placeholder="e.g. Hazaribagh, Jharkhand"/></div>
-        <div class="form-group"><label for="message">Message *</label><textarea id="message" placeholder="Please describe your enquiry in detail..."></textarea></div>
-
-        <button class="submit-btn" onclick="submitForm()">Send Message →</button>
-        <p class="form-note">Your information is used only to respond to your enquiry. CCL does not share personal data with third parties.</p>
-      </div>
-
-      <!-- Success view -->
-      <div class="form-success" id="form-success">
-        <div class="fs-icon">✅</div>
-        <div class="fs-title">Message Received</div>
-        <p class="fs-sub">Thank you for reaching out to CCL's CSR Division. Our team will review your message and respond within 3–5 working days to the email address you provided.<br/><br/>For urgent matters, please call <strong>0651-2360555</strong> during office hours (Mon–Fri, 10 AM – 5 PM).</p>
-      </div>
-    </div>
-  </div>
-
   <!-- SIDEBAR -->
   <div class="sidebar">
 
@@ -243,7 +148,7 @@
       </div>
       <div class="ac-detail">
         <div class="ac-icon">📧</div>
-        <div class="ac-text"><h4>Email</h4><p><a href="mailto:csr@ccl.gov.in">csr@ccl.gov.in</a></p></div>
+        <div class="ac-text"><h4>Email</h4><p><a href="mailto:gmsdncsr.ccl@coalindia.in">gmsdncsr.ccl@coalindia.in</a></p></div>
       </div>
       <div class="ac-detail">
         <div class="ac-icon">🕐</div>
