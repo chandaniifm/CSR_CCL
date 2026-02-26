@@ -160,32 +160,7 @@
       </div>
     </div>
 
-    <!-- Enquiry type quick select -->
-    <div class="rev">
-      <p style="font-size:13px;font-weight:700;color:var(--coal);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px">I am a…</p>
-      <div class="enquiry-types">
-        <div class="et-card" onclick="setEnquiry('NGO / Implementing Agency Partnership')">
-          <div class="et-icon">🤝</div>
-          <div class="et-title">NGO / Partner</div>
-          <div class="et-sub">Implementing agencies &amp; CSOs</div>
-        </div>
-        <div class="et-card" onclick="setEnquiry('Vendor Empanelment')">
-          <div class="et-icon">🏭</div>
-          <div class="et-title">Vendor</div>
-          <div class="et-sub">Empanelment &amp; procurement</div>
-        </div>
-        <div class="et-card" onclick="setEnquiry('Beneficiary Support / Grievance')">
-          <div class="et-icon">👤</div>
-          <div class="et-title">Beneficiary</div>
-          <div class="et-sub">Programme support &amp; grievances</div>
-        </div>
-        <div class="et-card" onclick="setEnquiry('Media / Press Enquiry')">
-          <div class="et-icon">📰</div>
-          <div class="et-title">Press / Media</div>
-          <div class="et-sub">Journalists &amp; researchers</div>
-        </div>
-      </div>
-    </div>
+
 
     <!-- CSR Key Numbers -->
     <div class="report-card rev">
@@ -235,28 +210,6 @@
   </div>
 </footer>
 
-<script>
-  const ro = new IntersectionObserver((e)=>{ e.forEach((en,i)=>{ if(en.isIntersecting){ setTimeout(()=>en.target.classList.add('vis'),i*60); ro.unobserve(en.target); } }); },{threshold:0.08});
-  document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
 
-  function setEnquiry(val) {
-    document.getElementById('enquiry').value = val;
-    document.getElementById('form-view').scrollIntoView({behavior:'smooth',block:'center'});
-    document.getElementById('enquiry').focus();
-  }
-
-  function submitForm() {
-    const req = ['fname','lname','email','enquiry','message'];
-    let ok = true;
-    req.forEach(id => {
-      const el = document.getElementById(id);
-      if (!el.value.trim()) { el.style.borderColor='#DC2626'; ok=false; }
-      else el.style.borderColor='';
-    });
-    if (!ok) { alert('Please fill in all required fields marked with *.'); return; }
-    document.getElementById('form-view').style.display='none';
-    document.getElementById('form-success').classList.add('show');
-  }
-</script>
 </body>
 </html>
