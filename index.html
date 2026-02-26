@@ -9,29 +9,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <style>
-    /* COLOR SYSTEM — CCL Color Analysis Report Feb 2026 */
     :root {
       --coal:         #1A1A2E;
       --forest-deep:  #1B4332;
       --forest:       #1E4D35;
       --forest-mid:   #2A6347;
       --forest-light: #3A7D5A;
-      --gold:         #B45309;   /* WCAG AA 4.68:1 on white */
+      --gold:         #B45309;
       --gold-hover:   #D97706;
-      --gold-bright:  #F59E0B;   /* dark bg only */
-      --gold-pale:    #FFFBEB;   /* marquee bg per report */
+      --gold-bright:  #F59E0B;
+      --gold-pale:    #FFFBEB;
       --cream:        #F7F3EE;
       --cream-dark:   #EDE6D8;
       --warm-white:   #FDFAF6;
       --text:         #1C2B22;
       --muted:        #5A7060;
-      /* SIX-COLOUR SECTOR SYSTEM — exact hex from report */
       --s-edu:    #2563EB; --s-edu-bg:    #EFF6FF;
       --s-health: #DC2626; --s-health-bg: #FEF2F2;
       --s-skill:  #D97706; --s-skill-bg:  #FFFBEB;
       --s-sport:  #7C3AED; --s-sport-bg:  #EDE9FE;
       --s-animal: #0891B2; --s-animal-bg: #E0F2FE;
       --s-env:    #16A34A; --s-env-bg:    #F0FDF4;
+      --s-policy: #B45309; --s-policy-bg: #FFFBEB;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -44,14 +43,15 @@
     .nav-text{display:flex;flex-direction:column}
     .nav-text span:first-child{font-size:13px;font-weight:600;color:var(--gold-bright);letter-spacing:.08em;text-transform:uppercase}
     .nav-text span:last-child{font-size:11px;color:rgba(255,255,255,.42);letter-spacing:.04em}
-    .nav-links{display:flex;gap:2rem;list-style:none}
+    .nav-links{display:flex;gap:1.7rem;list-style:none}
     .nav-links a{color:rgba(255,255,255,.68);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.03em;transition:color .2s}
     .nav-links a:hover{color:var(--gold-bright)}
+    .nav-links a.active{color:var(--gold-bright)}
     .nav-cta{background:var(--gold);color:#FEFCE8;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;transition:background .2s}
     .nav-cta:hover{background:var(--gold-hover)}
     a:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px;border-radius:4px}
 
-    /* HERO — coal #1A1A2E → forest #1B4332 per report */
+    /* HERO */
     .hero{min-height:100vh;background:linear-gradient(145deg,#1A1A2E 0%,#12192A 22%,#0E2318 48%,#1B4332 100%);position:relative;overflow:hidden;display:flex;align-items:center}
     .hero-warmth{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 55% at 12% 88%,rgba(180,83,9,.07) 0%,transparent 60%),radial-gradient(ellipse 35% 45% at 88% 18%,rgba(27,67,50,.55) 0%,transparent 65%)}
     .hero-grid{position:absolute;inset:0;opacity:.03;background-image:linear-gradient(rgba(245,240,230,1) 1px,transparent 1px),linear-gradient(90deg,rgba(245,240,230,1) 1px,transparent 1px);background-size:60px 60px}
@@ -82,7 +82,7 @@
     .hero-stat-label{font-size:11px;color:rgba(255,255,255,.42);font-weight:500;line-height:1.4}
     .hero-card-note{margin-top:16px;font-size:11px;color:rgba(255,255,255,.22);text-align:center;font-style:italic}
 
-    /* MARQUEE — cream bg + deep amber text per report */
+    /* MARQUEE */
     .marquee-strip{background:var(--gold-pale);border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);padding:11px 0;overflow:hidden}
     .marquee-inner{display:flex;white-space:nowrap;animation:marquee 48s linear infinite}
     .marquee-inner span{font-size:13px;font-weight:700;color:var(--gold);padding:0 36px;letter-spacing:.04em}
@@ -185,58 +185,37 @@
     .sector-card[data-sector="animal"] .sc-arrow{color:var(--s-animal)}
     .sector-card[data-sector="env"] .sc-arrow{color:var(--s-env)}
 
-    /* ══════════════════════════════════════════════════════════════
-       EXPENDITURE CHART — REDESIGNED
-       Split-segment bar: green (within target) + gold (surplus above target)
-       Dashed outline shows mandatory target position
-       ══════════════════════════════════════════════════════════════ */
+    /* EXPENDITURE */
     #expenditure{background:var(--warm-white)}
     .exp-layout{display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start}
-
-    /* Summary strip */
     .exp-summary-strip{display:flex;gap:24px;margin-bottom:24px;padding:16px 20px;background:var(--cream);border-radius:12px;flex-wrap:wrap}
     .ess{display:flex;flex-direction:column;gap:2px}
     .ess-val{font-family:'DM Mono',monospace;font-size:1.1rem;font-weight:700}
     .ess-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
-    .green{color:var(--forest)} .amber{color:var(--gold)}
-
-    /* Legend */
+    .green{color:var(--forest)}.amber{color:var(--gold)}
     .exp-legend{display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap}
     .exp-legend-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-weight:500}
     .exp-swatch{width:16px;height:16px;border-radius:3px;flex-shrink:0}
-
-    /* Bar rows */
     .bar-chart{display:flex;flex-direction:column;gap:11px}
     .bar-row{display:grid;grid-template-columns:60px 1fr 22px 120px;gap:10px;align-items:center}
     .bar-year{font-size:12px;color:var(--muted);font-weight:600;text-align:right;white-space:nowrap}
     .bar-row.exceeded .bar-year{color:var(--forest-mid);font-weight:700}
     .bar-row.latest .bar-year{color:var(--gold);font-weight:700}
-
     .bar-track{position:relative;height:30px;background:var(--cream-dark);border-radius:6px;overflow:visible}
-
-    /* Dashed mandatory target outline */
     .bar-mandatory{position:absolute;top:0;left:0;height:100%;border-radius:6px;background:transparent;border:2px dashed rgba(90,112,96,.38);z-index:1;pointer-events:none}
-
-    /* Base (actual within mandatory) */
     .bar-base{position:absolute;top:0;left:0;height:100%;border-radius:6px 0 0 6px;background:linear-gradient(90deg,var(--forest-mid),var(--forest-light));z-index:2;transition:width 1.3s cubic-bezier(.22,1,.36,1);display:flex;align-items:center;padding-left:10px;font-size:11px;font-weight:700;color:rgba(255,255,255,.9);overflow:hidden;white-space:nowrap}
     .bar-base.full-radius{border-radius:6px}
     .bar-base.below-style{background:linear-gradient(90deg,#7A9080,#94A899)}
-
-    /* Gold surplus beyond target */
     .bar-surplus{position:absolute;top:0;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-bright));z-index:2;border-radius:0 6px 6px 0;transition:width 1.3s cubic-bezier(.22,1,.36,1),left 1.3s cubic-bezier(.22,1,.36,1)}
     .bar-row.latest .bar-base{background:linear-gradient(90deg,var(--gold),#E8900A)}
     .bar-row.latest .bar-surplus{background:linear-gradient(90deg,#D97706,#FBBF24)}
-
     .bar-badge{font-size:16px;text-align:center;line-height:1}
     .bar-amt-col{display:flex;flex-direction:column;gap:2px}
     .bar-actual{font-family:'DM Mono',monospace;font-size:12px;font-weight:700;color:var(--text)}
     .bar-diff{font-family:'DM Mono',monospace;font-size:10px;font-weight:600}
     .bar-diff.surplus-lbl{color:var(--gold)}
     .bar-diff.below-lbl{color:var(--muted)}
-
     .exp-chart-note{margin-top:16px;padding:12px 16px;background:var(--cream);border-radius:8px;border-left:3px solid var(--forest-light);font-size:12px;color:var(--muted);line-height:1.6}
-
-    /* Summary panel */
     .exp-panel{background:var(--forest);border-radius:18px;padding:32px;position:sticky;top:90px}
     .exp-panel h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-bright);margin-bottom:22px;padding-bottom:12px;border-bottom:1px solid rgba(180,83,9,.18)}
     .esr{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
@@ -246,6 +225,79 @@
     .esr-val.big{font-size:1.8rem;color:#FDE68A;font-family:'Playfair Display',serif}
     .exp-note{margin-top:18px;background:rgba(180,83,9,.08);border-radius:10px;padding:14px;border:1px solid rgba(180,83,9,.15)}
     .exp-note p{font-size:12px;color:rgba(255,255,255,.4);line-height:1.65}
+
+    /* ═══════════════════════════════════════════════
+       CSR POLICY SECTION
+    ═══════════════════════════════════════════════ */
+    #policy{background:var(--cream);padding:88px 2rem}
+
+    /* Compliance overview pills */
+    .policy-compliance-strip{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+    .pcs-pill{display:flex;align-items:center;gap:10px;background:var(--warm-white);border:1px solid rgba(27,58,45,.1);border-radius:12px;padding:14px 18px;flex:1;min-width:180px}
+    .pcs-pill .pnum{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gold);line-height:1}
+    .pcs-pill .ptext{display:flex;flex-direction:column;gap:2px}
+    .pcs-pill .ptext strong{font-size:13px;font-weight:700;color:var(--forest)}
+    .pcs-pill .ptext span{font-size:11px;color:var(--muted);line-height:1.4}
+    .pcs-pill .pdot{width:8px;height:8px;border-radius:50%;background:#22c55e;flex-shrink:0;margin-left:auto}
+
+    /* Two-column policy layout */
+    .policy-layout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+
+    /* Committee card */
+    .policy-committee{background:var(--forest);border-radius:18px;padding:32px;color:#fff}
+    .policy-committee h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-bright);margin-bottom:6px}
+    .policy-committee .sub{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:22px;line-height:1.5}
+    .committee-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+    .committee-row:last-child{border:none}
+    .cr-num{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:rgba(255,255,255,.5);flex-shrink:0}
+    .cr-body{flex:1}
+    .cr-role{font-size:13px;font-weight:600;color:#fff;line-height:1.3}
+    .cr-cat{font-size:11px;color:rgba(255,255,255,.38);margin-top:1px}
+    .cr-badge{padding:3px 9px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:.04em;flex-shrink:0}
+    .cr-badge.chair{background:rgba(180,83,9,.25);color:var(--gold-bright)}
+    .cr-badge.mem  {background:rgba(255,255,255,.08);color:rgba(255,255,255,.55)}
+    .cr-badge.ind  {background:rgba(245,158,11,.15);color:#FDE68A}
+    .cr-badge.sec  {background:rgba(34,197,94,.12);color:#86efac}
+    .committee-footer{margin-top:18px;padding:12px 14px;background:rgba(0,0,0,.2);border-radius:10px;font-size:11px;color:rgba(255,255,255,.3);line-height:1.6}
+
+    /* Documents panel */
+    .policy-docs-panel{display:flex;flex-direction:column;gap:12px}
+    .policy-doc-group{background:var(--warm-white);border-radius:16px;border:1px solid rgba(27,58,45,.08);overflow:hidden}
+    .pdg-header{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid rgba(27,58,45,.06)}
+    .pdg-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+    .pdg-icon.gold{background:var(--gold-pale)}
+    .pdg-icon.forest{background:rgba(27,67,50,.08)}
+    .pdg-icon.blue{background:#EFF6FF}
+    .pdg-title{font-size:13px;font-weight:700;color:var(--forest)}
+    .pdg-count{margin-left:auto;font-size:11px;font-weight:700;background:var(--cream);color:var(--muted);padding:2px 8px;border-radius:10px}
+    .pdg-list{padding:6px 0}
+    .pdg-link{display:flex;align-items:center;gap:10px;padding:9px 20px;text-decoration:none;transition:background .18s}
+    .pdg-link:hover{background:var(--cream)}
+    .pdg-link .dl-icon{font-size:14px;flex-shrink:0}
+    .pdg-link .dl-name{font-size:13px;color:var(--text);line-height:1.35;flex:1}
+    .pdg-link .dl-tag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:8px;flex-shrink:0}
+    .dl-tag.new{background:rgba(220,38,38,.1);color:#DC2626}
+    .dl-tag.pdf{background:var(--cream);color:var(--muted)}
+    .dl-tag.gov{background:rgba(27,67,50,.09);color:var(--forest)}
+
+    /* Action Plan row */
+    .policy-action-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .par-card{background:var(--warm-white);border-radius:14px;border:1px solid rgba(27,58,45,.08);padding:16px 18px;display:flex;align-items:center;gap:12px;text-decoration:none;transition:all .2s}
+    .par-card:hover{border-color:var(--gold);box-shadow:0 4px 18px rgba(180,83,9,.12);transform:translateY(-2px)}
+    .par-icon{width:38px;height:38px;border-radius:9px;background:var(--gold-pale);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+    .par-body strong{display:block;font-size:13px;font-weight:700;color:var(--forest);line-height:1.3}
+    .par-body span{font-size:11px;color:var(--muted)}
+    .par-arrow{margin-left:auto;color:var(--gold);font-size:16px;flex-shrink:0}
+
+    /* Full-page CTA banner */
+    .policy-cta{margin-top:40px;background:linear-gradient(135deg,var(--coal) 0%,var(--forest-deep) 100%);border-radius:18px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .policy-cta-text h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;margin-bottom:6px}
+    .policy-cta-text p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.6}
+    .policy-cta-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .pc-badge-item{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:4px 12px;font-size:11px;color:rgba(255,255,255,.55)}
+    .pc-badge-item .dot{width:6px;height:6px;border-radius:50%;background:#22c55e}
+    .policy-cta-btn{background:var(--gold);color:#FEFCE8;padding:13px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;transition:all .2s;flex-shrink:0}
+    .policy-cta-btn:hover{background:var(--gold-hover);transform:translateY(-2px)}
 
     /* PROJECTS */
     #projects{background:var(--cream)}
@@ -283,7 +335,7 @@
     .story-body h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--forest);margin-bottom:6px}
     .story-body p{font-size:13px;color:var(--muted);line-height:1.65}
     .story-loc{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-top:12px}
-    .loc-edu{color:var(--s-edu)} .loc-health{color:var(--s-health)} .loc-skill{color:var(--s-skill)}
+    .loc-edu{color:var(--s-edu)}.loc-health{color:var(--s-health)}.loc-skill{color:var(--s-skill)}
 
     /* AWARDS */
     #awards{background:var(--forest)}
@@ -304,11 +356,11 @@
     .quicklinks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .ql{background:var(--warm-white);border-radius:16px;padding:24px;text-decoration:none;border:1px solid rgba(27,58,45,.07);transition:all .25s;display:flex;flex-direction:column;gap:10px}
     .ql:hover{box-shadow:0 8px 30px rgba(27,58,45,.1);transform:translateY(-4px);border-color:rgba(180,83,9,.28)}
-    .ql-icon{font-size:28px} .ql h4{font-size:15px;font-weight:700} .ql p{font-size:12px;color:var(--muted);line-height:1.5} .ql-arrow{font-size:18px;margin-top:auto}
+    .ql-icon{font-size:28px}.ql h4{font-size:15px;font-weight:700}.ql p{font-size:12px;color:var(--muted);line-height:1.5}.ql-arrow{font-size:18px;margin-top:auto}
 
     /* FOOTER */
     footer{background:var(--coal);padding:56px 2rem 28px}
-    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
     .footer-brand h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;margin-bottom:10px}
     .footer-brand p{font-size:13px;color:rgba(255,255,255,.3);line-height:1.75}
     .footer-col h4{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:16px}
@@ -326,13 +378,14 @@
 
     @media(max-width:1024px){
       .hero-content{grid-template-columns:1fr}.hero-card,.hero-pulse{display:none}
-      .about-grid,.exp-layout{grid-template-columns:1fr}
+      .about-grid,.exp-layout,.policy-layout{grid-template-columns:1fr}
       .sectors-grid{grid-template-columns:repeat(2,1fr)}
       .impact-grid{grid-template-columns:repeat(2,1fr)}
       .awards-grid{grid-template-columns:repeat(2,1fr)}
       .quicklinks-grid{grid-template-columns:repeat(2,1fr)}
       .footer-grid{grid-template-columns:1fr 1fr}
       .stories-grid{grid-template-columns:1fr 1fr}
+      .policy-action-row{grid-template-columns:1fr}
     }
     @media(max-width:640px){
       .nav-links{display:none}
@@ -341,6 +394,8 @@
       .awards-grid,.quicklinks-grid{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr}
       .bar-row{grid-template-columns:50px 1fr 18px 90px}
+      .policy-compliance-strip{flex-direction:column}
+      .policy-cta{flex-direction:column;text-align:center}
     }
   </style>
 </head>
@@ -352,9 +407,13 @@
     <div class="nav-text"><span>CCL CSR</span><span>Central Coalfields Limited</span></div>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li><li><a href="#sectors">Sectors</a></li>
-    <li><a href="#projects">Projects</a></li><li><a href="#impact">Impact</a></li>
-    <li><a href="#expenditure">Expenditure</a></li><li><a href="#awards">Awards</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#sectors">Sectors</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#expenditure">Expenditure</a></li>
+    <li><a href="#policy">CSR Policy</a></li>
+    <li><a href="#awards">Awards</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <a href="projects.html" class="nav-cta">Explore Projects →</a>
@@ -400,6 +459,7 @@
   </div>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="about-grid">
@@ -424,6 +484,7 @@
   </div>
 </section>
 
+<!-- IMPACT -->
 <section id="impact">
   <div class="container">
     <div class="impact-header reveal">
@@ -450,6 +511,7 @@
   </div>
 </section>
 
+<!-- SECTORS -->
 <section id="sectors">
   <div class="container">
     <div class="reveal">
@@ -476,6 +538,7 @@
   </div>
 </section>
 
+<!-- EXPENDITURE -->
 <section id="expenditure">
   <div class="container">
     <div class="reveal" style="margin-bottom:40px">
@@ -498,7 +561,7 @@
           <div class="exp-legend-item"><div class="exp-swatch" style="border:2px dashed rgba(90,112,96,.45);background:transparent"></div>Mandatory target line (2% Net Profit)</div>
         </div>
         <div class="bar-chart" id="barChart"></div>
-        <div class="exp-chart-note"><strong>How to read:</strong> Each bar shows the actual CSR spend split into two segments — dark green (spend within the mandatory target) and gold (surplus spend above the 2% statutory requirement). The dashed outline marks exactly where the mandatory target sits. Bars extending beyond the dashed line are years where CCL exceeded its statutory obligation. ✅ = exceeded &nbsp;|&nbsp; ⚠️ = below target &nbsp;|&nbsp; 🏆 = highest ever (FY 2024–25)</div>
+        <div class="exp-chart-note"><strong>How to read:</strong> Each bar shows the actual CSR spend split into two segments — dark green (spend within the mandatory target) and gold (surplus spend above the 2% statutory requirement). The dashed outline marks exactly where the mandatory target sits. ✅ = exceeded &nbsp;|&nbsp; ⚠️ = below target &nbsp;|&nbsp; 🏆 = highest ever (FY 2024–25)</div>
       </div>
       <div class="exp-panel reveal">
         <h3>Expenditure Summary</h3>
@@ -515,6 +578,236 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     CSR POLICY & COMPLIANCE SECTION
+═══════════════════════════════════════════════ -->
+<section id="policy">
+  <div class="container">
+
+    <!-- Section header -->
+    <div class="reveal" style="margin-bottom:36px">
+      <div class="section-label">CSR Policy &amp; Compliance</div>
+      <h2 class="section-heading">Governed by Law, Driven by Purpose</h2>
+      <p class="section-subtext">Statutory disclosures under Companies Act 2013 Section 135 — Board-approved policy, CSR Committee composition, annual action plans, and the legal framework governing CCL's CSR obligations.</p>
+    </div>
+
+    <!-- Compliance overview pills -->
+    <div class="policy-compliance-strip reveal">
+      <div class="pcs-pill">
+        <div class="ptext"><strong>2%</strong><span>Mandatory spend — avg. net profit of 3 preceding years</span></div>
+        <div class="pdot"></div>
+      </div>
+      <div class="pcs-pill">
+        <div class="ptext"><strong>60%</strong><span>Minimum allocation to DPE-notified priority themes</span></div>
+        <div class="pdot"></div>
+      </div>
+      <div class="pcs-pill">
+        <div class="ptext"><strong>80%</strong><span>Spend within 25 km of CCL establishments</span></div>
+        <div class="pdot"></div>
+      </div>
+      <div class="pcs-pill">
+        <div class="ptext"><strong>Zero</strong><span>CAG audit paragraphs on CSR compliance — all years</span></div>
+        <div class="pdot"></div>
+      </div>
+    </div>
+
+    <!-- Two-column: Committee + Documents -->
+    <div class="policy-layout">
+
+      <!-- LEFT — CSR Committee -->
+      <div class="policy-committee reveal">
+        <h3>CSR Committee of CCL Board</h3>
+        <p class="sub">Constituted under Section 135(1) of the Companies Act 2013 · Meets minimum 4 times per year · Approves policy, budget &amp; impact assessments</p>
+
+        <div class="committee-row">
+          <div class="cr-num">1</div>
+          <div class="cr-body">
+            <div class="cr-role">Chairman-cum-Managing Director (CMD)</div>
+            <div class="cr-cat">Functional Director · Govt. Nominee</div>
+          </div>
+          <span class="cr-badge chair">Chairman</span>
+        </div>
+        <div class="committee-row">
+          <div class="cr-num">2</div>
+          <div class="cr-body">
+            <div class="cr-role">Director (Personnel), CCL</div>
+            <div class="cr-cat">Functional Director</div>
+          </div>
+          <span class="cr-badge mem">Member</span>
+        </div>
+        <div class="committee-row">
+          <div class="cr-num">3</div>
+          <div class="cr-body">
+            <div class="cr-role">Director (Finance), CCL</div>
+            <div class="cr-cat">Functional Director</div>
+          </div>
+          <span class="cr-badge mem">Member</span>
+        </div>
+        <div class="committee-row">
+          <div class="cr-num">4</div>
+          <div class="cr-body">
+            <div class="cr-role">Director (Technical / Operations), CCL</div>
+            <div class="cr-cat">Functional Director</div>
+          </div>
+          <span class="cr-badge mem">Member</span>
+        </div>
+        <div class="committee-row">
+          <div class="cr-num">5</div>
+          <div class="cr-body">
+            <div class="cr-role">Independent Director (Govt. Nominee)</div>
+            <div class="cr-cat">Independent Director · CCL Board</div>
+          </div>
+          <span class="cr-badge ind">Independent</span>
+        </div>
+        <div class="committee-row">
+          <div class="cr-num">6</div>
+          <div class="cr-body">
+            <div class="cr-role">GM (CSR &amp; Community Development), CCL</div>
+            <div class="cr-cat">Senior Management · Non-Director</div>
+          </div>
+          <span class="cr-badge sec">Secretary</span>
+        </div>
+
+        <div class="committee-footer">
+          📋 Committee composition, meeting minutes, department structure and executive list of all 35 CSR officers available for download below. Current officer names updated post each Board reconstitution.
+        </div>
+
+        <!-- Action plan download links below committee -->
+        <div style="margin-top:20px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:10px">Annual Action Plans</div>
+          <div class="policy-action-row">
+            <a class="par-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <div class="par-icon">📅</div>
+              <div class="par-body"><strong>FY 2025–26 Action Plan</strong><span>Board Approved + Modified</span></div>
+              <span class="par-arrow">↗</span>
+            </a>
+            <a class="par-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <div class="par-icon">📅</div>
+              <div class="par-body"><strong>FY 2024–25 Action Plan</strong><span>Board Approved + Modified</span></div>
+              <span class="par-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — Document groups -->
+      <div class="policy-docs-panel reveal">
+
+        <!-- Group 1: CCL Policy -->
+        <div class="policy-doc-group">
+          <div class="pdg-header">
+            <div class="pdg-icon gold">📜</div>
+            <span class="pdg-title">CCL &amp; CIL CSR Policy</span>
+            <span class="pdg-count">4 docs</span>
+          </div>
+          <div class="pdg-list">
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">📄</span>
+              <span class="dl-name">CCL Revised CSR Policy (2024)</span>
+              <span class="dl-tag new">Latest</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">📋</span>
+              <span class="dl-name">Implementation SOP — CSR Activities (26.11.2019)</span>
+              <span class="dl-tag gov">SOP</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">📋</span>
+              <span class="dl-name">CIL Group CSR Policy — Modified April 2021</span>
+              <span class="dl-tag pdf">PDF</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">📋</span>
+              <span class="dl-name">CIL Group CSR Policy — Modified October 2020</span>
+              <span class="dl-tag pdf">PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Group 2: Board-Approved Projects -->
+        <div class="policy-doc-group">
+          <div class="pdg-header">
+            <div class="pdg-icon forest">🏛️</div>
+            <span class="pdg-title">Board-Approved Projects &amp; Committee</span>
+            <span class="pdg-count">4 docs</span>
+          </div>
+          <div class="pdg-list">
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">👥</span>
+              <span class="dl-name">CCL SD &amp; CSR Committee — Composition &amp; Minutes</span>
+              <span class="dl-tag new">Updated</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">✅</span>
+              <span class="dl-name">List of CCL Board-Approved CSR Projects — Till FY 2021</span>
+              <span class="dl-tag pdf">PDF</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">✅</span>
+              <span class="dl-name">List of CSR Projects Approved in FY 2022–23</span>
+              <span class="dl-tag pdf">PDF</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">📊</span>
+              <span class="dl-name">Year-wise CSR Expenditure Report — All Years</span>
+              <span class="dl-tag gov">Reports</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Group 3: Companies Act & Legal -->
+        <div class="policy-doc-group">
+          <div class="pdg-header">
+            <div class="pdg-icon blue">⚖️</div>
+            <span class="pdg-title">Companies Act, Rules &amp; FAQs</span>
+            <span class="pdg-count">4 docs</span>
+          </div>
+          <div class="pdg-list">
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">⚖️</span>
+              <span class="dl-name">Section 135 of Companies Act 2013</span>
+              <span class="dl-tag gov">Primary Law</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">📑</span>
+              <span class="dl-name">Companies (CSR Policy) Rules 2014</span>
+              <span class="dl-tag pdf">PDF</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">📑</span>
+              <span class="dl-name">Amendment Rules w.e.f. 22.01.2021</span>
+              <span class="dl-tag pdf">PDF</span>
+            </a>
+            <a class="pdg-link" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+              <span class="dl-icon">❓</span>
+              <span class="dl-name">MCA GC No. 14/2021 — FAQs (25.08.2021)</span>
+              <span class="dl-tag pdf">PDF</span>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /policy-docs-panel -->
+    </div><!-- /policy-layout -->
+
+    <!-- Full-width CTA linking to dedicated policy page -->
+    <div class="policy-cta reveal">
+      <div class="policy-cta-text">
+        <h3>Complete Policy &amp; Compliance Documentation</h3>
+        <p>The dedicated CSR Policy page contains all meeting minutes, activity-wise expenditure for FY 2022–25, Notifications &amp; Circulars, DPE guidelines, impact assessment reports, and the complete legal framework.</p>
+        <div class="policy-cta-badges">
+          <span class="pc-badge-item"><span class="dot"></span> CSR Committee Minutes</span>
+          <span class="pc-badge-item"><span class="dot"></span> Activity-wise Expenditure FY22–FY25</span>
+          <span class="pc-badge-item"><span class="dot"></span> TERI &amp; IICA Impact Studies</span>
+          <span class="pc-badge-item"><span class="dot"></span> DPE &amp; MCA Circulars</span>
+        </div>
+      </div>
+      <a href="csr-policy.html" class="policy-cta-btn">View Full Compliance Page →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- STORIES -->
 <section id="stories">
   <div class="container">
     <div class="reveal">
@@ -530,6 +823,7 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <div class="reveal">
@@ -549,6 +843,7 @@
   </div>
 </section>
 
+<!-- AWARDS -->
 <section id="awards">
   <div class="container">
     <div class="awards-header reveal"><div class="section-label">Recognition</div><h2 class="section-heading">Awards &amp; Accolades</h2></div>
@@ -563,6 +858,7 @@
   </div>
 </section>
 
+<!-- QUICKLINKS -->
 <section id="quicklinks">
   <div class="container">
     <div class="reveal" style="text-align:center;margin-bottom:36px"><div class="section-label" style="justify-content:center">Quick Navigation</div><h2 class="section-heading" style="text-align:center">Explore the Website</h2></div>
@@ -574,19 +870,70 @@
       <a href="just-transition.html" class="ql reveal" style="border-top:3px solid var(--s-env)"><span class="ql-icon">🌿</span><h4 style="color:var(--s-env)">Just Transition</h4><p>Fish farming, solar energy, afforestation.</p><span class="ql-arrow" style="color:var(--s-env)">→</span></a>
       <a href="animal-welfare.html" class="ql reveal" style="border-top:3px solid var(--s-animal)"><span class="ql-icon">🐾</span><h4 style="color:var(--s-animal)">Animal Welfare</h4><p>Rakshak — Jharkhand's first stray animal ambulance.</p><span class="ql-arrow" style="color:var(--s-animal)">→</span></a>
       <a href="projects.html" class="ql reveal" style="border-top:3px solid var(--forest)"><span class="ql-icon">📋</span><h4>All Projects</h4><p>Browse all 377 projects across 8 districts.</p><span class="ql-arrow">→</span></a>
-      <a href="contact.html" class="ql reveal" style="border-top:3px solid var(--gold)"><span class="ql-icon">📬</span><h4>Contact CSR Division</h4><p>Submit proposals, reach area offices.</p><span class="ql-arrow" style="color:var(--gold)">→</span></a>
+      <a href="csr-policy.html" class="ql reveal" style="border-top:3px solid var(--gold)"><span class="ql-icon">⚖️</span><h4 style="color:var(--gold)">CSR Policy &amp; Compliance</h4><p>Committee, policy docs, action plans, legal framework.</p><span class="ql-arrow" style="color:var(--gold)">→</span></a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="footer-grid">
-    <div class="footer-brand"><h2>Central Coalfields Limited</h2><p>A Mini-Ratna subsidiary of Coal India Limited, CCL operates across 8 Aspirational Districts of Jharkhand — powering India's growth while investing in the communities that make it possible.</p><br/><p style="font-size:12px;color:rgba(255,255,255,.18)">CIN: U10101JH1956GOI000581<br/>Darbhanga House, Ranchi – 834 029, Jharkhand</p></div>
-    <div class="footer-col"><h4>CSR Sectors</h4><ul><li><a href="education.html">Education</a></li><li><a href="health.html">Health &amp; Nutrition</a></li><li><a href="skill-livelihood.html">Skill &amp; Livelihood</a></li><li><a href="sports.html">Sports</a></li><li><a href="animal-welfare.html">Animal Welfare</a></li><li><a href="just-transition.html">Just Transition</a></li></ul></div>
-    <div class="footer-col"><h4>Projects</h4><ul><li><a href="projects.html">All 377 Projects</a></li><li><a href="projects.html#fy2425">FY 2024–25</a></li><li><a href="projects.html#fy2526">FY 2025–26</a></li><li><a href="education.html#lal-ladli">CCL Ke Lal &amp; Laadli</a></li><li><a href="sports.html">Sports Academy</a></li><li><a href="health.html#nanha">Nanha Sa Dil</a></li></ul></div>
-    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="#about">About CCL</a></li><li><a href="#awards">Awards</a></li><li><a href="#expenditure">CSR Expenditure</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://www.centralcoalfields.in" target="_blank" rel="noopener">Main Website ↗</a></li></ul></div>
+    <div class="footer-brand">
+      <h2>Central Coalfields Limited</h2>
+      <p>A Mini-Ratna subsidiary of Coal India Limited, CCL operates across 8 Aspirational Districts of Jharkhand — powering India's growth while investing in the communities that make it possible.</p>
+      <br/><p style="font-size:12px;color:rgba(255,255,255,.18)">CIN: U10101JH1956GOI000581<br/>Darbhanga House, Ranchi – 834 029, Jharkhand</p>
+    </div>
+    <div class="footer-col">
+      <h4>CSR Sectors</h4>
+      <ul>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="health.html">Health &amp; Nutrition</a></li>
+        <li><a href="skill-livelihood.html">Skill &amp; Livelihood</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="animal-welfare.html">Animal Welfare</a></li>
+        <li><a href="just-transition.html">Just Transition</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Projects</h4>
+      <ul>
+        <li><a href="projects.html">All 377 Projects</a></li>
+        <li><a href="projects.html#fy2425">FY 2024–25</a></li>
+        <li><a href="projects.html#fy2526">FY 2025–26</a></li>
+        <li><a href="education.html#lal-ladli">CCL Ke Lal &amp; Laadli</a></li>
+        <li><a href="sports.html">Sports Academy</a></li>
+        <li><a href="health.html#nanha">Nanha Sa Dil</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Compliance</h4>
+      <ul>
+        <li><a href="csr-policy.html#committee">CSR Committee</a></li>
+        <li><a href="csr-policy.html#policy">CSR Policy</a></li>
+        <li><a href="csr-policy.html#expenditure">Budget &amp; Expenditure</a></li>
+        <li><a href="csr-policy.html#action-plan">Action Plans</a></li>
+        <li><a href="csr-policy.html#circulars">Notifications</a></li>
+        <li><a href="csr-policy.html#legal">Legal Framework</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Organisation</h4>
+      <ul>
+        <li><a href="#about">About CCL</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#expenditure">CSR Expenditure</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.centralcoalfields.in" target="_blank" rel="noopener">Main Website ↗</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© 2025–26 Central Coalfields Limited · CSR Division, Ranchi, Jharkhand</p><div class="footer-badges"><span class="fbadge">Ministry of Corporate Affairs</span><span class="fbadge">Coal India Limited</span><span class="fbadge">Govt. of India PSU</span></div></div>
+  <div class="footer-bottom">
+    <p>© 2025–26 Central Coalfields Limited · CSR Division, Ranchi, Jharkhand</p>
+    <div class="footer-badges">
+      <span class="fbadge">Ministry of Corporate Affairs</span>
+      <span class="fbadge">Coal India Limited</span>
+      <span class="fbadge">Govt. of India PSU</span>
+    </div>
+  </div>
 </footer>
 
 <script>
@@ -614,16 +961,13 @@ expData.forEach((d,i)=>{
   const diff=exceeded?`▲ +₹${surplus.toFixed(2)} Cr`:`▼ −₹${(d.mandatory-d.actual).toFixed(2)} Cr`;
   const badge=isLatest?'🏆':(exceeded?'✅':'⚠️');
   const rowCls=isLatest?'latest':(exceeded?'exceeded':'below-target');
-
   const mPct=(d.mandatory/SCALE*100).toFixed(2);
   const basePct=(Math.min(d.actual,d.mandatory)/SCALE*100).toFixed(2);
   const surplusPct=hasSurplus?((d.actual-d.mandatory)/SCALE*100).toFixed(2):0;
   const surplusLeft=(d.mandatory/SCALE*100).toFixed(2);
-
   const baseStyle=exceeded?'bar-base':'bar-base below-style';
   const fullRadius=!hasSurplus?'full-radius':'';
   const showLabel=d.actual>30;
-
   chart.insertAdjacentHTML('beforeend',`
     <div class="bar-row ${rowCls}">
       <span class="bar-year">${d.year}</span>
@@ -640,7 +984,6 @@ expData.forEach((d,i)=>{
     </div>`);
 });
 
-/* Animate bars on scroll */
 const barObs=new IntersectionObserver(entries=>{
   if(entries[0].isIntersecting){
     document.querySelectorAll('.bar-base,.bar-surplus').forEach((el,i)=>{
@@ -654,13 +997,11 @@ const barObs=new IntersectionObserver(entries=>{
 },{threshold:.15});
 barObs.observe(document.getElementById('expenditure'));
 
-/* Scroll reveal */
 const ro=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*55);ro.unobserve(e.target);}});
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-/* Counter */
 function cnt(el){
   const target=parseInt(el.dataset.target,10),dur=1900,start=performance.now();
   (function step(now){
