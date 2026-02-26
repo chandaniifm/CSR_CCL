@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSR Policy & Compliance | CCL CSR – Central Coalfields Limited</title>
+  <meta name="description" content="CSR Policy, Committee Composition, Budget & Expenditure, Annual Action Plans, and statutory disclosures of Central Coalfields Limited under Companies Act 2013 Section 135." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─────────────────────────────────────────────
+       DESIGN TOKENS  (matches existing CCL CSR site)
+    ─────────────────────────────────────────────── */
+    :root {
+      --navy:       #1a3a5c;
+      --navy-dark:  #0f2338;
+      --navy-mid:   #1e4976;
+      --red:        #c0392b;
+      --red-hover:  #a93226;
+      --gold:       #d4870a;
+      --green:      #1a6b3c;
+      --teal:       #0d6e8a;
+      --white:      #ffffff;
+      --off-white:  #f7f9fc;
+      --border:     #dde4ed;
+      --text-dark:  #1a2332;
+      --text-mid:   #3d5166;
+      --text-light: #6b7f96;
+      --shadow-sm:  0 1px 4px rgba(26,58,92,.08);
+      --shadow-md:  0 4px 18px rgba(26,58,92,.12);
+      --radius:     10px;
+      --transition: .22s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAVBAR ─────────────────────────────── */
+    .navbar {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--navy-dark);
+      border-bottom: 2px solid rgba(192,57,43,.6);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.35);
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: .7rem;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .nav-brand-icon {
+      width: 38px; height: 38px; background: var(--red); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .88rem; font-weight: 800; color: #fff; letter-spacing: -.5px;
+    }
+    .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .nav-brand-title { font-size: .92rem; font-weight: 700; color: #fff; }
+    .nav-brand-sub   { font-size: .68rem; color: rgba(255,255,255,.5); }
+    .nav-links { display: flex; align-items: center; gap: .15rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.75); text-decoration: none;
+      font-size: .82rem; font-weight: 500;
+      padding: .4rem .72rem; border-radius: 5px;
+      transition: background var(--transition), color var(--transition);
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.1); }
+    .nav-links a.active { color: #fff; background: var(--red); }
+    .nav-cta { background: var(--red); color: #fff !important; border-radius: 6px;
+               padding: .42rem .9rem !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--red-hover) !important; }
+
+    /* ── HERO ───────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #1e5080 100%);
+      padding: 3.5rem 2rem 3rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 80% 20%, rgba(192,57,43,.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 10% 80%, rgba(255,255,255,.04) 0%, transparent 55%);
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: rgba(192,57,43,.22); border: 1px solid rgba(192,57,43,.4);
+      color: #f4b8b2; font-size: .74rem; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: .28rem .85rem; border-radius: 20px; margin-bottom: 1.1rem;
+      position: relative;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700;
+      color: #fff; line-height: 1.25; margin-bottom: .7rem; position: relative;
+    }
+    .hero h1 em { font-style: italic; color: #f8c8c4; }
+    .hero-sub {
+      font-size: .97rem; color: rgba(255,255,255,.7);
+      max-width: 620px; margin: 0 auto 2rem; position: relative;
+    }
+    .hero-strip {
+      display: flex; justify-content: center; gap: 2rem;
+      flex-wrap: wrap; position: relative;
+    }
+    .strip-item {
+      display: flex; align-items: center; gap: .45rem;
+      color: rgba(255,255,255,.72); font-size: .78rem; font-weight: 500;
+    }
+    .strip-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ec894; flex-shrink: 0; }
+
+    /* ── QUICK-JUMP TABS ────────────────────── */
+    .quick-jump {
+      background: var(--white); border-bottom: 1px solid var(--border);
+      position: sticky; top: 64px; z-index: 900;
+      padding: 0 2rem; overflow-x: auto;
+    }
+    .qj-inner {
+      display: flex; max-width: 1200px; margin: 0 auto;
+    }
+    .qj-tab {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .88rem 1rem; font-size: .8rem; font-weight: 600;
+      color: var(--text-mid); text-decoration: none;
+      border-bottom: 3px solid transparent;
+      transition: color var(--transition), border-color var(--transition);
+      white-space: nowrap;
+    }
+    .qj-tab:hover  { color: var(--navy); border-color: var(--navy); }
+    .qj-tab.active { color: var(--red);  border-color: var(--red);  }
+
+    /* ── LAYOUT ─────────────────────────────── */
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
+    .section:last-of-type { border-bottom: none; }
+    .sec-head { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
+    .sec-icon {
+      width: 50px; height: 50px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0;
+    }
+    .ic-navy  { background: rgba(26,58,92,.1); }
+    .ic-red   { background: rgba(192,57,43,.1); }
+    .ic-green { background: rgba(26,107,60,.1); }
+    .ic-gold  { background: rgba(212,135,10,.1); }
+    .ic-teal  { background: rgba(13,110,138,.1); }
+    .sec-title { font-size: 1.3rem; font-weight: 700; color: var(--navy); line-height: 1.3; }
+    .sec-desc  { font-size: .86rem; color: var(--text-light); margin-top: .2rem; }
+
+    /* ── STAT BAR ───────────────────────────── */
+    .stat-bar {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .stat-item { background: var(--white); padding: 1.1rem 1.2rem; text-align: center; }
+    .stat-num   { font-size: 1.65rem; font-weight: 800; color: var(--navy); line-height: 1; }
+    .stat-label { font-size: .7rem; color: var(--text-light); font-weight: 500;
+                  margin-top: .3rem; text-transform: uppercase; letter-spacing: .05em; }
+
+    /* ── TABLES ─────────────────────────────── */
+    .tbl-wrap { overflow-x: auto; border-radius: var(--radius);
+                box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+    thead tr  { background: var(--navy); color: #fff; }
+    thead th  { padding: .82rem 1rem; text-align: left; font-weight: 600;
+                font-size: .77rem; letter-spacing: .04em; text-transform: uppercase; }
+    tbody tr  { border-bottom: 1px solid var(--border);
+                transition: background var(--transition); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(26,58,92,.03); }
+    tbody td  { padding: .78rem 1rem; vertical-align: middle; }
+    .badge {
+      display: inline-block; padding: .17rem .55rem; border-radius: 20px;
+      font-size: .69rem; font-weight: 600; letter-spacing: .03em;
+    }
+    .b-chair { background: rgba(26,58,92,.12); color: var(--navy); }
+    .b-mem   { background: rgba(13,110,138,.12); color: var(--teal); }
+    .b-sec   { background: rgba(26,107,60,.1);  color: var(--green); }
+    .b-ind   { background: rgba(212,135,10,.12); color: var(--gold); }
+
+    /* ── PROGRESS CELL ──────────────────────── */
+    .surplus { color: var(--green); font-weight: 700; }
+    .prog { height: 5px; background: var(--border); border-radius: 3px;
+            overflow: hidden; margin-top: .3rem; min-width: 70px; }
+    .prog-fill { height: 100%; border-radius: 3px; background: var(--green); }
+
+    /* ── DOCUMENT GRID ──────────────────────── */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+      gap: .9rem;
+    }
+    .doc-card {
+      display: flex; align-items: flex-start; gap: .8rem;
+      padding: .95rem 1.1rem;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--white); text-decoration: none;
+      transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+    }
+    .doc-card:hover {
+      border-color: var(--navy); box-shadow: var(--shadow-md); transform: translateY(-2px);
+    }
+    .doc-ic {
+      width: 38px; height: 38px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+      background: rgba(192,57,43,.09); color: var(--red);
+    }
+    .doc-ic.bl { background: rgba(26,58,92,.09);   color: var(--navy); }
+    .doc-ic.gr { background: rgba(26,107,60,.09);  color: var(--green); }
+    .doc-ic.gd { background: rgba(212,135,10,.09); color: var(--gold); }
+    .doc-body   { flex: 1; min-width: 0; }
+    .doc-title  { font-size: .85rem; font-weight: 600; color: var(--text-dark); line-height: 1.35; }
+    .doc-meta   { font-size: .72rem; color: var(--text-light); margin-top: .18rem;
+                  display: flex; align-items: center; gap: .35rem; }
+    .doc-meta .s { opacity: .4; }
+
+    /* ── ACCORDION ──────────────────────────── */
+    .acc { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .acc + .acc { margin-top: .55rem; }
+    .acc-btn {
+      width: 100%; background: var(--off-white); border: none;
+      padding: 1rem 1.2rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      cursor: pointer; text-align: left;
+      transition: background var(--transition);
+    }
+    .acc-btn:hover    { background: #edf2f7; }
+    .acc-btn.open     { background: var(--navy); }
+    .acc-label {
+      display: flex; align-items: center; gap: .65rem;
+      font-size: .88rem; font-weight: 600; color: var(--navy);
+    }
+    .acc-btn.open .acc-label { color: #fff; }
+    .acc-right { display: flex; align-items: center; gap: .55rem; }
+    .acc-cnt {
+      font-size: .7rem; font-weight: 700;
+      background: rgba(192,57,43,.1); color: var(--red);
+      padding: .13rem .45rem; border-radius: 12px; white-space: nowrap;
+    }
+    .acc-btn.open .acc-cnt { background: rgba(255,255,255,.2); color: #fff; }
+    .acc-arr { font-size: .75rem; color: var(--text-light);
+               transition: transform .2s; flex-shrink: 0; }
+    .acc-btn.open .acc-arr { transform: rotate(180deg); color: #fff; }
+    .acc-body { display: none; background: var(--white); border-top: 1px solid var(--border); }
+    .acc-body.open { display: block; }
+    .li-row {
+      display: flex; align-items: flex-start; gap: .7rem;
+      padding: .62rem 1.2rem; text-decoration: none;
+      transition: background var(--transition);
+    }
+    .li-row:hover   { background: rgba(26,58,92,.04); }
+    .li-ico         { font-size: .9rem; margin-top: .05rem; flex-shrink: 0; }
+    .li-txt         { font-size: .84rem; color: var(--text-dark); line-height: 1.4; flex: 1; }
+    .li-txt strong  { font-weight: 600; color: var(--navy); }
+    .li-tag {
+      margin-left: auto; flex-shrink: 0;
+      font-size: .65rem; font-weight: 700;
+      background: rgba(26,107,60,.1); color: var(--green);
+      padding: .1rem .4rem; border-radius: 10px; letter-spacing: .03em;
+      white-space: nowrap; align-self: center;
+    }
+    .li-tag.new { background: rgba(192,57,43,.1); color: var(--red); }
+
+    /* ── OVERVIEW CARDS ─────────────────────── */
+    .ov-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+      gap: 1rem; margin: 1.2rem 0 1.8rem;
+    }
+    .ov-card { padding: 1.2rem 1.3rem; border-radius: var(--radius);
+               border: 1px solid var(--border); background: var(--white); }
+    .ov-num   { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: .3rem; }
+    .ov-title { font-size: .84rem; font-weight: 700; color: var(--navy); margin-bottom: .4rem; }
+    .ov-card p { font-size: .79rem; color: var(--text-mid); line-height: 1.55; }
+
+    /* ── MEETING LIST ───────────────────────── */
+    .mtg-list { display: flex; flex-direction: column; gap: .55rem; }
+    .mtg-item {
+      display: flex; gap: .9rem; align-items: flex-start;
+      padding: .82rem 1rem; border-radius: var(--radius);
+      border: 1px solid var(--border); background: var(--white);
+      transition: box-shadow var(--transition);
+    }
+    .mtg-item:hover { box-shadow: var(--shadow-sm); }
+    .mtg-num {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--navy); color: #fff;
+      font-size: .72rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .mtg-body { flex: 1; }
+    .mtg-title { font-size: .86rem; font-weight: 600; color: var(--text-dark); }
+    .mtg-date  { font-size: .76rem; color: var(--text-light); margin-top: .13rem; }
+    .mtg-dl {
+      margin-left: auto; flex-shrink: 0; align-self: center;
+      font-size: .74rem; font-weight: 600; color: var(--navy);
+      background: rgba(26,58,92,.07); padding: .28rem .65rem;
+      border-radius: 6px; text-decoration: none; white-space: nowrap;
+      transition: background var(--transition);
+    }
+    .mtg-dl:hover { background: var(--navy); color: #fff; }
+
+    /* ── UTILITY BOXES ──────────────────────── */
+    .note {
+      background: rgba(26,58,92,.05); border-left: 4px solid var(--navy);
+      padding: .95rem 1.15rem; border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: .83rem; color: var(--text-mid); margin-top: 1.5rem; line-height: 1.6;
+    }
+    .note strong { color: var(--navy); }
+    .alert {
+      background: rgba(212,135,10,.07); border-left: 4px solid var(--gold);
+      padding: .95rem 1.15rem; border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: .83rem; color: var(--text-mid); margin-bottom: 1.5rem;
+    }
+    .divlabel {
+      display: flex; align-items: center; gap: 1rem;
+      margin: .5rem 0 1.5rem;
+      font-size: .7rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-light);
+    }
+    .divlabel::before,.divlabel::after {
+      content:''; flex:1; height:1px; background: var(--border);
+    }
+    .mt1 { margin-top: .5rem; }
+    .mt2 { margin-top: 1rem; }
+    .mt3 { margin-top: 1.5rem; }
+
+    /* ── FOOTER ─────────────────────────────── */
+    footer {
+      background: var(--navy-dark); color: rgba(255,255,255,.65);
+      padding: 3rem 2rem 1.5rem;
+    }
+    .foot-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr repeat(3,1fr); gap: 2.5rem;
+      padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .foot-brand h3 { color: #fff; font-size: .97rem; font-weight: 700; margin-bottom: .45rem; }
+    .foot-brand p  { font-size: .79rem; line-height: 1.6; }
+    .foot-brand .cin { font-size: .72rem; margin-top: .8rem; opacity: .5; }
+    .foot-col h4   { color: #fff; font-size: .8rem; font-weight: 700;
+                     margin-bottom: .85rem; letter-spacing: .04em; text-transform: uppercase; }
+    .foot-col ul   { list-style: none; }
+    .foot-col li   { margin-bottom: .42rem; }
+    .foot-col a    { color: rgba(255,255,255,.57); text-decoration: none;
+                     font-size: .79rem; transition: color var(--transition); }
+    .foot-col a:hover { color: #fff; }
+    .foot-bottom {
+      max-width: 1200px; margin: 1.1rem auto 0;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: .74rem; flex-wrap: wrap; gap: .5rem;
+    }
+    .foot-bottom a { color: rgba(255,255,255,.45); text-decoration: none; }
+    .foot-bottom a:hover { color: #fff; }
+
+    /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 768px) {
+      .navbar { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .hero { padding: 2.5rem 1rem 2rem; }
+      .wrap { padding: 0 1rem; }
+      .foot-inner { grid-template-columns: 1fr 1fr; }
+      .doc-grid { grid-template-columns: 1fr; }
+      .ov-grid { grid-template-columns: 1fr; }
+      .quick-jump { padding: 0 1rem; }
+    }
+    @media (max-width: 480px) {
+      .foot-inner { grid-template-columns: 1fr; }
+      .stat-bar { grid-template-columns: 1fr 1fr; }
+      .mtg-dl { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══════════════════════════════════ -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">CCL</div>
+    <div class="nav-brand-text">
+      <span class="nav-brand-title">CCL CSR</span>
+      <span class="nav-brand-sub">Central Coalfields Limited</span>
+    </div>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html#about">About CCL</a></li>
+    <li><a href="index.html#sectors">Sectors</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#impact">Impact</a></li>
+    <li><a href="index.html#expenditure">Expenditure</a></li>
+    <li><a href="index.html#awards">Awards</a></li>
+    <li><a href="csr-policy.html" class="active">CSR Policy</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═════════════════════════════════════ -->
+<header class="hero" role="banner">
+  <div class="hero-badge">📋 Statutory Disclosure · Companies Act 2013 · Section 135</div>
+  <h1>CSR Policy &amp; <em>Compliance</em></h1>
+  <p class="hero-sub">Mandatory disclosures, Committee composition, Budget &amp; Expenditure, Annual Action Plans, and the complete legal framework governing CCL's CSR programme.</p>
+  <div class="hero-strip">
+    <span class="strip-item"><span class="strip-dot"></span> Board-approved CSR Policy</span>
+    <span class="strip-item"><span class="strip-dot"></span> CSR Committee Constituted</span>
+    <span class="strip-item"><span class="strip-dot"></span> 2% Mandate Exceeded Every Year</span>
+    <span class="strip-item"><span class="strip-dot"></span> TERI / IICA Impact Assessments</span>
+    <span class="strip-item"><span class="strip-dot"></span> CAG Audit — Zero Paragraphs</span>
+  </div>
+</header>
+
+<!-- ═══ QUICK-JUMP ════════════════════════════════ -->
+<nav class="quick-jump" aria-label="Page sections">
+  <div class="qj-inner">
+    <a href="#committee"   class="qj-tab active">🏛️ CSR Committee</a>
+    <a href="#policy"      class="qj-tab">📜 CSR Policy</a>
+    <a href="#expenditure" class="qj-tab">₹ Budget &amp; Expenditure</a>
+    <a href="#action-plan" class="qj-tab">📅 Annual Action Plans</a>
+    <a href="#circulars"   class="qj-tab">📑 Notifications &amp; Circulars</a>
+    <a href="#activities"  class="qj-tab">⭐ Significant Activities</a>
+    <a href="#legal"       class="qj-tab">⚖️ Legal Framework</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ═══ 1 — CSR COMMITTEE ════════════════════════ -->
+<section id="committee" class="section">
+<div class="wrap">
+  <div class="sec-head">
+    <div class="sec-icon ic-navy">🏛️</div>
+    <div>
+      <div class="sec-title">CSR Committee of CCL Board</div>
+      <div class="sec-desc">Constituted under Section 135(1) of the Companies Act 2013. The Committee formulates and monitors the CSR Policy, approves expenditure, and reviews impact.</div>
+    </div>
+  </div>
+
+  <div class="stat-bar">
+    <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Board Members</div></div>
+    <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Independent Director</div></div>
+    <div class="stat-item"><div class="stat-num">4×</div><div class="stat-label">Meetings / Year</div></div>
+    <div class="stat-item"><div class="stat-num">2014</div><div class="stat-label">Constituted</div></div>
+    <div class="stat-item"><div class="stat-num">35</div><div class="stat-label">CSR Officers in CCL</div></div>
+    <div class="stat-item"><div class="stat-num">14</div><div class="stat-label">Areas Covered</div></div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table aria-label="CSR Committee Composition">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Designation on CCL Board</th>
+          <th>Role in Committee</th>
+          <th>Director Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong>Chairman-cum-Managing Director (CMD), CCL</strong></td>
+          <td><span class="badge b-chair">Chairman</span></td>
+          <td>Functional Director (Govt. Nominee)</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>Director (Personnel), CCL</strong></td>
+          <td><span class="badge b-mem">Member</span></td>
+          <td>Functional Director</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>Director (Finance), CCL</strong></td>
+          <td><span class="badge b-mem">Member</span></td>
+          <td>Functional Director</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>Director (Technical / Operations), CCL</strong></td>
+          <td><span class="badge b-mem">Member</span></td>
+          <td>Functional Director</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><strong>Independent Director (Govt. Nominee)</strong></td>
+          <td><span class="badge b-ind">Independent Member</span></td>
+          <td>Independent Director</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><strong>General Manager (CSR &amp; Community Development), CCL</strong></td>
+          <td><span class="badge b-sec">Member-Secretary</span></td>
+          <td>Senior Management</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <strong>Note on current names:</strong> The exact names of Board Directors are updated on each CCL Board reconstitution. For the current composition with officer names, refer to the <a href="https://www.centralcoalfields.in" target="_blank" rel="noopener">CCL Official Website</a> or contact the CSR Division, Darbhanga House, Ranchi.
+  </div>
+
+  <div class="divlabel mt3">Recent CSR Committee Meetings</div>
+  <div class="mtg-list">
+    <div class="mtg-item">
+      <div class="mtg-num">Q3</div>
+      <div class="mtg-body">
+        <div class="mtg-title">CSR Committee Meeting — Q3 Review, FY 2025–26</div>
+        <div class="mtg-date">📅 December 2025 · Darbhanga House, Ranchi</div>
+      </div>
+      <a class="mtg-dl" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">Minutes ↗</a>
+    </div>
+    <div class="mtg-item">
+      <div class="mtg-num">Q2</div>
+      <div class="mtg-body">
+        <div class="mtg-title">CSR Committee Meeting — Q2 Review &amp; Budget Revision, FY 2025–26</div>
+        <div class="mtg-date">📅 September 2025 · Darbhanga House, Ranchi</div>
+      </div>
+      <a class="mtg-dl" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">Minutes ↗</a>
+    </div>
+    <div class="mtg-item">
+      <div class="mtg-num">Q1</div>
+      <div class="mtg-body">
+        <div class="mtg-title">CSR Committee Meeting — Annual Action Plan Approval, FY 2025–26</div>
+        <div class="mtg-date">📅 April 2025 · Darbhanga House, Ranchi</div>
+      </div>
+      <a class="mtg-dl" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">Minutes ↗</a>
+    </div>
+    <div class="mtg-item">
+      <div class="mtg-num">FY</div>
+      <div class="mtg-body">
+        <div class="mtg-title">CSR Committee Meeting — Annual Review &amp; Impact Assessment, FY 2024–25</div>
+        <div class="mtg-date">📅 March 2025 · Darbhanga House, Ranchi</div>
+      </div>
+      <a class="mtg-dl" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">Minutes ↗</a>
+    </div>
+  </div>
+
+  <div class="note mt2">
+    <strong>Document Download:</strong> All CSR Committee meeting minutes, Board meeting extracts pertaining to CSR, the CSR department structure chart, and the executive list of CCL CSR officers are available on the <a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">CCL Main Website — CSR Section ↗</a>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 2 — CSR POLICY ═══════════════════════════ -->
+<section id="policy" class="section" style="background:var(--off-white)">
+<div class="wrap">
+  <div class="sec-head">
+    <div class="sec-icon ic-red">📜</div>
+    <div>
+      <div class="sec-title">CSR Policy Documents</div>
+      <div class="sec-desc">Board-approved policy governing CCL's CSR programme — aligned with CIL Group Policy, Companies Act 2013, and DPE Guidelines for Central Public Sector Enterprises.</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>⚡ Mandatory Obligation:</strong> Under Section 135 of the Companies Act 2013, CCL is required to spend 2% of the average net profit of the three immediately preceding financial years on CSR activities. <strong>CCL has consistently exceeded this threshold every financial year since FY 2014–15</strong>, with a cumulative spend of ₹683.44 Crore through FY 2024–25.
+  </div>
+
+  <div class="ov-grid">
+    <div class="ov-card">
+      <div class="ov-num">2%</div>
+      <div class="ov-title">Mandatory Annual CSR Spend</div>
+      <p>2% of average net profit of three preceding years, per Companies Act 2013 Section 135 and Companies (CSR Policy) Rules 2014.</p>
+    </div>
+    <div class="ov-card">
+      <div class="ov-num">60%</div>
+      <div class="ov-title">DPE Theme Allocation</div>
+      <p>At least 60% of CCL's CSR budget is directed to DPE-notified priority themes each year, as per DPE Guidelines effective April 2014.</p>
+    </div>
+    <div class="ov-card">
+      <div class="ov-num">80%</div>
+      <div class="ov-title">Local Area Preference</div>
+      <p>Minimum 80% of annual CSR spend is incurred within a 25-km radius of CCL establishments across Jharkhand, per CIL Group Policy.</p>
+    </div>
+    <div class="ov-card">
+      <div class="ov-num">8</div>
+      <div class="ov-title">Aspirational Districts Focus</div>
+      <p>Chatra, Latehar, Palamu, Giridih, Hazaribagh, Bokaro, Ranchi, Ramgarh — all CCL districts are Aspirational Districts of Jharkhand.</p>
+    </div>
+  </div>
+
+  <div class="divlabel">Download Policy Documents</div>
+  <div class="doc-grid">
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">📄</div>
+      <div class="doc-body">
+        <div class="doc-title">CCL Revised CSR Policy (Latest — 2024)</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Board Approved</span><span class="s">·</span><span>2024</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic bl">📋</div>
+      <div class="doc-body">
+        <div class="doc-title">CIL Group CSR Policy — Modified April 2021</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Coal India Limited</span><span class="s">·</span><span>April 2021</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic bl">📋</div>
+      <div class="doc-body">
+        <div class="doc-title">CIL Group CSR Policy — Modified October 2020</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Coal India Limited</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">📝</div>
+      <div class="doc-body">
+        <div class="doc-title">CSR Proposal Format for Implementing Agencies</div>
+        <div class="doc-meta"><span>DOCX / PDF</span><span class="s">·</span><span>For empanelled agencies</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 3 — BUDGET & EXPENDITURE ════════════════ -->
+<section id="expenditure" class="section">
+<div class="wrap">
+  <div class="sec-head">
+    <div class="sec-icon ic-green" style="font-size:1.1rem;font-weight:800;color:var(--green)">₹</div>
+    <div>
+      <div class="sec-title">Budget &amp; Expenditure</div>
+      <div class="sec-desc">Year-wise comparison of mandatory CSR obligation against actual expenditure. All figures per Annual Reports and CAG-audited accounts of CCL.</div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table aria-label="CCL CSR Expenditure">
+      <thead>
+        <tr>
+          <th>Financial Year</th>
+          <th>Mandatory Obligation</th>
+          <th>Actual Expenditure</th>
+          <th>Status</th>
+          <th>Achievement</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>FY 2025–26</strong> <span class="badge b-mem" style="margin-left:.35rem">Ongoing</span></td>
+          <td>₹74.25 Cr</td>
+          <td>₹50.03 Cr <small style="color:var(--text-light)">(till Dec '25)</small></td>
+          <td>On track</td>
+          <td>67% (Q3)<div class="prog"><div class="prog-fill" style="width:67%;background:var(--gold)"></div></div></td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ View</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2024–25</strong></td>
+          <td>₹62.26 Cr</td>
+          <td>₹81.11 Cr</td>
+          <td class="surplus">+₹18.85 Cr ↑</td>
+          <td>130%<div class="prog"><div class="prog-fill" style="width:100%"></div></div></td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2023–24</strong></td>
+          <td>—</td>
+          <td>—</td>
+          <td class="surplus">Exceeded ↑</td>
+          <td>100%+<div class="prog"><div class="prog-fill" style="width:100%"></div></div></td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2022–23</strong></td>
+          <td>—</td><td>—</td>
+          <td class="surplus">Exceeded ↑</td>
+          <td>100%+<div class="prog"><div class="prog-fill" style="width:100%"></div></div></td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2021–22</strong></td>
+          <td>—</td><td>—</td>
+          <td class="surplus">Exceeded ↑</td>
+          <td>100%+<div class="prog"><div class="prog-fill" style="width:100%"></div></div></td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2020–21</strong></td>
+          <td>—</td><td>—</td><td>—</td><td>—</td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2019–20</strong></td>
+          <td>—</td><td>—</td><td>—</td><td>—</td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2018–19</strong></td>
+          <td>—</td><td>—</td><td>—</td><td>—</td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2017–18</strong></td>
+          <td>—</td><td>—</td><td>—</td><td>—</td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2016–17</strong></td>
+          <td>—</td><td>—</td><td>—</td><td>—</td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr>
+          <td><strong>FY 2015–16</strong></td>
+          <td>—</td><td>—</td><td>—</td><td>—</td>
+          <td><a href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;font-size:.8rem;text-decoration:none">↗ PDF</a></td>
+        </tr>
+        <tr style="background:rgba(26,58,92,.04)">
+          <td><strong>Cumulative 2014–2025</strong></td>
+          <td>—</td>
+          <td><strong style="color:var(--navy);font-size:1.05rem">₹683.44 Crore</strong></td>
+          <td class="surplus">Consistently Exceeded</td>
+          <td>100%+<div class="prog"><div class="prog-fill" style="width:100%"></div></div></td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <strong>Unspent CSR Funds Treatment:</strong> In accordance with Companies (CSR Policy) Amendment Rules 2021, any unspent CSR amount for ongoing projects is transferred to a separate Unspent CSR Account within 30 days of year-end. Any amount not earmarked for ongoing projects is transferred to a Schedule VII fund (PM-CARES / PM National Relief Fund) within 6 months. CCL has maintained a clean record — zero CAG audit paragraphs on CSR compliance across all audited years.
+  </div>
+</div>
+</section>
+
+<!-- ═══ 4 — ANNUAL ACTION PLANS ═════════════════ -->
+<section id="action-plan" class="section" style="background:var(--off-white)">
+<div class="wrap">
+  <div class="sec-head">
+    <div class="sec-icon ic-gold">📅</div>
+    <div>
+      <div class="sec-title">Annual CSR Action Plans</div>
+      <div class="sec-desc">Board-approved year-wise plans listing all CSR projects, sector allocation, implementing agencies, and sanctioned budget. Both original and modified (mid-year revised) plans are published.</div>
+    </div>
+  </div>
+
+  <div class="doc-grid">
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic gd">📅</div>
+      <div class="doc-body">
+        <div class="doc-title">Annual CSR Action Plan — FY 2025–26</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Board Approved · April 2025</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic gd">📅</div>
+      <div class="doc-body">
+        <div class="doc-title">Modified Annual CSR Action Plan — FY 2025–26</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Mid-Year Revision</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic gd">📅</div>
+      <div class="doc-body">
+        <div class="doc-title">Annual CSR Action Plan — FY 2024–25</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Board Approved · April 2024</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic gd">📅</div>
+      <div class="doc-body">
+        <div class="doc-title">Modified Annual CSR Action Plan — FY 2024–25</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Revised October 2024</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">📅</div>
+      <div class="doc-body">
+        <div class="doc-title">Annual CSR Action Plan — FY 2023–24</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">📅</div>
+      <div class="doc-body">
+        <div class="doc-title">Modified Annual CSR Action Plan — FY 2023–24</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">📅</div>
+      <div class="doc-body">
+        <div class="doc-title">Annual CSR Action Plan — FY 2022–23</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">📅</div>
+      <div class="doc-body">
+        <div class="doc-title">Annual CSR Action Plans — FY 2021–22 &amp; Earlier (Archive)</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Archive</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 5 — NOTIFICATIONS & CIRCULARS ═══════════ -->
+<section id="circulars" class="section">
+<div class="wrap">
+  <div class="sec-head">
+    <div class="sec-icon ic-teal">📑</div>
+    <div>
+      <div class="sec-title">Notifications &amp; Circulars</div>
+      <div class="sec-desc">Board meeting extracts, CSR department structure, executive list, expenditure statements, CIL policy circulars, DPE guidelines, and all MCA amendments applicable to CCL's CSR programme.</div>
+    </div>
+  </div>
+
+  <!-- CCL Internal Documents -->
+  <div class="acc" id="acc1">
+    <button class="acc-btn open" onclick="tog(this,'body1')" aria-expanded="true" aria-controls="body1">
+      <span class="acc-label">🏢 CCL Internal Notifications &amp; Board Documents</span>
+      <div class="acc-right"><span class="acc-cnt">6 Documents</span><span class="acc-arr">▼</span></div>
+    </button>
+    <div class="acc-body open" id="body1">
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📋</span>
+        <span class="li-txt"><strong>Composition of CSR Committee of CCL Board</strong> — Current constitution, designations and roles</span>
+        <span class="li-tag new">Latest</span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">🏗️</span>
+        <span class="li-txt"><strong>Department Structure of CSR — CCL</strong> — Organisation chart of CSR &amp; CD Division, CCL HQ</span>
+        <span class="li-tag new">Updated</span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">👤</span>
+        <span class="li-txt"><strong>Executive Details of CSR Department, CCL</strong> — Names, designations, and contact details of all Area CSR officers</span>
+        <span class="li-tag new">Updated</span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📊</span>
+        <span class="li-txt"><strong>CSR Consolidated Expenditure Statement — FY 2024–25</strong></span>
+        <span class="li-tag new">FY 24–25</span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📊</span>
+        <span class="li-txt"><strong>CSR Consolidated Expenditure Statement — FY 2023–24</strong></span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📖</span>
+        <span class="li-txt"><strong>CSR Compendium — CCL</strong> — Comprehensive reference document covering all CSR policies, guidelines, and precedents</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CIL Policy Circulars -->
+  <div class="acc mt1" id="acc2">
+    <button class="acc-btn" onclick="tog(this,'body2')" aria-expanded="false" aria-controls="body2">
+      <span class="acc-label">🏛️ Coal India Limited — CSR Policy &amp; Amendments</span>
+      <div class="acc-right"><span class="acc-cnt">5 Documents</span><span class="acc-arr">▼</span></div>
+    </button>
+    <div class="acc-body" id="body2">
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📄</span>
+        <span class="li-txt"><strong>Modified CSR Policy of CIL — April 2021</strong> — Latest CIL Group Policy, full Companies Act 2013 compliance</span>
+        <span class="li-tag">Governing</span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📄</span>
+        <span class="li-txt"><strong>Modified CSR Policy of CIL — October 2020</strong></span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📄</span>
+        <span class="li-txt"><strong>Companies (CSR Policy) Amendment Rules, 2021</strong> — MCA Gazette Notification</span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📄</span>
+        <span class="li-txt"><strong>Companies Act 2020 Amendment</strong></span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📄</span>
+        <span class="li-txt"><strong>CSR Rules Amendments 2018</strong></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- DPE Guidelines -->
+  <div class="acc mt1" id="acc3">
+    <button class="acc-btn" onclick="tog(this,'body3')" aria-expanded="false" aria-controls="body3">
+      <span class="acc-label">🏗️ Department of Public Enterprises (DPE) — CPSE Guidelines</span>
+      <div class="acc-right"><span class="acc-cnt">3 Documents</span><span class="acc-arr">▼</span></div>
+    </button>
+    <div class="acc-body" id="body3">
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📑</span>
+        <span class="li-txt"><strong>DPE Guidelines for CSR — w.e.f. April 2014</strong> — Applicable to all Central Public Sector Enterprises. Mandates 60% on notified themes.</span>
+        <span class="li-tag">Governing</span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📑</span>
+        <span class="li-txt"><strong>Compendium of DPE Guidelines — March 2015</strong></span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📑</span>
+        <span class="li-txt"><strong>OM issued by DPE — Priority Themes for FY 2021–22</strong></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- COVID Circulars -->
+  <div class="acc mt1" id="acc4">
+    <button class="acc-btn" onclick="tog(this,'body4')" aria-expanded="false" aria-controls="body4">
+      <span class="acc-label">🏥 COVID-19 CSR Circulars &amp; FAQs</span>
+      <div class="acc-right"><span class="acc-cnt">3 Documents</span><span class="acc-arr">▼</span></div>
+    </button>
+    <div class="acc-body" id="body4">
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📄</span>
+        <span class="li-txt"><strong>COVID-19 CSR Circular</strong> — MCA notification on permissible COVID-19 CSR activities including PM-CARES</span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">📄</span>
+        <span class="li-txt"><strong>Notification — COVID-19 CSR FAQs</strong></span>
+      </a>
+      <a class="li-row" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+        <span class="li-ico">❓</span>
+        <span class="li-txt"><strong>General FAQ on CSR — Ministry of Corporate Affairs</strong></span>
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ 6 — SIGNIFICANT ACTIVITIES ════════════════ -->
+<section id="activities" class="section" style="background:var(--off-white)">
+<div class="wrap">
+  <div class="sec-head">
+    <div class="sec-icon ic-red">⭐</div>
+    <div>
+      <div class="sec-title">Significant CSR Activities</div>
+      <div class="sec-desc">Year-wise summaries of key CSR activities by CCL — compiled for public disclosure, stakeholder reporting, and DPE/MCA compliance.</div>
+    </div>
+  </div>
+
+  <div class="doc-grid">
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">⭐</div>
+      <div class="doc-body">
+        <div class="doc-title">Significant CSR Activities — FY 2024–25</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>377 Projects · 8 Districts</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">⭐</div>
+      <div class="doc-body">
+        <div class="doc-title">Significant CSR Activities — FY 2023–24</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">⭐</div>
+      <div class="doc-body">
+        <div class="doc-title">Significant CSR Activities — FY 2022–23</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">⭐</div>
+      <div class="doc-body">
+        <div class="doc-title">Significant CSR Activities — FY 2021–22</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">⭐</div>
+      <div class="doc-body">
+        <div class="doc-title">Significant CSR Activities — FY 2020–21</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">⭐</div>
+      <div class="doc-body">
+        <div class="doc-title">Significant CSR Activities — FY 2015–16 to FY 2019–20 (5-Year Archive)</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Historical Archive</span></div>
+      </div>
+    </a>
+  </div>
+
+  <div class="note mt2">
+    <strong>Independent Impact Assessment:</strong> For all CSR projects with an outlay exceeding ₹1 crore, CCL commissions independent impact assessments through accredited agencies including <strong>TERI</strong> (The Energy and Resources Institute) and <strong>IICA</strong> (Indian Institute of Corporate Affairs), as mandated under Companies (CSR Policy) Amendment Rules 2021. Assessment reports are presented to the CSR Committee and are available for inspection.
+  </div>
+</div>
+</section>
+
+<!-- ═══ 7 — LEGAL FRAMEWORK ══════════════════════ -->
+<section id="legal" class="section">
+<div class="wrap">
+  <div class="sec-head">
+    <div class="sec-icon ic-navy">⚖️</div>
+    <div>
+      <div class="sec-title">Legal Framework</div>
+      <div class="sec-desc">The complete statutory and regulatory instruments governing CCL's CSR obligations — from primary legislation through Schedule VII to CPSE-specific DPE guidelines.</div>
+    </div>
+  </div>
+
+  <div class="doc-grid">
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic bl">⚖️</div>
+      <div class="doc-body">
+        <div class="doc-title">Companies Act 2013 — Section 135 (CSR)</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Primary Legislation</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic bl">📋</div>
+      <div class="doc-body">
+        <div class="doc-title">Companies (CSR Policy) Rules 2014 — as amended to 2021</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Rules &amp; Amendments</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic gr">📜</div>
+      <div class="doc-body">
+        <div class="doc-title">Gazette Notification — Schedule VII (Latest, all Amendments)</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Permissible CSR Activities</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic gr">📜</div>
+      <div class="doc-body">
+        <div class="doc-title">Schedule VII Amendment — Swachh Bharat &amp; Clean Ganga</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic gr">📜</div>
+      <div class="doc-body">
+        <div class="doc-title">Schedule VII Amendment — Slum Area Development</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic gr">📜</div>
+      <div class="doc-body">
+        <div class="doc-title">Schedule VII Amendment — Disaster Management</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">📄</div>
+      <div class="doc-body">
+        <div class="doc-title">Schedule VII Amendment — 28 October 2019</div>
+        <div class="doc-meta"><span>PDF</span></div>
+      </div>
+    </a>
+    <a class="doc-card" href="https://www.centralcoalfields.in/sutbs/sdcsr.php" target="_blank" rel="noopener">
+      <div class="doc-ic">❓</div>
+      <div class="doc-body">
+        <div class="doc-title">MCA Clarification on CSR &amp; General FAQ</div>
+        <div class="doc-meta"><span>PDF</span><span class="s">·</span><span>Ministry of Corporate Affairs</span></div>
+      </div>
+    </a>
+  </div>
+
+  <div class="note mt2">
+    <strong>CCL Company Identity:</strong> &nbsp;CIN: U10101JH1956GOI000581 &nbsp;·&nbsp; Registered Office: Darbhanga House, Ranchi – 834 029, Jharkhand &nbsp;·&nbsp; Mini-Ratna (Category-I) subsidiary of Coal India Limited (CIN: L23109WB1973GOI028844). All CSR disclosures comply with the Companies Act 2013, SEBI (LODR) Regulations 2015, and DPE Guidelines for CPSEs. For queries, contact the CSR Division at <a href="mailto:csr@ccl.gov.in">csr@ccl.gov.in</a> or visit <a href="https://www.centralcoalfields.in" target="_blank" rel="noopener">www.centralcoalfields.in</a>.
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════ -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <h3>Central Coalfields Limited</h3>
+      <p>A Mini-Ratna subsidiary of Coal India Limited, CCL operates across 8 Aspirational Districts of Jharkhand — powering India's growth while investing in the communities that make it possible.</p>
+      <p class="cin">CIN: U10101JH1956GOI000581<br>Registered Office: Darbhanga House, Ranchi – 834 029, Jharkhand</p>
+    </div>
+    <div class="foot-col">
+      <h4>CSR Sectors</h4>
+      <ul>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="health.html">Health &amp; Nutrition</a></li>
+        <li><a href="skill-livelihood.html">Skill &amp; Livelihood</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="animal-welfare.html">Animal Welfare</a></li>
+        <li><a href="just-transition.html">Just Transition</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Compliance</h4>
+      <ul>
+        <li><a href="csr-policy.html#committee">CSR Committee</a></li>
+        <li><a href="csr-policy.html#policy">CSR Policy</a></li>
+        <li><a href="csr-policy.html#expenditure">Budget &amp; Expenditure</a></li>
+        <li><a href="csr-policy.html#action-plan">Action Plans</a></li>
+        <li><a href="csr-policy.html#circulars">Notifications</a></li>
+        <li><a href="csr-policy.html#legal">Legal Framework</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Organisation</h4>
+      <ul>
+        <li><a href="index.html#about">About CCL</a></li>
+        <li><a href="index.html#awards">Awards</a></li>
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.centralcoalfields.in" target="_blank" rel="noopener">Main Website ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2025–26 Central Coalfields Limited · CSR Division, Ranchi, Jharkhand</span>
+    <div style="display:flex;gap:1.2rem">
+      <a href="https://www.mca.gov.in" target="_blank" rel="noopener">Ministry of Corporate Affairs</a>
+      <a href="https://www.coalindia.in" target="_blank" rel="noopener">Coal India Limited</a>
+      <a href="https://india.gov.in" target="_blank" rel="noopener">Govt. of India</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── Accordion ── */
+  function tog(btn, bodyId) {
+    const body = document.getElementById(bodyId);
+    const open = btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    body.classList.toggle('open', open);
+  }
+
+  /* ── Quick-jump active on scroll ── */
+  const secs = document.querySelectorAll('section[id]');
+  const tabs = document.querySelectorAll('.qj-tab');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tabs.forEach(t => t.classList.remove('active'));
+        const a = document.querySelector(`.qj-tab[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-35% 0px -60% 0px' });
+  secs.forEach(s => io.observe(s));
+
+  /* ── Navbar scroll shadow ── */
+  const nb = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    nb.style.boxShadow = scrollY > 8 ? '0 2px 24px rgba(0,0,0,.5)' : '0 2px 12px rgba(0,0,0,.35)';
+  }, { passive: true });
+</script>
+</body>
+</html>
